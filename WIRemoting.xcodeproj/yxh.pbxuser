@@ -3,7 +3,7 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeSDKPreference = iphonesimulator3.1.2;
-		activeTarget = D2AAC07D0554694100DB518D /* WIRemoting */;
+		activeTarget = E659C34B109E553F00D9CFE2 /* RemotingTests */;
 		addToTargets = (
 			D2AAC07D0554694100DB518D /* WIRemoting */,
 		);
@@ -160,8 +160,8 @@
 	E659C101109E48F900D9CFE2 /* ASIS3ListRequest.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {894, 768}}";
-			sepNavSelRange = "{829, 0}";
-			sepNavVisRange = "{317, 864}";
+			sepNavSelRange = "{231, 0}";
+			sepNavVisRange = "{0, 755}";
 		};
 	};
 	E659C126109E493400D9CFE2 /* PBXTextBookmark */ = {
@@ -358,6 +358,13 @@
 		path = "/Users/yxh/Code/XCode/asi-http-request/Frameworks/libGHUnitIPhone/GHUNSObject+Swizzle.h";
 		sourceTree = "<absolute>";
 	};
+	E659C258109E4D9700D9CFE2 /* Tests-Info.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = "Tests-Info.plist";
+		path = "/Users/yxh/Code/XCode/WIRemoting/Tests-Info.plist";
+		sourceTree = "<absolute>";
+	};
 	E659C267109E4DEA00D9CFE2 /* GHAsyncTestCase.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
@@ -470,9 +477,6 @@
 		vrLen = 894;
 		vrLoc = 0;
 	};
-	E659C2EB109E4FF800D9CFE2 /* Tests */ = {
-		activeExec = 0;
-	};
 	E659C305109E522F00D9CFE2 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = E659C258109E4D9700D9CFE2 /* Tests-Info.plist */;
@@ -524,6 +528,23 @@
 		rType = 0;
 		vrLen = 864;
 		vrLoc = 317;
+	};
+	E659C34B109E553F00D9CFE2 /* RemotingTests */ = {
+		activeExec = 0;
+	};
+	E659C35E109E559D00D9CFE2 /* LocalTests.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1174, 498}}";
+			sepNavSelRange = "{793, 0}";
+			sepNavVisRange = "{0, 799}";
+		};
+	};
+	E659C35F109E559D00D9CFE2 /* LocalTests.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {894, 576}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 704}";
+		};
 	};
 	E69ADB4C107559C6005E1E82 /* Source Control */ = {
 		isa = PBXSourceControlManager;

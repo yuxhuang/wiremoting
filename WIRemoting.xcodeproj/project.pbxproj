@@ -46,11 +46,13 @@
 		E659C31F109E523500D9CFE2 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C312109E523500D9CFE2 /* SBJsonParser.m */; };
 		E659C320109E523500D9CFE2 /* SBJsonWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = E659C313109E523500D9CFE2 /* SBJsonWriter.h */; };
 		E659C321109E523500D9CFE2 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C314109E523500D9CFE2 /* SBJsonWriter.m */; };
-		E659C32D109E524A00D9CFE2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C3109E497000D9CFE2 /* CFNetwork.framework */; };
-		E659C32E109E524B00D9CFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		E659C330109E525100D9CFE2 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
-		E659C332109E525800D9CFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
-		E659C333109E525D00D9CFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
+		E659C352109E555400D9CFE2 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
+		E659C353109E555700D9CFE2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1CB109E498100D9CFE2 /* libz.dylib */; };
+		E659C354109E555800D9CFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		E659C355109E555900D9CFE2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C3109E497000D9CFE2 /* CFNetwork.framework */; };
+		E659C356109E555F00D9CFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
+		E659C357109E556000D9CFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
+		E659C362109E55A100D9CFE2 /* LocalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C35F109E559D00D9CFE2 /* LocalTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,9 +83,6 @@
 		E659C1C3109E497000D9CFE2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E659C1CB109E498100D9CFE2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		E659C258109E4D9700D9CFE2 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		E659C2BF109E4FAB00D9CFE2 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
-		E659C2EC109E4FF800D9CFE2 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.octest; path = "build/Debug-iphonesimulator/Tests.octest"; sourceTree = "<group>"; };
 		E659C308109E523500D9CFE2 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		E659C309109E523500D9CFE2 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		E659C30A109E523500D9CFE2 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -97,6 +96,10 @@
 		E659C312109E523500D9CFE2 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		E659C313109E523500D9CFE2 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		E659C314109E523500D9CFE2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E659C34C109E553F00D9CFE2 /* RemotingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RemotingTests.octest; path = "build/Debug-iphonesimulator/RemotingTests.octest"; sourceTree = "<group>"; };
+		E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemotingTests-Info.plist"; sourceTree = "<group>"; };
+		E659C35E109E559D00D9CFE2 /* LocalTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalTests.h; sourceTree = "<group>"; };
+		E659C35F109E559D00D9CFE2 /* LocalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,15 +115,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E659C2E9109E4FF800D9CFE2 /* Frameworks */ = {
+		E659C349109E553F00D9CFE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E659C32D109E524A00D9CFE2 /* CFNetwork.framework in Frameworks */,
-				E659C32E109E524B00D9CFE2 /* Foundation.framework in Frameworks */,
-				E659C330109E525100D9CFE2 /* libWIRemoting.a in Frameworks */,
-				E659C332109E525800D9CFE2 /* SystemConfiguration.framework in Frameworks */,
-				E659C333109E525D00D9CFE2 /* UIKit.framework in Frameworks */,
+				E659C352109E555400D9CFE2 /* libWIRemoting.a in Frameworks */,
+				E659C353109E555700D9CFE2 /* libz.dylib in Frameworks */,
+				E659C354109E555800D9CFE2 /* Foundation.framework in Frameworks */,
+				E659C355109E555900D9CFE2 /* CFNetwork.framework in Frameworks */,
+				E659C356109E555F00D9CFE2 /* SystemConfiguration.framework in Frameworks */,
+				E659C357109E556000D9CFE2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libWIRemoting.a */,
-				E659C2EC109E4FF800D9CFE2 /* Tests.octest */,
+				E659C34C109E553F00D9CFE2 /* RemotingTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,8 +149,7 @@
 				E659C304109E51FE00D9CFE2 /* Third Party */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				E659C258109E4D9700D9CFE2 /* Tests-Info.plist */,
-				E659C2BF109E4FAB00D9CFE2 /* Test-Info.plist */,
+				E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */,
 			);
 			name = WIRemoting;
 			sourceTree = "<group>";
@@ -208,6 +211,8 @@
 		E659C289109E4E0200D9CFE2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E659C35E109E559D00D9CFE2 /* LocalTests.h */,
+				E659C35F109E559D00D9CFE2 /* LocalTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -289,22 +294,22 @@
 			productReference = D2AAC07E0554694100DB518D /* libWIRemoting.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E659C2EB109E4FF800D9CFE2 /* Tests */ = {
+		E659C34B109E553F00D9CFE2 /* RemotingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E659C2F3109E502000D9CFE2 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = E659C350109E554000D9CFE2 /* Build configuration list for PBXNativeTarget "RemotingTests" */;
 			buildPhases = (
-				E659C2E7109E4FF800D9CFE2 /* Resources */,
-				E659C2E8109E4FF800D9CFE2 /* Sources */,
-				E659C2E9109E4FF800D9CFE2 /* Frameworks */,
-				E659C2EA109E4FF800D9CFE2 /* ShellScript */,
+				E659C347109E553F00D9CFE2 /* Resources */,
+				E659C348109E553F00D9CFE2 /* Sources */,
+				E659C349109E553F00D9CFE2 /* Frameworks */,
+				E659C34A109E553F00D9CFE2 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Tests;
-			productName = Tests;
-			productReference = E659C2EC109E4FF800D9CFE2 /* Tests.octest */;
+			name = RemotingTests;
+			productName = RemotingTests;
+			productReference = E659C34C109E553F00D9CFE2 /* RemotingTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -321,13 +326,13 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* WIRemoting */,
-				E659C2EB109E4FF800D9CFE2 /* Tests */,
+				E659C34B109E553F00D9CFE2 /* RemotingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E659C2E7109E4FF800D9CFE2 /* Resources */ = {
+		E659C347109E553F00D9CFE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,7 +342,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E659C2EA109E4FF800D9CFE2 /* ShellScript */ = {
+		E659C34A109E553F00D9CFE2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,10 +381,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E659C2E8109E4FF800D9CFE2 /* Sources */ = {
+		E659C348109E553F00D9CFE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E659C362109E55A100D9CFE2 /* LocalTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +451,7 @@
 			};
 			name = Release;
 		};
-		E659C2ED109E4FF800D9CFE2 /* Debug */ = {
+		E659C34E109E553F00D9CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -458,7 +464,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "Tests-Info.plist";
+				INFOPLIST_FILE = "RemotingTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -468,12 +474,12 @@
 					UIKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = Tests;
+				PRODUCT_NAME = RemotingTests;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		E659C2EE109E4FF800D9CFE2 /* Release */ = {
+		E659C34F109E553F00D9CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -485,7 +491,7 @@
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				INFOPLIST_FILE = "Tests-Info.plist";
+				INFOPLIST_FILE = "RemotingTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -495,7 +501,7 @@
 					UIKit,
 				);
 				PREBINDING = NO;
-				PRODUCT_NAME = Tests;
+				PRODUCT_NAME = RemotingTests;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
 			};
@@ -522,11 +528,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E659C2F3109E502000D9CFE2 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		E659C350109E554000D9CFE2 /* Build configuration list for PBXNativeTarget "RemotingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E659C2ED109E4FF800D9CFE2 /* Debug */,
-				E659C2EE109E4FF800D9CFE2 /* Release */,
+				E659C34E109E553F00D9CFE2 /* Debug */,
+				E659C34F109E553F00D9CFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
