@@ -53,6 +53,16 @@
 		E659C356109E555F00D9CFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
 		E659C357109E556000D9CFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
 		E659C362109E55A100D9CFE2 /* LocalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C35F109E559D00D9CFE2 /* LocalTests.m */; };
+		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
+		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
+		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
+		E6FA4340109E849300385C66 /* RMCall.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA433E109E849300385C66 /* RMCall.m */; };
+		E6FA4347109E84BD00385C66 /* RMArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4345109E84BD00385C66 /* RMArguments.h */; };
+		E6FA4348109E84BD00385C66 /* RMArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4346109E84BD00385C66 /* RMArguments.m */; };
+		E6FA434F109E84CA00385C66 /* RMStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA434D109E84CA00385C66 /* RMStatus.h */; };
+		E6FA4350109E84CA00385C66 /* RMStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA434E109E84CA00385C66 /* RMStatus.m */; };
+		E6FA438A109E896800385C66 /* RMResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4388109E896800385C66 /* RMResponse.h */; };
+		E6FA438B109E896800385C66 /* RMResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4389109E896800385C66 /* RMResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,10 +106,20 @@
 		E659C312109E523500D9CFE2 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		E659C313109E523500D9CFE2 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		E659C314109E523500D9CFE2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		E659C34C109E553F00D9CFE2 /* RemotingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RemotingTests.octest; path = "build/Debug-iphonesimulator/RemotingTests.octest"; sourceTree = "<group>"; };
+		E659C34C109E553F00D9CFE2 /* RemotingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemotingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemotingTests-Info.plist"; sourceTree = "<group>"; };
 		E659C35E109E559D00D9CFE2 /* LocalTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalTests.h; sourceTree = "<group>"; };
 		E659C35F109E559D00D9CFE2 /* LocalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalTests.m; sourceTree = "<group>"; };
+		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
+		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
+		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
+		E6FA433E109E849300385C66 /* RMCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMCall.m; sourceTree = "<group>"; };
+		E6FA4345109E84BD00385C66 /* RMArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMArguments.h; sourceTree = "<group>"; };
+		E6FA4346109E84BD00385C66 /* RMArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMArguments.m; sourceTree = "<group>"; };
+		E6FA434D109E84CA00385C66 /* RMStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMStatus.h; sourceTree = "<group>"; };
+		E6FA434E109E84CA00385C66 /* RMStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMStatus.m; sourceTree = "<group>"; };
+		E6FA4388109E896800385C66 /* RMResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMResponse.h; sourceTree = "<group>"; };
+		E6FA4389109E896800385C66 /* RMResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +189,16 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E6FA4331109E806F00385C66 /* RMSession.h */,
+				E6FA4332109E806F00385C66 /* RMSession.m */,
+				E6FA433D109E849300385C66 /* RMCall.h */,
+				E6FA433E109E849300385C66 /* RMCall.m */,
+				E6FA4345109E84BD00385C66 /* RMArguments.h */,
+				E6FA4346109E84BD00385C66 /* RMArguments.m */,
+				E6FA434D109E84CA00385C66 /* RMStatus.h */,
+				E6FA434E109E84CA00385C66 /* RMStatus.m */,
+				E6FA4388109E896800385C66 /* RMResponse.h */,
+				E6FA4389109E896800385C66 /* RMResponse.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -271,6 +301,11 @@
 				E659C31C109E523500D9CFE2 /* SBJsonBase.h in Headers */,
 				E659C31E109E523500D9CFE2 /* SBJsonParser.h in Headers */,
 				E659C320109E523500D9CFE2 /* SBJsonWriter.h in Headers */,
+				E6FA4333109E806F00385C66 /* RMSession.h in Headers */,
+				E6FA433F109E849300385C66 /* RMCall.h in Headers */,
+				E6FA4347109E84BD00385C66 /* RMArguments.h in Headers */,
+				E6FA434F109E84CA00385C66 /* RMStatus.h in Headers */,
+				E6FA438A109E896800385C66 /* RMResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +413,11 @@
 				E659C31D109E523500D9CFE2 /* SBJsonBase.m in Sources */,
 				E659C31F109E523500D9CFE2 /* SBJsonParser.m in Sources */,
 				E659C321109E523500D9CFE2 /* SBJsonWriter.m in Sources */,
+				E6FA4334109E806F00385C66 /* RMSession.m in Sources */,
+				E6FA4340109E849300385C66 /* RMCall.m in Sources */,
+				E6FA4348109E84BD00385C66 /* RMArguments.m in Sources */,
+				E6FA4350109E84CA00385C66 /* RMStatus.m in Sources */,
+				E6FA438B109E896800385C66 /* RMResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
