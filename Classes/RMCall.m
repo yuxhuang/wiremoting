@@ -11,6 +11,6 @@
 
 @implementation RMCall
 
-@synthesize delegate;
+@synthesize protocol;
 
 @end

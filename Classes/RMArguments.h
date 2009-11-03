@@ -10,7 +10,7 @@
 
 
 @interface RMArguments : NSObject {
-
+  NSMutableDictionary *dictionary;
 }
 
 - (void)setValue:(NSObject*) value

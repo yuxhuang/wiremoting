@@ -8,38 +8,79 @@
 
 #import <Foundation/Foundation.h>
 
-@class RMStatus;
 @class RMArguments;
 @class RMResponse;
+@class RMError;
+@class ASIHTTPRequest;
+
+@protocol RMCallProtocol
+
+@optional
+- (BOOL) shouldSendRequest: (ASIHTTPRequest*) request
+                    method: (NSString*) method
+                 arguments: (RMArguments*) arguments;
+
+@optional
+- (void) willSendRequest: (ASIHTTPRequest*) request
+                  method: (NSString*) method
+               arguments: (RMArguments*) arguments;
+
+@optional
+- (void) sentRequest: (ASIHTTPRequest*) request
+                  method: (NSString*) method
+               arguments: (RMArguments*) arguments;
+
+@optional
+- (BOOL) shouldAdjustRequest: (ASIHTTPRequest*) request
+                           method: (NSString*) method
+                        arguments: (RMArguments*) arguments;
+
+@optional
+- (void) willAdjustRequest: (ASIHTTPRequest*) request
+                    method: (NSString*) method
+                 arguments: (RMArguments*) arguments;
+
+@required
+- (void) adjustRequest: (ASIHTTPRequest*) request
+                method: (NSString*) method
+             arguments: (RMArguments*) arguments;
+@end
 
 @protocol RMCallDelegate
 
-- (void) invoke: (NSString*) method
-      arguments: (RMArguments*) arguments;
-
-- (void) invokeAsynchronous: (NSString*) method
-                  arguments: (RMArguments*) arguments;
-
+@required
 - (void) callFinished: (RMResponse*) response;
 
-- (void) callFailed: (RMStatus*) status;
+@required
+- (void) callFailed: (RMResponse*) response
+              error: (RMError*) error;
 
 @end
 
-
 @interface RMCall : NSObject {
-  id<RMCallDelegate> delegate;
+  id<RMCallProtocol> protocol;
 }
 
-@property(readonly) id<RMCallDelegate> delegate;
+@property(retain) id<RMCallProtocol> protocol;
 
-- (id)initWithDelegate: (id<RMCallDelegate>) delegate;
+- (id)initWithProtocol: (id<RMCallProtocol>) protocol;
 
 - (void)call:(NSString*) method
    arguments:(RMArguments*) arguments
     delegate:(id<RMCallDelegate>) delegate;
 
+- (void)call:(NSString*) method
+   arguments:(RMArguments*) arguments
+    delegate:(id<RMCallDelegate>) delegate
+    protocol:(id<RMCallProtocol>) protocol;
+
 - (void)callAsynchronous:(NSString*) method
                arguments:(RMArguments*) arguments
                 delegate:(id<RMCallDelegate>) delegate;
+
+- (void)callAsynchronous:(NSString*) method
+               arguments:(RMArguments*) arguments
+                delegate:(id<RMCallDelegate>) delegate
+                protocol:(id<RMCallProtocol>) protocol;
+
 @end

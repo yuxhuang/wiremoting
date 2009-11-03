@@ -10,16 +10,22 @@
 
 @class RMCall;
 @protocol RMCallDelegate;
-@class RMStatus;
+@class RMResponse;
+@class RMError;
 @class RMArguments;
+@class ASIHTTPRequest;
 
 @protocol RMAuthenticator
 
+@required
 - (void) authenticateWithCall: (RMCall*) call;
-- (void) authenticated: (RMStatus*) status;
-- (void) failed: (RMStatus*) status;
 
-- (void) adjustCallArguments: (RMArguments*) arguments;
+@required
+- (void) authenticated: (RMResponse*) response;
+
+@required
+- (void) failed: (RMResponse*) response
+          error: (RMError*) error;
 
 @end
 
@@ -39,8 +45,8 @@
  * @param authenticator
  * @param call
  */
-- (id) initWithAuthentication: (id<RMAuthenticator>) authenticator
-                callProtocol:(RMCall*) call;
+- (id) initWithAuthenticator: (id<RMAuthenticator>) authenticator
+                        call:(RMCall*) call;
 
 - (BOOL) authenticate;
 - (void) authenticateAsynchronous;
