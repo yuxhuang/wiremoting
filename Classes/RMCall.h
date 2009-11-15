@@ -13,6 +13,9 @@
 @class RMError;
 @class ASIHTTPRequest;
 
+/**
+ * Provides call protocol interface/implementation.
+ */
 @protocol RMCallProtocol
 
 @optional
@@ -81,6 +84,9 @@
 
 @end
 
+/**
+ * Handles call results in WIRemoting framework.
+ */
 @protocol RMCallDelegate
 
 @required
@@ -95,14 +101,17 @@
 /**
  * An event fired when the call fails.
  *
- * @param A response object from the remote peer.
- * @param An error object from the remote peer.
+ * @param response A response object from the remote peer.
+ * @param error An error object from the remote peer.
  */
 - (void) callFailed: (RMResponse*) response
               error: (RMError*) error;
 
 @end
 
+/**
+ * Handles calls in WIRemoting framework.
+ */
 @interface RMCall : NSObject {
   id<RMCallProtocol> protocol;
   NSMutableArray *protocolStack;

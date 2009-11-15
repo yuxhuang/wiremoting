@@ -17,6 +17,9 @@
 @class ASIHTTPRequest;
 
 
+/**
+ * The session delegate to handle authentication events.
+ */
 @protocol RMSessionDelegate
 
 @required
@@ -41,6 +44,9 @@
 
 @end
 
+/**
+ * The authentication provider.
+ */
 @protocol RMAuthenticator
 
 @required
@@ -62,6 +68,9 @@
 
 @end
 
+/**
+ * Handles sessions in WIRemoting framework.
+ */
 @interface RMSession : NSObject {
   RMCall *call;
   id<RMAuthenticator> authenticator;
@@ -112,4 +121,9 @@
 - (void)call:(NSString*) method
    arguments:(RMArguments*) arguments
     delegate:(id<RMCallDelegate>) delegate;
+
+/**
+ * Close a session.
+ */
+- (void)close;
 @end

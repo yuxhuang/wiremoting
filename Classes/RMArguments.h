@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ * Handles call arguments in WIRemoting framework.
+ */
 @interface RMArguments : NSObject {
   NSMutableDictionary *dictionary;
 }

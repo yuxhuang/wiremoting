@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ * Handles errors in WIRmoeting framework.
+ */
 @interface RMError : NSObject {
-
+  
 }
 
 @end

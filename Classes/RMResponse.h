@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+ * Handles call responses in WIRemoting framework.
+ */
 @interface RMResponse : NSObject {
 
 }

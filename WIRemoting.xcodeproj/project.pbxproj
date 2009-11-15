@@ -54,7 +54,11 @@
 		E659C355109E555900D9CFE2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C3109E497000D9CFE2 /* CFNetwork.framework */; };
 		E659C356109E555F00D9CFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
 		E659C357109E556000D9CFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
-		E659C362109E55A100D9CFE2 /* LocalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C35F109E559D00D9CFE2 /* LocalTests.m */; };
+		E664DBCD10AF912E00B1418A /* RMSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBCA10AF90F200B1418A /* RMSessionTests.m */; };
+		E664DBD410AF915100B1418A /* RMCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBD110AF914700B1418A /* RMCallTests.m */; };
+		E664DBD710AF919800B1418A /* RMArgumentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBD610AF919800B1418A /* RMArgumentsTests.m */; };
+		E664DBDA10AF91AB00B1418A /* RMResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBD910AF91AB00B1418A /* RMResponseTests.m */; };
+		E664DBDD10AF91B800B1418A /* RMErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBDC10AF91B800B1418A /* RMErrorTests.m */; };
 		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
 		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
 		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
@@ -110,8 +114,16 @@
 		E659C314109E523500D9CFE2 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		E659C34C109E553F00D9CFE2 /* RemotingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemotingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemotingTests-Info.plist"; sourceTree = "<group>"; };
-		E659C35E109E559D00D9CFE2 /* LocalTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalTests.h; sourceTree = "<group>"; };
-		E659C35F109E559D00D9CFE2 /* LocalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalTests.m; sourceTree = "<group>"; };
+		E664DBC910AF90F200B1418A /* RMSessionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSessionTests.h; sourceTree = "<group>"; };
+		E664DBCA10AF90F200B1418A /* RMSessionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSessionTests.m; sourceTree = "<group>"; };
+		E664DBD010AF914700B1418A /* RMCallTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCallTests.h; sourceTree = "<group>"; };
+		E664DBD110AF914700B1418A /* RMCallTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMCallTests.m; sourceTree = "<group>"; };
+		E664DBD510AF919800B1418A /* RMArgumentsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMArgumentsTests.h; sourceTree = "<group>"; };
+		E664DBD610AF919800B1418A /* RMArgumentsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMArgumentsTests.m; sourceTree = "<group>"; };
+		E664DBD810AF91AB00B1418A /* RMResponseTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMResponseTests.h; sourceTree = "<group>"; };
+		E664DBD910AF91AB00B1418A /* RMResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMResponseTests.m; sourceTree = "<group>"; };
+		E664DBDB10AF91B800B1418A /* RMErrorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMErrorTests.h; sourceTree = "<group>"; };
+		E664DBDC10AF91B800B1418A /* RMErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMErrorTests.m; sourceTree = "<group>"; };
 		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
 		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
 		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
@@ -241,8 +253,7 @@
 		E659C289109E4E0200D9CFE2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E659C35E109E559D00D9CFE2 /* LocalTests.h */,
-				E659C35F109E559D00D9CFE2 /* LocalTests.m */,
+				E664DBC810AF90D400B1418A /* UnitTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -274,6 +285,23 @@
 				E659C201109E4A3700D9CFE2 /* ASIHTTPRequest */,
 			);
 			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		E664DBC810AF90D400B1418A /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E664DBC910AF90F200B1418A /* RMSessionTests.h */,
+				E664DBCA10AF90F200B1418A /* RMSessionTests.m */,
+				E664DBD010AF914700B1418A /* RMCallTests.h */,
+				E664DBD110AF914700B1418A /* RMCallTests.m */,
+				E664DBD510AF919800B1418A /* RMArgumentsTests.h */,
+				E664DBD610AF919800B1418A /* RMArgumentsTests.m */,
+				E664DBD810AF91AB00B1418A /* RMResponseTests.h */,
+				E664DBD910AF91AB00B1418A /* RMResponseTests.m */,
+				E664DBDB10AF91B800B1418A /* RMErrorTests.h */,
+				E664DBDC10AF91B800B1418A /* RMErrorTests.m */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,7 +453,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E659C362109E55A100D9CFE2 /* LocalTests.m in Sources */,
+				E664DBCD10AF912E00B1418A /* RMSessionTests.m in Sources */,
+				E664DBD410AF915100B1418A /* RMCallTests.m in Sources */,
+				E664DBD710AF919800B1418A /* RMArgumentsTests.m in Sources */,
+				E664DBDA10AF91AB00B1418A /* RMResponseTests.m in Sources */,
+				E664DBDD10AF91B800B1418A /* RMErrorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
