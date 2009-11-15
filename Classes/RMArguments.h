@@ -13,11 +13,27 @@
   NSMutableDictionary *dictionary;
 }
 
+/**
+ * Set a new argument
+ *
+ * @param value The argument value.
+ * @param key The argument key.
+ */
 - (void)setValue:(NSObject*) value
     forKey:(NSString*) key;
 
+/**
+ * Get the argument value for a key.
+ *
+ * @param key The argument key.
+ */
 - (NSObject*)valueForKey: (NSString*) key;
 
+/**
+ * Get arguments as a NSDictionary.
+ *
+ * @return An NSDictionary instance of arguments.
+ */
 - (NSDictionary*)arguments;
 
 @end

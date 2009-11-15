@@ -11,6 +11,6 @@
 
 @implementation RMSession
 
-@synthesize call;
+@synthesize call, delegate;
 
 @end

@@ -10,54 +10,106 @@
 
 @class RMCall;
 @protocol RMCallDelegate;
+@protocol RMCallProtocol;
 @class RMResponse;
 @class RMError;
 @class RMArguments;
 @class ASIHTTPRequest;
 
-@protocol RMAuthenticator
+
+@protocol RMSessionDelegate
 
 @required
-- (void) authenticateWithCall: (RMCall*) call;
-
-@required
+/**
+ * Called when the session is authenticated.
+ *
+ * @param response A response object of the call containing arbitrary forms
+ *        of results.
+ */
 - (void) authenticated: (RMResponse*) response;
 
 @required
+/**
+ * Called when the session has failed.
+ *
+ * @param response A response object of the call containing arbitrary forms
+ *        of results.
+ * @param error An error object from the call describing what the error is.
+ */
 - (void) failed: (RMResponse*) response
           error: (RMError*) error;
 
 @end
 
+@protocol RMAuthenticator
+
+@required
+/**
+ * Authenticate the session with a call object.
+ *
+ * @param call a RMCall object.
+ * @param delegate a RMSessionDelegate.
+ */
+- (void) authenticateWithCall: (RMCall*) call
+                     delegate: (id<RMSessionDelegate>) delegate;
+@required
+/**
+ * A call protocol to handle session credentials for subsequent calls.
+ *
+ * @return An object implementing RMCallProtocol.
+ */
+- (id<RMCallProtocol>) callProtocol;
+
+@end
 
 @interface RMSession : NSObject {
   RMCall *call;
   id<RMAuthenticator> authenticator;
+  id<RMSessionDelegate> delegate;
 }
 
+/**
+ * The call object to handle session calls.
+ */
 @property (retain) RMCall *call;
+/**
+ * The session delegate to handle authentication events.
+ */
+@property (retain) id<RMSessionDelegate> delegate;
 
 /**
- * Initiate a session with an authentication delegate
+ * Initiate a session with an authentication delegate.
  *
- * Initiate a session asynchronously with an authentication delegate.
+ * @param authenticator An authentication service provider.
+ * @param call A call object to handle session calls.
+ * @param delegate A session delegate to handle authentication events.
  *
- * @param authenticator
- * @param call
+ * @return An initiated RMSession object.
  */
 - (id) initWithAuthenticator: (id<RMAuthenticator>) authenticator
-                        call:(RMCall*) call;
+                        call:(RMCall*) call
+                    delegate: (id<RMSessionDelegate>) delegate;
 
-- (BOOL) authenticate;
-- (void) authenticateAsynchronous;
+/**
+ * Authenticate the session.
+ */
+- (void) authenticate;
+
+/**
+ * Return the state whether the session is authenticated.
+ *
+ * @return whether the session is authenticated.
+ */
 - (BOOL) isAuthenticated;
 
+/**
+ * Call a method.
+ *
+ * @param method The method name.
+ * @param arguments Method arguments.
+ * @param delegate The call delegate to handle call results.
+ */
 - (void)call:(NSString*) method
    arguments:(RMArguments*) arguments
     delegate:(id<RMCallDelegate>) delegate;
-
-- (void)callAsynchronous:(NSString*) method
-               arguments:(RMArguments*) arguments
-                delegate:(id<RMCallDelegate>) delegate;
-
 @end
