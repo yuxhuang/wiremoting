@@ -80,14 +80,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* WIRemoting */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = WIRemoting;
 		};
 		E667E36E10C71C7E00EC0CA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* WIRemoting */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = WIRemoting;
 		};
 /* End PBXContainerItemProxy section */
