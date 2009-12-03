@@ -13,7 +13,6 @@
 @protocol RMCallProtocol;
 @class RMResponse;
 @class RMError;
-@class RMArguments;
 @class ASIHTTPRequest;
 
 
@@ -119,7 +118,7 @@
  * @param delegate The call delegate to handle call results.
  */
 - (void)call:(NSString*) method
-   arguments:(RMArguments*) arguments
+   arguments:(NSDictionary*) arguments
     delegate:(id<RMCallDelegate>) delegate;
 
 /**

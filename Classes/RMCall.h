@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class RMArguments;
 @class RMResponse;
-@class RMError;
-@class ASIHTTPRequest;
+@class ASIFormDataRequest;
 
 /**
  * Provides call protocol interface/implementation.
@@ -28,9 +26,9 @@
  *
  * @return Whether this request should be sent.
  */
-- (BOOL) requestShouldSend: (ASIHTTPRequest*) request
+- (BOOL) requestShouldSend: (ASIFormDataRequest*) request
                     method: (NSString*) method
-                 arguments: (RMArguments*) arguments;
+                 arguments: (NSDictionary*) arguments;
 
 @optional
 /**
@@ -40,9 +38,9 @@
  * @param method The method name.
  * @param arguments The arguments for the call.
  */
-- (void) requestWillSend: (ASIHTTPRequest*) request
+- (void) requestWillSend: (ASIFormDataRequest*) request
                   method: (NSString*) method
-               arguments: (RMArguments*) arguments;
+               arguments: (NSDictionary*) arguments;
 
 @optional
 /**
@@ -52,23 +50,9 @@
  * @param method The method name.
  * @param arguments The arguments for the call.
  */
-- (void) requestSent: (ASIHTTPRequest*) request
+- (void) requestDidSend: (ASIFormDataRequest*) request
                   method: (NSString*) method
-               arguments: (RMArguments*) arguments;
-
-@optional
-/**
- * Should the request be adjusted?
- *
- * @param request The request object.
- * @param method The method name.
- * @param arguments The arguments for the call.
- *
- * @return Whether this request should be adjusted.
- */
-- (void) requestWillAdjust: (ASIHTTPRequest*) request
-                    method: (NSString*) method
-                 arguments: (RMArguments*) arguments;
+               arguments: (NSDictionary*) arguments;
 
 @required
 /**
@@ -78,9 +62,17 @@
  * @param method The method name.
  * @param arguments The arguments for the call.
  */
-- (void) adjustRequest: (ASIHTTPRequest*) request
+- (void) adjustRequest: (ASIFormDataRequest*) request
                 method: (NSString*) method
-             arguments: (RMArguments*) arguments;
+             arguments: (NSDictionary*) arguments;
+
+@optional
+/**
+ * Whether the call protocol is asynchronous
+ *
+ * @return the call protocol is asynchronous or not, defaults to YES
+ */
+- (BOOL) isAsynchronous;
 
 @end
 
@@ -105,7 +97,7 @@
  * @param error An error object from the remote peer.
  */
 - (void) callFailed: (RMResponse*) response
-              error: (RMError*) error;
+              error: (NSError*) error;
 
 @end
 
@@ -115,12 +107,14 @@
 @interface RMCall : NSObject {
   id<RMCallProtocol> protocol;
   NSMutableArray *protocolStack;
+  NSMutableArray *responseQueue;
+  NSAutoreleasePool *autoReleasePool;
 }
 
 /**
  * A call protocol to adjust HTTP requests.
  */
-@property(retain) id<RMCallProtocol> protocol;
+@property(readonly) id<RMCallProtocol> protocol;
 
 /**
  * Initiatize the call with a call protocol.
@@ -135,9 +129,11 @@
  * @param method The method name.
  * @param arguments The method arguments.
  * @param delegate The call delegate to handle results.
+ *
+ * @return whether the call is sent.
  */
-- (void)call:(NSString*) method
-   arguments:(RMArguments*) arguments
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
     delegate:(id<RMCallDelegate>) delegate;
 
 /**
@@ -150,9 +146,11 @@
  * @param arguments The method arguments.
  * @param delegate The call delegate to handle results.
  * @param protocl The call protocol to execute on top of other protocols.
+ *
+ * @return whether the call is sent.
  */
-- (void)call:(NSString*) method
-   arguments:(RMArguments*) arguments
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
     delegate:(id<RMCallDelegate>) delegate
     protocol:(id<RMCallProtocol>) protocol;
 

@@ -16,15 +16,11 @@
 #import <UIKit/UIKit.h>
 //#import "application_headers" as required
 
+@class RMCall;
 
 @interface RMCallTests : SenTestCase {
-
+  id protocol;
+  RMCall *call;
 }
-
-#if USE_APPLICATION_UNIT_TEST
-- (void) testAppDelegate;       // simple test on application
-#else
-- (void) testMath;              // simple standalone test
-#endif
 
 @end
