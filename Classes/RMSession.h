@@ -9,44 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class RMCall;
-@protocol RMCallDelegate;
+@protocol RMResultDelegate;
 @protocol RMCallProtocol;
 @class RMResponse;
-@class RMError;
 @class ASIHTTPRequest;
 
 
 /**
- * The session delegate to handle authentication events.
- */
-@protocol RMSessionDelegate
-
-@required
-/**
- * Called when the session is authenticated.
- *
- * @param response A response object of the call containing arbitrary forms
- *        of results.
- */
-- (void) authenticated: (RMResponse*) response;
-
-@required
-/**
- * Called when the session has failed.
- *
- * @param response A response object of the call containing arbitrary forms
- *        of results.
- * @param error An error object from the call describing what the error is.
- */
-- (void) failed: (RMResponse*) response
-          error: (RMError*) error;
-
-@end
-
-/**
  * The authentication provider.
  */
-@protocol RMAuthenticator
+@protocol RMAuthenticator <NSObject>
 
 @required
 /**
@@ -56,7 +28,7 @@
  * @param delegate a RMSessionDelegate.
  */
 - (void) authenticateWithCall: (RMCall*) call
-                     delegate: (id<RMSessionDelegate>) delegate;
+                     delegate: (id<RMResultDelegate>) delegate;
 @required
 /**
  * A call protocol to handle session credentials for subsequent calls.
@@ -65,25 +37,44 @@
  */
 - (id<RMCallProtocol>) callProtocol;
 
+@optional
+/**
+ * Check the responseString if the response is authenticated
+ *
+ * @param responseString
+ * @return true if the session is authenticated
+ */
+- (BOOL) authenticateResponseString:(NSString*) responseString;
+
+@optional
+/**
+ * Check the responseData if the response is authenticated
+ *
+ * @param responseData
+ * @return true if the session is authenticated
+ */
+- (BOOL) authenticateResponseData:(NSData*) responseData;
+
 @end
 
 /**
  * Handles sessions in WIRemoting framework.
  */
-@interface RMSession : NSObject {
+@interface RMSession : NSObject<RMResultDelegate> {
   RMCall *call;
   id<RMAuthenticator> authenticator;
-  id<RMSessionDelegate> delegate;
+  id<RMResultDelegate> delegate;
+  BOOL authenticated;
 }
 
 /**
  * The call object to handle session calls.
  */
-@property (retain) RMCall *call;
+@property (readonly) RMCall *call;
 /**
  * The session delegate to handle authentication events.
  */
-@property (retain) id<RMSessionDelegate> delegate;
+@property (retain) id<RMResultDelegate> delegate;
 
 /**
  * Initiate a session with an authentication delegate.
@@ -96,7 +87,7 @@
  */
 - (id) initWithAuthenticator: (id<RMAuthenticator>) authenticator
                         call:(RMCall*) call
-                    delegate: (id<RMSessionDelegate>) delegate;
+                    delegate: (id<RMResultDelegate>) delegate;
 
 /**
  * Authenticate the session.
@@ -108,7 +99,7 @@
  *
  * @return whether the session is authenticated.
  */
-- (BOOL) isAuthenticated;
+@property(readonly) BOOL authenticated;
 
 /**
  * Call a method.
@@ -117,9 +108,9 @@
  * @param arguments Method arguments.
  * @param delegate The call delegate to handle call results.
  */
-- (void)call:(NSString*) method
+- (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMCallDelegate>) delegate;
+    delegate:(id<RMResultDelegate>) delegate;
 
 /**
  * Close a session.

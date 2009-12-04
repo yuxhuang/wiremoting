@@ -1,0 +1,85 @@
+\hypertarget{protocol_r_m_authenticator-p}{
+\section{$<$RMAuthenticator$>$ Protocol Reference}
+\label{protocol_r_m_authenticator-p}\index{RMAuthenticator-\/p@{RMAuthenticator-\/p}}
+}
+
+
+The authentication provider.  
+
+
+{\ttfamily \#import $<$RMSession.h$>$}Inheritance diagram for $<$RMAuthenticator$>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{protocol_r_m_authenticator-p}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{protocol_r_m_authenticator-p_a89800622f7067e082cbb6665f51d44c8}{authenticateWithCall:delegate:}
+\begin{DoxyCompactList}\small\item\em Authenticate the session with a call object. \item\end{DoxyCompactList}\item 
+(id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$) -\/ \hyperlink{protocol_r_m_authenticator-p_a1a8ee1ab6eb4014dd3783e096173f000}{callProtocol}
+\begin{DoxyCompactList}\small\item\em A call protocol to handle session credentials for subsequent calls. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{protocol_r_m_authenticator-p_adf5dc80e89981e86b61d1720ad441c79}{authenticateResponseString:}
+\begin{DoxyCompactList}\small\item\em Check the responseString if the response is authenticated. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{protocol_r_m_authenticator-p_aa82480a76b720c6497425661de692eea}{authenticateResponseData:}
+\begin{DoxyCompactList}\small\item\em Check the responseData if the response is authenticated. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The authentication provider. 
+
+Definition at line 21 of file RMSession.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{protocol_r_m_authenticator-p_a89800622f7067e082cbb6665f51d44c8}{
+\index{RMAuthenticator-\/p@{RMAuthenticator-\/p}!authenticateWithCall:delegate:@{authenticateWithCall:delegate:}}
+\index{authenticateWithCall:delegate:@{authenticateWithCall:delegate:}!RMAuthenticator-p@{RMAuthenticator-\/p}}
+\subsubsection[{authenticateWithCall:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) authenticateWithCall: ({\bf RMCall} $\ast$) {\em call}\/ delegate: (id$<$ {\bf RMResultDelegate} $>$) {\em delegate}\hspace{0.3cm}{\ttfamily  \mbox{[}required\mbox{]}}}}
+\label{protocol_r_m_authenticator-p_a89800622f7067e082cbb6665f51d44c8}
+
+
+Authenticate the session with a call object. 
+\begin{DoxyParams}{Parameters}
+\item[{\em call}]a \hyperlink{interface_r_m_call}{RMCall} object. \item[{\em delegate}]a RMSessionDelegate. \end{DoxyParams}
+\hypertarget{protocol_r_m_authenticator-p_a1a8ee1ab6eb4014dd3783e096173f000}{
+\index{RMAuthenticator-\/p@{RMAuthenticator-\/p}!callProtocol@{callProtocol}}
+\index{callProtocol@{callProtocol}!RMAuthenticator-p@{RMAuthenticator-\/p}}
+\subsubsection[{callProtocol}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<${\bf RMCallProtocol}$>$) callProtocol \hspace{0.3cm}{\ttfamily  \mbox{[}required\mbox{]}}}}
+\label{protocol_r_m_authenticator-p_a1a8ee1ab6eb4014dd3783e096173f000}
+
+
+A call protocol to handle session credentials for subsequent calls. \begin{DoxyReturn}{Returns}
+An object implementing \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol}. 
+\end{DoxyReturn}
+\hypertarget{protocol_r_m_authenticator-p_adf5dc80e89981e86b61d1720ad441c79}{
+\index{RMAuthenticator-\/p@{RMAuthenticator-\/p}!authenticateResponseString:@{authenticateResponseString:}}
+\index{authenticateResponseString:@{authenticateResponseString:}!RMAuthenticator-p@{RMAuthenticator-\/p}}
+\subsubsection[{authenticateResponseString:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) authenticateResponseString: ({\bf NSString} $\ast$) {\em responseString}\hspace{0.3cm}{\ttfamily  \mbox{[}optional\mbox{]}}}}
+\label{protocol_r_m_authenticator-p_adf5dc80e89981e86b61d1720ad441c79}
+
+
+Check the responseString if the response is authenticated. 
+\begin{DoxyParams}{Parameters}
+\item[{\em responseString}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the session is authenticated 
+\end{DoxyReturn}
+\hypertarget{protocol_r_m_authenticator-p_aa82480a76b720c6497425661de692eea}{
+\index{RMAuthenticator-\/p@{RMAuthenticator-\/p}!authenticateResponseData:@{authenticateResponseData:}}
+\index{authenticateResponseData:@{authenticateResponseData:}!RMAuthenticator-p@{RMAuthenticator-\/p}}
+\subsubsection[{authenticateResponseData:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) authenticateResponseData: (NSData $\ast$) {\em responseData}\hspace{0.3cm}{\ttfamily  \mbox{[}optional\mbox{]}}}}
+\label{protocol_r_m_authenticator-p_aa82480a76b720c6497425661de692eea}
+
+
+Check the responseData if the response is authenticated. 
+\begin{DoxyParams}{Parameters}
+\item[{\em responseData}]\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the session is authenticated 
+\end{DoxyReturn}
+
+
+The documentation for this protocol was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/Classes/RMSession.h\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{interface_s_b_j_s_o_n}{
+\section{SBJSON Class Reference}
+\label{interface_s_b_j_s_o_n}\index{SBJSON@{SBJSON}}
+}
+
+
+Facade for SBJsonWriter/SBJsonParser.  
+
+
+{\ttfamily \#import $<$SBJSON.h$>$}Inheritance diagram for SBJSON::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{interface_s_b_j_s_o_n}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_s_b_j_s_o_n_aa88f7cb9ddc4ab7fd6e9fc0853e6da6a}{fragmentWithString:error:}
+\begin{DoxyCompactList}\small\item\em Return the fragment represented by the given string. \item\end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_s_b_j_s_o_n_a2b0ae389a765270663c1e1110bcef613}{objectWithString:error:}
+\begin{DoxyCompactList}\small\item\em Return the object represented by the given string. \item\end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_s_b_j_s_o_n_a942831fa293980ad189b72860055d32a}{objectWithString:allowScalar:error:}
+\begin{DoxyCompactList}\small\item\em Parse the string and return the represented object (or scalar). \item\end{DoxyCompactList}\item 
+(\hyperlink{class_n_s_string}{NSString} $\ast$) -\/ \hyperlink{interface_s_b_j_s_o_n_a830175bff0fbef8ccb82da852a154b48}{stringWithObject:error:}
+\begin{DoxyCompactList}\small\item\em Return JSON representation of an array or dictionary. \item\end{DoxyCompactList}\item 
+(\hyperlink{class_n_s_string}{NSString} $\ast$) -\/ \hyperlink{interface_s_b_j_s_o_n_a9289d1d536954874498df4143c55ee80}{stringWithFragment:error:}
+\begin{DoxyCompactList}\small\item\em Return JSON representation of any legal JSON value. \item\end{DoxyCompactList}\item 
+(\hyperlink{class_n_s_string}{NSString} $\ast$) -\/ \hyperlink{interface_s_b_j_s_o_n_adfe4a880ee09edf0c9d14508d79311d8}{stringWithObject:allowScalar:error:}
+\begin{DoxyCompactList}\small\item\em Return JSON representation (or fragment) for the given object. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Facade for SBJsonWriter/SBJsonParser. Requests are forwarded to instances of \hyperlink{interface_s_b_json_writer}{SBJsonWriter} and \hyperlink{interface_s_b_json_parser}{SBJsonParser}. 
+
+Definition at line 39 of file SBJSON.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_s_b_j_s_o_n_aa88f7cb9ddc4ab7fd6e9fc0853e6da6a}{
+\index{SBJSON@{SBJSON}!fragmentWithString:error:@{fragmentWithString:error:}}
+\index{fragmentWithString:error:@{fragmentWithString:error:}!SBJSON@{SBJSON}}
+\subsubsection[{fragmentWithString:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) fragmentWithString: ({\bf NSString}$\ast$) {\em repr}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_aa88f7cb9ddc4ab7fd6e9fc0853e6da6a}
+
+
+Return the fragment represented by the given string. Returns the object represented by the passed-\/in string or nil on error.
+
+The returned object can be a string, number, boolean, null, array or dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em repr}]the json string to parse \item[{\em error}]used to return an error by reference (pass NULL if this is not desired)\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000006}{Deprecated}]Given we bill ourselves as a \char`\"{}strict\char`\"{} JSON library, this method should be removed. \end{Desc}
+
+
+Definition at line 162 of file SBJSON.m.\hypertarget{interface_s_b_j_s_o_n_a2b0ae389a765270663c1e1110bcef613}{
+\index{SBJSON@{SBJSON}!objectWithString:error:@{objectWithString:error:}}
+\index{objectWithString:error:@{objectWithString:error:}!SBJSON@{SBJSON}}
+\subsubsection[{objectWithString:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) objectWithString: ({\bf NSString}$\ast$) {\em repr}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_a2b0ae389a765270663c1e1110bcef613}
+
+
+Return the object represented by the given string. Returns the object represented by the passed-\/in string or nil on error.
+
+The returned object will be either a dictionary or an array.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em repr}]the json string to parse \item[{\em error}]used to return an error by reference (pass NULL if this is not desired) \end{DoxyParams}
+
+
+Definition at line 175 of file SBJSON.m.\hypertarget{interface_s_b_j_s_o_n_a942831fa293980ad189b72860055d32a}{
+\index{SBJSON@{SBJSON}!objectWithString:allowScalar:error:@{objectWithString:allowScalar:error:}}
+\index{objectWithString:allowScalar:error:@{objectWithString:allowScalar:error:}!SBJSON@{SBJSON}}
+\subsubsection[{objectWithString:allowScalar:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) objectWithString: (id) {\em value}\/ allowScalar: (BOOL) {\em allowScalar}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_a942831fa293980ad189b72860055d32a}
+
+
+Parse the string and return the represented object (or scalar). Returns the object represented by the passed-\/in string or nil on error.
+
+The returned object can be a string, number, boolean, null, array or dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]the json string to parse \item[{\em allowScalar}]whether to return objects for JSON fragments \item[{\em error}]used to return an error by reference (pass NULL if this is not desired)\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000005}{Deprecated}]Given we bill ourselves as a \char`\"{}strict\char`\"{} JSON library, this method should be removed. \end{Desc}
+
+
+Definition at line 139 of file SBJSON.m.\hypertarget{interface_s_b_j_s_o_n_a830175bff0fbef8ccb82da852a154b48}{
+\index{SBJSON@{SBJSON}!stringWithObject:error:@{stringWithObject:error:}}
+\index{stringWithObject:error:@{stringWithObject:error:}!SBJSON@{SBJSON}}
+\subsubsection[{stringWithObject:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf NSString} $\ast$) stringWithObject: (id) {\em value}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_a830175bff0fbef8ccb82da852a154b48}
+
+
+Return JSON representation of an array or dictionary. Returns a string containing JSON representation of the passed in value, or nil on error.
+
+If nil is returned and {\ttfamily error} is not NULL, {\ttfamily error} can be interrogated to find the cause of the error.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]a NSDictionary or NSArray instance \item[{\em error}]used to return an error by reference (pass NULL if this is not desired) \end{DoxyParams}
+
+
+Definition at line 110 of file SBJSON.m.\hypertarget{interface_s_b_j_s_o_n_a9289d1d536954874498df4143c55ee80}{
+\index{SBJSON@{SBJSON}!stringWithFragment:error:@{stringWithFragment:error:}}
+\index{stringWithFragment:error:@{stringWithFragment:error:}!SBJSON@{SBJSON}}
+\subsubsection[{stringWithFragment:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf NSString} $\ast$) stringWithFragment: (id) {\em value}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_a9289d1d536954874498df4143c55ee80}
+
+
+Return JSON representation of any legal JSON value. Returns a string containing JSON representation of the passed in value, or nil on error.
+
+If nil is returned and {\ttfamily error} is not NULL, {\ttfamily error} can be interrogated to find the cause of the error.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]any instance that can be represented as a JSON fragment \item[{\em error}]used to return an error by reference (pass NULL if this is not desired)\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000004}{Deprecated}]Given we bill ourselves as a \char`\"{}strict\char`\"{} JSON library, this method should be removed. \end{Desc}
+
+
+Definition at line 97 of file SBJSON.m.\hypertarget{interface_s_b_j_s_o_n_adfe4a880ee09edf0c9d14508d79311d8}{
+\index{SBJSON@{SBJSON}!stringWithObject:allowScalar:error:@{stringWithObject:allowScalar:error:}}
+\index{stringWithObject:allowScalar:error:@{stringWithObject:allowScalar:error:}!SBJSON@{SBJSON}}
+\subsubsection[{stringWithObject:allowScalar:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf NSString} $\ast$) stringWithObject: (id) {\em value}\/ allowScalar: (BOOL) {\em allowScalar}\/ error: (NSError$\ast$$\ast$) {\em error}}}
+\label{interface_s_b_j_s_o_n_adfe4a880ee09edf0c9d14508d79311d8}
+
+
+Return JSON representation (or fragment) for the given object. Returns a string containing JSON representation of the passed in value, or nil on error.
+
+If nil is returned and {\ttfamily error} is not NULL, {\ttfamily $\ast$error} can be interrogated to find the cause of the error.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em value}]any instance that can be represented as a JSON fragment \item[{\em allowScalar}]wether to return json fragments for scalar objects \item[{\em error}]used to return an error by reference (pass NULL if this is not desired)\end{DoxyParams}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000003}{Deprecated}]Given we bill ourselves as a \char`\"{}strict\char`\"{} JSON library, this method should be removed. \end{Desc}
+
+
+Definition at line 74 of file SBJSON.m.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/JSON/SBJSON.h\item 
+/Users/yxh/Code/XCode/WIRemoting/JSON/SBJSON.m\end{DoxyCompactItemize}

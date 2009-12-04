@@ -1,0 +1,82 @@
+\hypertarget{interface_mock}{
+\section{Mock Class Reference}
+\label{interface_mock}\index{Mock@{Mock}}
+}
+Inheritance diagram for Mock::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{interface_mock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_mock_a24935b458f7a6a2aa01b28e9c5f81b63}{
+(id) -\/ {\bfseries initWithObject:finished:failed:}}
+\label{interface_mock_a24935b458f7a6a2aa01b28e9c5f81b63}
+
+\item 
+(void) -\/ \hyperlink{interface_mock_ab15e59579bf7b5c5de900d28374062b7}{finished:}
+\begin{DoxyCompactList}\small\item\em An event fired when the call successfully finishes. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_mock_ae57e780c8ddcf5c4c79af12c54d58cff}{failed:error:}
+\begin{DoxyCompactList}\small\item\em An event fired when the call fails. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_mock_acd44dbbfc0cf1442f66471cdab70f642}{
+id {\bfseries object}}
+\label{interface_mock_acd44dbbfc0cf1442f66471cdab70f642}
+
+\item 
+\hypertarget{interface_mock_a28044b61b39281421caafdb81ef258cf}{
+SEL {\bfseries finished}}
+\label{interface_mock_a28044b61b39281421caafdb81ef258cf}
+
+\item 
+\hypertarget{interface_mock_a25af3f8adbc951c4ea3b6b4a1e5687d3}{
+SEL {\bfseries failed}}
+\label{interface_mock_a25af3f8adbc951c4ea3b6b4a1e5687d3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file Mock.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_mock_ab15e59579bf7b5c5de900d28374062b7}{
+\index{Mock@{Mock}!finished:@{finished:}}
+\index{finished:@{finished:}!Mock@{Mock}}
+\subsubsection[{finished:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) finished: ({\bf RMResponse} $\ast$) {\em response}}}
+\label{interface_mock_ab15e59579bf7b5c5de900d28374062b7}
+
+
+An event fired when the call successfully finishes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em response}]A response object from the remote call. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{protocol_r_m_result_delegate-p_a965fe7cc4e150bb6ecf7cbb02b9c7248}{$<$RMResultDelegate$>$}.
+
+Definition at line 27 of file Mock.m.\hypertarget{interface_mock_ae57e780c8ddcf5c4c79af12c54d58cff}{
+\index{Mock@{Mock}!failed:error:@{failed:error:}}
+\index{failed:error:@{failed:error:}!Mock@{Mock}}
+\subsubsection[{failed:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) failed: ({\bf RMResponse} $\ast$) {\em response}\/ error: (NSError $\ast$) {\em error}}}
+\label{interface_mock_ae57e780c8ddcf5c4c79af12c54d58cff}
+
+
+An event fired when the call fails. 
+\begin{DoxyParams}{Parameters}
+\item[{\em response}]A response object from the remote peer. \item[{\em error}]An error object from the remote peer. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{protocol_r_m_result_delegate-p_a3521cd9555449b32aabdb759d2dadce5}{$<$RMResultDelegate$>$}.
+
+Definition at line 33 of file Mock.m.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/Tests/UnitTests/Mock.h\item 
+/Users/yxh/Code/XCode/WIRemoting/Tests/UnitTests/Mock.m\end{DoxyCompactItemize}

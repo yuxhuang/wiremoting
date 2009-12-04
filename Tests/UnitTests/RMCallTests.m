@@ -7,11 +7,11 @@
 //
 
 #import "RMCallTests.h"
-#import "RMCall.h"
-#import "MockupProtocol.h"
+#import "MockProtocol.h"
 #import "MockProtocol2.h"
+#import "MockProtocolShouldSend.h"
 #import "Mock.h"
-#import "JSON.h"
+#import "WIRemoting.h"
 
 @implementation RMCallTests
 
@@ -19,7 +19,7 @@
 
 - (void) setUp
 {
-  protocol = [[MockupProtocol alloc] init];
+  protocol = [[MockProtocol alloc] init];
   call = [[RMCall alloc] initWithProtocol:protocol];
 }
 
@@ -34,7 +34,7 @@
 - (void) testSingleProtocol {
   Mock *m = [[Mock alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
-                                  failed:@selector(callFailed:error:)];
+                                  failed:@selector(failed:error:)];
   [call call:@"echo" arguments:
    [NSDictionary
     dictionaryWithObjectsAndKeys:
@@ -48,7 +48,7 @@
 {
   Mock *m = [[Mock alloc] initWithObject:self
                                 finished:@selector(callMultipleJsonEchoFinished:)
-                                  failed:@selector(callFailed:error:)];
+                                  failed:@selector(failed:error:)];
   MockProtocol2 *proto2 = [[MockProtocol2 alloc] init];
   
   [call pushProtocol:proto2];
@@ -74,7 +74,7 @@
   
   m = [[Mock alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
-                                  failed:@selector(callFailed:error:)];
+                                  failed:@selector(failed:error:)];
   [call call:@"echo" arguments:
    [NSDictionary
     dictionaryWithObjectsAndKeys:
@@ -88,7 +88,7 @@
 {
   Mock *m = [[Mock alloc] initWithObject:self
                                 finished:@selector(callMultipleJsonEchoFinished:)
-                                  failed:@selector(callFailed:error:)];
+                                  failed:@selector(failed:error:)];
   MockProtocol2 *proto2 = [[MockProtocol2 alloc] init];
   
   // protocol 2 will change _method to json_echo2
@@ -104,6 +104,30 @@
   [proto2 release];
   [m release];
 }
+
+- (void) testRequestShouldSend
+{
+  Mock *m = [[Mock alloc] initWithObject:self
+                                finished:@selector(callEchoFinished:)
+                                  failed:@selector(failed:error:)];
+  
+  MockProtocolShouldSend *p2 = [[MockProtocolShouldSend alloc] init];
+  
+  [call pushProtocol:p2];
+  
+  BOOL r = [call call:@"echo"
+            arguments:[NSDictionary
+                       dictionaryWithObjectsAndKeys:
+                       @"hello world", @"echo",
+                       nil]
+             delegate:m];
+  if (r) {
+    STFail(@"The call shouldn't be sent.");
+  }
+  
+  [call popProtocol];
+  [p2 release];
+  [m release];}
 
 #pragma mark assistant methods
 
@@ -131,7 +155,7 @@
                 [response responseString]);
 }
 
-- (void) callFailed:(RMResponse *) response
+- (void) failed:(RMResponse *) response
               error:(NSError *) error
 {
   NSLog(@"%@\n", [error localizedFailureReason]);

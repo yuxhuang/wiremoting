@@ -1,0 +1,143 @@
+\hypertarget{interface_a_s_i_s3_request}{
+\section{ASIS3Request Class Reference}
+\label{interface_a_s_i_s3_request}\index{ASIS3Request@{ASIS3Request}}
+}
+Inheritance diagram for ASIS3Request::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{interface_a_s_i_s3_request}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_a_s_i_s3_request_a3eb32c464e0663e896f97338e45fcbcc}{
+(void) -\/ {\bfseries setDate:}}
+\label{interface_a_s_i_s3_request_a3eb32c464e0663e896f97338e45fcbcc}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_aa38da86baaa8d65546692c3ab8b62f59}{
+(void) -\/ {\bfseries parseError}}
+\label{interface_a_s_i_s3_request_aa38da86baaa8d65546692c3ab8b62f59}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_a_s_i_s3_request_a30c01a846dc868730c44959e47bbaa1a}{
+(id) + {\bfseries requestWithBucket:path:}}
+\label{interface_a_s_i_s3_request_a30c01a846dc868730c44959e47bbaa1a}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a6f856cb85815735ebcd370cb5339b7a8}{
+(id) + {\bfseries PUTRequestForFile:withBucket:path:}}
+\label{interface_a_s_i_s3_request_a6f856cb85815735ebcd370cb5339b7a8}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a5babc08c08f7b4c51db7769ee0c8c62f}{
+(id) + {\bfseries DELETERequestWithBucket:path:}}
+\label{interface_a_s_i_s3_request_a5babc08c08f7b4c51db7769ee0c8c62f}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a9cca451381cee7e928573cf315aea177}{
+(id) + {\bfseries COPYRequestFromBucket:path:toBucket:path:}}
+\label{interface_a_s_i_s3_request_a9cca451381cee7e928573cf315aea177}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_aabe3cf9cf22566005699b979b8eaffdf}{
+(id) + {\bfseries HEADRequestWithBucket:path:}}
+\label{interface_a_s_i_s3_request_aabe3cf9cf22566005699b979b8eaffdf}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_aadbf1f29ab30efc3f4640bac7b508d32}{
+(\hyperlink{class_n_s_string}{NSString} $\ast$) + {\bfseries sharedAccessKey}}
+\label{interface_a_s_i_s3_request_aadbf1f29ab30efc3f4640bac7b508d32}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_ad944a2a1b20fc9e4559c8faf4f41b977}{
+(void) + {\bfseries setSharedAccessKey:}}
+\label{interface_a_s_i_s3_request_ad944a2a1b20fc9e4559c8faf4f41b977}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_af1a72a1aacc05ce3f5def339d3bfbd5f}{
+(\hyperlink{class_n_s_string}{NSString} $\ast$) + {\bfseries sharedSecretAccessKey}}
+\label{interface_a_s_i_s3_request_af1a72a1aacc05ce3f5def339d3bfbd5f}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_aca8ba2305c0cbee1d7ec8553831768ff}{
+(void) + {\bfseries setSharedSecretAccessKey:}}
+\label{interface_a_s_i_s3_request_aca8ba2305c0cbee1d7ec8553831768ff}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a894f809afa5c5ec55231089f2d2af54f}{
+(NSData $\ast$) + {\bfseries HMACSHA1withKey:forString:}}
+\label{interface_a_s_i_s3_request_a894f809afa5c5ec55231089f2d2af54f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_a_s_i_s3_request_ae5a445cc590bdb2138a54c4b4b6544ea}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries currentErrorString}}
+\label{interface_a_s_i_s3_request_ae5a445cc590bdb2138a54c4b4b6544ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_a_s_i_s3_request_aef3ba2e285232e314b77c3e02cd64c0f}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries bucket}}
+\label{interface_a_s_i_s3_request_aef3ba2e285232e314b77c3e02cd64c0f}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_ac7ee05e8dc699cc6149ad9e049823150}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries path}}
+\label{interface_a_s_i_s3_request_ac7ee05e8dc699cc6149ad9e049823150}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a2d2ae1919cf3ab5f06886ca2e112f9f4}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries dateString}}
+\label{interface_a_s_i_s3_request_a2d2ae1919cf3ab5f06886ca2e112f9f4}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a1d8154f777b756286ce21643e48de369}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries mimeType}}
+\label{interface_a_s_i_s3_request_a1d8154f777b756286ce21643e48de369}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a74852ee7d378a16b5b1f324864ce8a07}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries accessKey}}
+\label{interface_a_s_i_s3_request_a74852ee7d378a16b5b1f324864ce8a07}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a71538b6b917584e6d8e4e3dd638aa295}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries secretAccessKey}}
+\label{interface_a_s_i_s3_request_a71538b6b917584e6d8e4e3dd638aa295}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_aae8aa542f29abfd7f87be3c3cafebdeb}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries accessPolicy}}
+\label{interface_a_s_i_s3_request_aae8aa542f29abfd7f87be3c3cafebdeb}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_a7821720ceee1bed8beda18aa61cc182c}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries sourceBucket}}
+\label{interface_a_s_i_s3_request_a7821720ceee1bed8beda18aa61cc182c}
+
+\item 
+\hypertarget{interface_a_s_i_s3_request_ae6c2fa8893eb31961a1584bb71ac9d85}{
+\hyperlink{class_n_s_string}{NSString} $\ast$ {\bfseries sourcePath}}
+\label{interface_a_s_i_s3_request_ae6c2fa8893eb31961a1584bb71ac9d85}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 28 of file ASIS3Request.h.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/ASIHTTPRequest/ASIS3Request.h\item 
+/Users/yxh/Code/XCode/WIRemoting/ASIHTTPRequest/ASIS3Request.m\end{DoxyCompactItemize}

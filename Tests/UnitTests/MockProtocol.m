@@ -6,11 +6,11 @@
 //  Copyright 2009 Webinit Consulting. All rights reserved.
 //
 
-#import "MockupProtocol.h"
+#import "MockProtocol.h"
 #import "ASIFormDataRequest.h"
+#import "RMCall.h"
 
-
-@implementation MockupProtocol
+@implementation MockProtocol
 
 - (void) adjustRequest:(ASIFormDataRequest *)request
                 method:(NSString *)method
@@ -31,6 +31,5 @@
 {
   return NO;
 }
-
 
 @end

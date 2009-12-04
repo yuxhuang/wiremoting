@@ -8,8 +8,8 @@
  */
 
 #import "WIRemoting.h"
-#import "MockupProtocol.h"
+#import "MockProtocol.h"
 
 int main() {
-  MockupProtocol* protocol = [[MockupProtocol alloc] init];
+  MockProtocol* protocol = [[MockProtocol alloc] init];
 }

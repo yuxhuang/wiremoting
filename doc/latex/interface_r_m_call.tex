@@ -1,0 +1,160 @@
+\hypertarget{interface_r_m_call}{
+\section{RMCall Class Reference}
+\label{interface_r_m_call}\index{RMCall@{RMCall}}
+}
+
+
+Handles calls in WIRemoting framework.  
+
+
+{\ttfamily \#import $<$RMCall.h$>$}Inheritance diagram for RMCall::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{interface_r_m_call}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_r_m_call_a64f1e76758d2d473859064c5b0c6c75d}{initWithProtocol:}
+\begin{DoxyCompactList}\small\item\em Initiatize the call with a call protocol. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}{call:arguments:delegate:}
+\begin{DoxyCompactList}\small\item\em Call a remote method. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}{call:arguments:delegate:protocol:}
+\begin{DoxyCompactList}\small\item\em Call a remote method with a specific call protocol. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}{pushProtocol:}
+\begin{DoxyCompactList}\small\item\em Push a call protocol onto the protocol stack. \item\end{DoxyCompactList}\item 
+(id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$) -\/ \hyperlink{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}{popProtocol}
+\begin{DoxyCompactList}\small\item\em Pop a call protocol from the protocol stack. \item\end{DoxyCompactList}\item 
+(id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$) -\/ \hyperlink{interface_r_m_call_a306021de3467cc71a876068cbed9d834}{topProtocol}
+\begin{DoxyCompactList}\small\item\em Get the protocol on the top of the protocol stack. \item\end{DoxyCompactList}\item 
+\hypertarget{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}{
+(void) -\/ {\bfseries responseDone:}}
+\label{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}
+
+\item 
+\hypertarget{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}{
+(void) -\/ {\bfseries responseDone:}}
+\label{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_r_m_call_af082e641c263aa410c5195084153e03b}{
+NSMutableArray $\ast$ {\bfseries protocolStack}}
+\label{interface_r_m_call_af082e641c263aa410c5195084153e03b}
+
+\item 
+\hypertarget{interface_r_m_call_ab5d202e25515a602bac16ab028336a89}{
+NSMutableArray $\ast$ {\bfseries responseQueue}}
+\label{interface_r_m_call_ab5d202e25515a602bac16ab028336a89}
+
+\item 
+\hypertarget{interface_r_m_call_a98a195cf89cf282dc613f6573c238d2d}{
+NSAutoreleasePool $\ast$ {\bfseries autoReleasePool}}
+\label{interface_r_m_call_a98a195cf89cf282dc613f6573c238d2d}
+
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_r_m_call_ae96906f15a63ea2680d57eccef568944}{
+id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$ \hyperlink{interface_r_m_call_ae96906f15a63ea2680d57eccef568944}{protocol}}
+\label{interface_r_m_call_ae96906f15a63ea2680d57eccef568944}
+
+\begin{DoxyCompactList}\small\item\em A call protocol to adjust HTTP requests. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles calls in WIRemoting framework. 
+
+Definition at line 107 of file RMCall.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_r_m_call_a64f1e76758d2d473859064c5b0c6c75d}{
+\index{RMCall@{RMCall}!initWithProtocol:@{initWithProtocol:}}
+\index{initWithProtocol:@{initWithProtocol:}!RMCall@{RMCall}}
+\subsubsection[{initWithProtocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) initWithProtocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
+\label{interface_r_m_call_a64f1e76758d2d473859064c5b0c6c75d}
+
+
+Initiatize the call with a call protocol. 
+\begin{DoxyParams}{Parameters}
+\item[{\em protocol}]A call protocol. \end{DoxyParams}
+
+
+Definition at line 29 of file RMCall.m.\hypertarget{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}{
+\index{RMCall@{RMCall}!call:arguments:delegate:@{call:arguments:delegate:}}
+\index{call:arguments:delegate:@{call:arguments:delegate:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: ({\bf NSString}$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
+\label{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}
+
+
+Call a remote method. 
+\begin{DoxyParams}{Parameters}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]The call delegate to handle results.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the call is sent. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file RMCall.m.\hypertarget{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}{
+\index{RMCall@{RMCall}!call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}}
+\index{call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:delegate:protocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: ({\bf NSString}$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}\/ protocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
+\label{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}
+
+
+Call a remote method with a specific call protocol. Call a remote method with the specified call protocol in the highest priority.
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]The call delegate to handle results. \item[{\em protocl}]The call protocol to execute on top of other protocols.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the call is sent. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file RMCall.m.\hypertarget{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}{
+\index{RMCall@{RMCall}!pushProtocol:@{pushProtocol:}}
+\index{pushProtocol:@{pushProtocol:}!RMCall@{RMCall}}
+\subsubsection[{pushProtocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) pushProtocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
+\label{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}
+
+
+Push a call protocol onto the protocol stack. 
+\begin{DoxyParams}{Parameters}
+\item[{\em protocol}]A call protocol. \end{DoxyParams}
+
+
+Definition at line 203 of file RMCall.m.\hypertarget{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}{
+\index{RMCall@{RMCall}!popProtocol@{popProtocol}}
+\index{popProtocol@{popProtocol}!RMCall@{RMCall}}
+\subsubsection[{popProtocol}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf RMCallProtocol} $>$) popProtocol }}
+\label{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}
+
+
+Pop a call protocol from the protocol stack. \begin{DoxyReturn}{Returns}
+The popped call protocol. 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file RMCall.m.\hypertarget{interface_r_m_call_a306021de3467cc71a876068cbed9d834}{
+\index{RMCall@{RMCall}!topProtocol@{topProtocol}}
+\index{topProtocol@{topProtocol}!RMCall@{RMCall}}
+\subsubsection[{topProtocol}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf RMCallProtocol} $>$) topProtocol }}
+\label{interface_r_m_call_a306021de3467cc71a876068cbed9d834}
+
+
+Get the protocol on the top of the protocol stack. \begin{DoxyReturn}{Returns}
+The protocol on the top of the stack. 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file RMCall.m.
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.h\item 
+/Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.m\end{DoxyCompactItemize}

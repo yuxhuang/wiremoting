@@ -24,13 +24,13 @@
   return self;
 }
 
-- (void) callFinished:(RMResponse *) response
+- (void) finished:(RMResponse *) response
 {
   [object performSelector:finished 
                withObject:response];
 }
 
-- (void) callFailed:(RMResponse *) response
+- (void) failed:(RMResponse *) response
               error:(NSError *) error
 {
   [object performSelector:failed

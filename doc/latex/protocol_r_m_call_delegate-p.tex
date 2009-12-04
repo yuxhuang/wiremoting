@@ -1,0 +1,49 @@
+\hypertarget{protocol_r_m_call_delegate-p}{
+\section{$<$RMCallDelegate$>$ Protocol Reference}
+\label{protocol_r_m_call_delegate-p}\index{RMCallDelegate-\/p@{RMCallDelegate-\/p}}
+}
+
+
+Handles call results in WIRemoting framework.  
+
+
+{\ttfamily \#import $<$RMCall.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{protocol_r_m_call_delegate-p_a4e44f6ff8fb2ed3324aeca5b6ed29492}{callFinished:}
+\begin{DoxyCompactList}\small\item\em An event fired when the call successfully finishes. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{protocol_r_m_call_delegate-p_a77f0f0f7675f43f3052198c74bfcdbe1}{callFailed:error:}
+\begin{DoxyCompactList}\small\item\em An event fired when the call fails. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles call results in WIRemoting framework. 
+
+Definition at line 82 of file RMCall.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{protocol_r_m_call_delegate-p_a4e44f6ff8fb2ed3324aeca5b6ed29492}{
+\index{RMCallDelegate-\/p@{RMCallDelegate-\/p}!callFinished:@{callFinished:}}
+\index{callFinished:@{callFinished:}!RMCallDelegate-p@{RMCallDelegate-\/p}}
+\subsubsection[{callFinished:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) callFinished: ({\bf RMResponse} $\ast$) {\em response}\hspace{0.3cm}{\ttfamily  \mbox{[}required\mbox{]}}}}
+\label{protocol_r_m_call_delegate-p_a4e44f6ff8fb2ed3324aeca5b6ed29492}
+
+
+An event fired when the call successfully finishes. 
+\begin{DoxyParams}{Parameters}
+\item[{\em response}]A response object from the remote call. \end{DoxyParams}
+\hypertarget{protocol_r_m_call_delegate-p_a77f0f0f7675f43f3052198c74bfcdbe1}{
+\index{RMCallDelegate-\/p@{RMCallDelegate-\/p}!callFailed:error:@{callFailed:error:}}
+\index{callFailed:error:@{callFailed:error:}!RMCallDelegate-p@{RMCallDelegate-\/p}}
+\subsubsection[{callFailed:error:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) callFailed: ({\bf RMResponse} $\ast$) {\em response}\/ error: (NSError $\ast$) {\em error}\hspace{0.3cm}{\ttfamily  \mbox{[}required\mbox{]}}}}
+\label{protocol_r_m_call_delegate-p_a77f0f0f7675f43f3052198c74bfcdbe1}
+
+
+An event fired when the call fails. 
+\begin{DoxyParams}{Parameters}
+\item[{\em response}]A response object from the remote peer. \item[{\em error}]An error object from the remote peer. \end{DoxyParams}
+
+
+The documentation for this protocol was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Volumes/yxh/Code/XCode/WIRemoting/Classes/RMCall.h\end{DoxyCompactItemize}

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @class RMResponse;
-@protocol RMCallDelegate;
+@protocol RMResultDelegate;
 
-@interface Mock : NSObject<RMCallDelegate> {
+@interface Mock : NSObject<RMResultDelegate> {
   id object;
   SEL finished;
   SEL failed;
@@ -19,9 +19,9 @@
 
 - (id)initWithObject:(id) obj finished:(SEL) fin failed:(SEL) fai;
 
-- (void) callFinished:(RMResponse *) response;
+- (void) finished:(RMResponse *) response;
 
-- (void) callFailed:(RMResponse *) response
+- (void) failed:(RMResponse *) response
               error:(NSError *) error;
 
 @end

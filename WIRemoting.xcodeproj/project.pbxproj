@@ -52,12 +52,12 @@
 		E659C356109E555F00D9CFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
 		E659C357109E556000D9CFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
 		E664DBD410AF915100B1418A /* RMCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBD110AF914700B1418A /* RMCallTests.m */; };
-		E664DC2210AFB71500B1418A /* MockupProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockupProtocol.m */; };
+		E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockProtocol.m */; };
 		E664DC2810AFB77D00B1418A /* WIRemoting.h in Headers */ = {isa = PBXBuildFile; fileRef = E664DC2710AFB77700B1418A /* WIRemoting.h */; };
 		E667E36B10C71C6B00EC0CA0 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
 		E667E37710C71CAB00EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
 		E667E37810C71CC100EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
-		E667E37D10C71CF400EC0CA0 /* MockupProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockupProtocol.m */; };
+		E667E37D10C71CF400EC0CA0 /* MockProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockProtocol.m */; };
 		E667E42010C7240300EC0CA0 /* Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* Mock.m */; };
 		E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */; };
 		E667E54C10C73F8700EC0CA0 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C30A109E523500D9CFE2 /* NSObject+SBJSON.m */; };
@@ -67,6 +67,9 @@
 		E667E55010C73F8B00EC0CA0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C312109E523500D9CFE2 /* SBJsonParser.m */; };
 		E667E55110C73F8E00EC0CA0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C314109E523500D9CFE2 /* SBJsonWriter.m */; };
 		E667E5C810C74AE900EC0CA0 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
+		E685BDF010C7EB63003E4873 /* MockProtocolShouldSend.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */; };
+		E685BE5A10C7FA39003E4873 /* RMSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE5910C7FA39003E4873 /* RMSessionTests.m */; };
+		E685BE8F10C7FDE7003E4873 /* MockSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */; };
 		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
 		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
 		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
@@ -137,8 +140,8 @@
 		E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemotingTests-Info.plist"; sourceTree = "<group>"; };
 		E664DBD010AF914700B1418A /* RMCallTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCallTests.h; sourceTree = "<group>"; };
 		E664DBD110AF914700B1418A /* RMCallTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMCallTests.m; sourceTree = "<group>"; };
-		E664DC2010AFB71500B1418A /* MockupProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockupProtocol.h; sourceTree = "<group>"; };
-		E664DC2110AFB71500B1418A /* MockupProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockupProtocol.m; sourceTree = "<group>"; };
+		E664DC2010AFB71500B1418A /* MockProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol.h; sourceTree = "<group>"; };
+		E664DC2110AFB71500B1418A /* MockProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol.m; sourceTree = "<group>"; };
 		E664DC2710AFB77700B1418A /* WIRemoting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIRemoting.h; sourceTree = "<group>"; };
 		E667E36310C71C5700EC0CA0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667E36510C71C5700EC0CA0 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
@@ -147,6 +150,12 @@
 		E667E41F10C7240300EC0CA0 /* Mock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mock.m; sourceTree = "<group>"; };
 		E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol2.h; sourceTree = "<group>"; };
 		E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol2.m; sourceTree = "<group>"; };
+		E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocolShouldSend.h; sourceTree = "<group>"; };
+		E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocolShouldSend.m; sourceTree = "<group>"; };
+		E685BE5810C7FA39003E4873 /* RMSessionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSessionTests.h; sourceTree = "<group>"; };
+		E685BE5910C7FA39003E4873 /* RMSessionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSessionTests.m; sourceTree = "<group>"; };
+		E685BE8D10C7FDE7003E4873 /* MockSessionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSessionProtocol.h; sourceTree = "<group>"; };
+		E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSessionProtocol.m; sourceTree = "<group>"; };
 		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
 		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
 		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
@@ -321,12 +330,18 @@
 			children = (
 				E664DBD010AF914700B1418A /* RMCallTests.h */,
 				E664DBD110AF914700B1418A /* RMCallTests.m */,
-				E664DC2010AFB71500B1418A /* MockupProtocol.h */,
-				E664DC2110AFB71500B1418A /* MockupProtocol.m */,
+				E664DC2010AFB71500B1418A /* MockProtocol.h */,
+				E664DC2110AFB71500B1418A /* MockProtocol.m */,
 				E667E41E10C7240300EC0CA0 /* Mock.h */,
 				E667E41F10C7240300EC0CA0 /* Mock.m */,
 				E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */,
 				E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */,
+				E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */,
+				E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */,
+				E685BE5810C7FA39003E4873 /* RMSessionTests.h */,
+				E685BE5910C7FA39003E4873 /* RMSessionTests.m */,
+				E685BE8D10C7FDE7003E4873 /* MockSessionProtocol.h */,
+				E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -505,7 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E664DBD410AF915100B1418A /* RMCallTests.m in Sources */,
-				E664DC2210AFB71500B1418A /* MockupProtocol.m in Sources */,
+				E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */,
 				E667E37710C71CAB00EC0CA0 /* main.m in Sources */,
 				E667E42010C7240300EC0CA0 /* Mock.m in Sources */,
 				E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */,
@@ -515,6 +530,9 @@
 				E667E54F10C73F8A00EC0CA0 /* SBJsonBase.m in Sources */,
 				E667E55010C73F8B00EC0CA0 /* SBJsonParser.m in Sources */,
 				E667E55110C73F8E00EC0CA0 /* SBJsonWriter.m in Sources */,
+				E685BDF010C7EB63003E4873 /* MockProtocolShouldSend.m in Sources */,
+				E685BE5A10C7FA39003E4873 /* RMSessionTests.m in Sources */,
+				E685BE8F10C7FDE7003E4873 /* MockSessionProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E667E37810C71CC100EC0CA0 /* main.m in Sources */,
-				E667E37D10C71CF400EC0CA0 /* MockupProtocol.m in Sources */,
+				E667E37D10C71CF400EC0CA0 /* MockProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

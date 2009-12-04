@@ -10,14 +10,14 @@
 
 @class RMCall;
 @class ASIHTTPRequest;
-@protocol RMCallDelegate;
+@protocol RMResultDelegate;
 
 /**
  * Handles call responses in WIRemoting framework.
  */
 @interface RMResponse : NSObject {
   RMCall *parentCall;
-  id<RMCallDelegate> delegate;
+  id<RMResultDelegate> delegate;
   ASIHTTPRequest *request;
   NSString *string;
   NSData *data;
@@ -26,11 +26,11 @@
 
 + (id)responseWithCall:(RMCall*) call
                request:(ASIHTTPRequest*) request
-              delegate:(id<RMCallDelegate>) delegate;
+              delegate:(id<RMResultDelegate>) delegate;
 
 - (id)initWithCall:(RMCall*) call
            request:(ASIHTTPRequest*) request
-          delegate:(id<RMCallDelegate>) delegate;
+          delegate:(id<RMResultDelegate>) delegate;
 
 - (void)requestFinished:(ASIHTTPRequest*) request;
 - (void)requestFailed:(ASIHTTPRequest*) request;

@@ -6,9 +6,7 @@
 //  Copyright 2009 Webinit Consulting. All rights reserved.
 //
 
-#import "ASIFormDataRequest.h"
-#import "RMCall.h"
-#import "RMResponse.h"
+#import "WIRemoting.h"
 
 @interface RMCall (Private)
 - (void)responseDone:(RMResponse*) response;
@@ -67,7 +65,7 @@
 
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMCallDelegate>) delegate
+    delegate:(id<RMResultDelegate>) delegate
 {
   return [self call:method
           arguments:arguments
@@ -77,7 +75,7 @@
 
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMCallDelegate>) delegate
+    delegate:(id<RMResultDelegate>) delegate
     protocol:(id<RMCallProtocol>) aProtocol
 {
   BOOL agreement;

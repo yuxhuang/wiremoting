@@ -14,7 +14,7 @@
 /**
  * Provides call protocol interface/implementation.
  */
-@protocol RMCallProtocol
+@protocol RMCallProtocol <NSObject>
 
 @optional
 /**
@@ -79,7 +79,7 @@
 /**
  * Handles call results in WIRemoting framework.
  */
-@protocol RMCallDelegate
+@protocol RMResultDelegate <NSObject>
 
 @required
 /**
@@ -87,7 +87,7 @@
  *
  * @param response A response object from the remote call.
  */
-- (void) callFinished: (RMResponse*) response;
+- (void) finished: (RMResponse*) response;
 
 @required
 /**
@@ -96,7 +96,7 @@
  * @param response A response object from the remote peer.
  * @param error An error object from the remote peer.
  */
-- (void) callFailed: (RMResponse*) response
+- (void) failed: (RMResponse*) response
               error: (NSError*) error;
 
 @end
@@ -134,7 +134,7 @@
  */
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMCallDelegate>) delegate;
+    delegate:(id<RMResultDelegate>) delegate;
 
 /**
  * Call a remote method with a specific call protocol.
@@ -151,7 +151,7 @@
  */
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMCallDelegate>) delegate
+    delegate:(id<RMResultDelegate>) delegate
     protocol:(id<RMCallProtocol>) protocol;
 
 /**

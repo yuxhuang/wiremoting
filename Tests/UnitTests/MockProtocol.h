@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "WIRemoting.h"
 
-@interface MockupProtocol : NSObject<RMAuthenticator, RMCallProtocol> {
+@interface MockProtocol : NSObject<RMCallProtocol> {
   
 }
 

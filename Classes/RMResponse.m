@@ -6,9 +6,7 @@
 //  Copyright 2009 Webinit Consulting. All rights reserved.
 //
 
-#import "RMResponse.h"
-#import "RMCall.h"
-#import "ASIHTTPRequest.h"
+#import "WIRemoting.h"
 
 @interface RMCall (Private)
 - (void)responseDone:(RMResponse*) response;
@@ -19,7 +17,7 @@
 
 + (id)responseWithCall:(RMCall*) call
                request:(ASIHTTPRequest*) request
-              delegate:(id<RMCallDelegate>) delegate
+              delegate:(id<RMResultDelegate>) delegate
 {
   return [[[RMResponse alloc]
            initWithCall:call request:request delegate:delegate] autorelease];
@@ -27,7 +25,7 @@
 
 - (id)initWithCall:(RMCall*) call
            request:(ASIHTTPRequest*) req
-          delegate:(id<RMCallDelegate>) aDelegate
+          delegate:(id<RMResultDelegate>) aDelegate
 {
   self = [super init];
   
@@ -54,7 +52,7 @@
   data = [[NSData alloc] initWithData:[req responseData]];
   
   // call the delegate for successful call
-  [delegate callFinished:self];
+  [delegate finished:self];
   
   // tell the parent call the response is done
   [parentCall responseDone:self];
@@ -68,7 +66,7 @@
   NSError *error = [req error];
   
   // call the delegate for failed call
-  [delegate callFailed:self
+  [delegate failed:self
                  error:error];
   
   // tell the parent call the response is done
