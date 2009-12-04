@@ -10,7 +10,7 @@
 #import "MockProtocol.h"
 #import "MockProtocol2.h"
 #import "MockProtocolShouldSend.h"
-#import "Mock.h"
+#import "RMResultDelegateWrapper.h"
 #import "WIRemoting.h"
 
 @implementation RMCallTests
@@ -32,7 +32,7 @@
 #pragma mark unit tests
 
 - (void) testSingleProtocol {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
                                   failed:@selector(failed:error:)];
   [call call:@"echo" arguments:
@@ -46,7 +46,7 @@
 
 - (void) testMultipleProtocols
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callMultipleJsonEchoFinished:)
                                   failed:@selector(failed:error:)];
   MockProtocol2 *proto2 = [[MockProtocol2 alloc] init];
@@ -72,7 +72,7 @@
   // pop the protocol out then it should behave with only one protocol
   [call popProtocol];
   
-  m = [[Mock alloc] initWithObject:self
+  m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
                                   failed:@selector(failed:error:)];
   [call call:@"echo" arguments:
@@ -86,7 +86,7 @@
 
 - (void) testStraightCall
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callMultipleJsonEchoFinished:)
                                   failed:@selector(failed:error:)];
   MockProtocol2 *proto2 = [[MockProtocol2 alloc] init];
@@ -107,7 +107,7 @@
 
 - (void) testRequestShouldSend
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
                                   failed:@selector(failed:error:)];
   

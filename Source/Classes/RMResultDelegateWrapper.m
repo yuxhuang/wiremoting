@@ -6,10 +6,10 @@
 //  Copyright 2009 Webinit Consulting. All rights reserved.
 //
 
-#import "Mock.h"
+#import "RMResultDelegateWrapper.h"
+#import "RMResponse.h"
 
-
-@implementation Mock
+@implementation RMResultDelegateWrapper
 
 - (id)initWithObject:(id) obj finished:(SEL) fin failed:(SEL) fai
 {

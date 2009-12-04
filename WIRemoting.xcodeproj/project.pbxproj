@@ -58,7 +58,7 @@
 		E667E37710C71CAB00EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
 		E667E37810C71CC100EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
 		E667E37D10C71CF400EC0CA0 /* MockProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockProtocol.m */; };
-		E667E42010C7240300EC0CA0 /* Mock.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* Mock.m */; };
+		E667E42010C7240300EC0CA0 /* RMResultDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */; };
 		E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */; };
 		E667E54C10C73F8700EC0CA0 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C30A109E523500D9CFE2 /* NSObject+SBJSON.m */; };
 		E667E54D10C73F8700EC0CA0 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C30C109E523500D9CFE2 /* NSString+SBJSON.m */; };
@@ -70,6 +70,13 @@
 		E685BDF010C7EB63003E4873 /* MockProtocolShouldSend.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */; };
 		E685BE5A10C7FA39003E4873 /* RMSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE5910C7FA39003E4873 /* RMSessionTests.m */; };
 		E685BE8F10C7FDE7003E4873 /* MockSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */; };
+		E685C0A810C89AE3003E4873 /* MoodleCallProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */; };
+		E685C0AD10C89B01003E4873 /* MoodleAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */; };
+		E685C0AE10C89B01003E4873 /* MoodleAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */; };
+		E685C0B110C89B17003E4873 /* MoodleResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0AF10C89B17003E4873 /* MoodleResult.h */; };
+		E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B010C89B17003E4873 /* MoodleResult.m */; };
+		E685C0B710C89B48003E4873 /* Moodle.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0B510C89B48003E4873 /* Moodle.h */; };
+		E685C0B810C89B48003E4873 /* Moodle.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B610C89B48003E4873 /* Moodle.m */; };
 		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
 		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
 		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
@@ -146,8 +153,8 @@
 		E667E36310C71C5700EC0CA0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667E36510C71C5700EC0CA0 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		E667E37610C71CAB00EC0CA0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E667E41E10C7240300EC0CA0 /* Mock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mock.h; sourceTree = "<group>"; };
-		E667E41F10C7240300EC0CA0 /* Mock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mock.m; sourceTree = "<group>"; };
+		E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMResultDelegateWrapper.h; sourceTree = "<group>"; };
+		E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMResultDelegateWrapper.m; sourceTree = "<group>"; };
 		E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol2.h; sourceTree = "<group>"; };
 		E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol2.m; sourceTree = "<group>"; };
 		E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocolShouldSend.h; sourceTree = "<group>"; };
@@ -156,6 +163,14 @@
 		E685BE5910C7FA39003E4873 /* RMSessionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSessionTests.m; sourceTree = "<group>"; };
 		E685BE8D10C7FDE7003E4873 /* MockSessionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSessionProtocol.h; sourceTree = "<group>"; };
 		E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSessionProtocol.m; sourceTree = "<group>"; };
+		E685C0A310C89AC1003E4873 /* MoodleCallProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleCallProtocol.h; sourceTree = "<group>"; };
+		E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleCallProtocol.m; sourceTree = "<group>"; };
+		E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleAuthenticator.h; sourceTree = "<group>"; };
+		E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleAuthenticator.m; sourceTree = "<group>"; };
+		E685C0AF10C89B17003E4873 /* MoodleResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleResult.h; sourceTree = "<group>"; };
+		E685C0B010C89B17003E4873 /* MoodleResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleResult.m; sourceTree = "<group>"; };
+		E685C0B510C89B48003E4873 /* Moodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moodle.h; sourceTree = "<group>"; };
+		E685C0B610C89B48003E4873 /* Moodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moodle.m; sourceTree = "<group>"; };
 		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
 		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
 		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
@@ -240,6 +255,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */,
+				E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */,
 				E6FA4331109E806F00385C66 /* RMSession.h */,
 				E6FA4332109E806F00385C66 /* RMSession.m */,
 				E6FA433D109E849300385C66 /* RMCall.h */,
@@ -331,8 +348,6 @@
 				E664DBD110AF914700B1418A /* RMCallTests.m */,
 				E664DC2010AFB71500B1418A /* MockProtocol.h */,
 				E664DC2110AFB71500B1418A /* MockProtocol.m */,
-				E667E41E10C7240300EC0CA0 /* Mock.h */,
-				E667E41F10C7240300EC0CA0 /* Mock.m */,
 				E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */,
 				E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */,
 				E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */,
@@ -348,6 +363,14 @@
 		E685C09310C8994F003E4873 /* Moodle */ = {
 			isa = PBXGroup;
 			children = (
+				E685C0A310C89AC1003E4873 /* MoodleCallProtocol.h */,
+				E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */,
+				E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */,
+				E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */,
+				E685C0AF10C89B17003E4873 /* MoodleResult.h */,
+				E685C0B010C89B17003E4873 /* MoodleResult.m */,
+				E685C0B510C89B48003E4873 /* Moodle.h */,
+				E685C0B610C89B48003E4873 /* Moodle.m */,
 			);
 			path = Moodle;
 			sourceTree = "<group>";
@@ -391,6 +414,9 @@
 				E6FA433F109E849300385C66 /* RMCall.h in Headers */,
 				E6FA438A109E896800385C66 /* RMResponse.h in Headers */,
 				E664DC2810AFB77D00B1418A /* WIRemoting.h in Headers */,
+				E685C0AD10C89B01003E4873 /* MoodleAuthenticator.h in Headers */,
+				E685C0B110C89B17003E4873 /* MoodleResult.h in Headers */,
+				E685C0B710C89B48003E4873 /* Moodle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +554,10 @@
 				E6FA4334109E806F00385C66 /* RMSession.m in Sources */,
 				E6FA4340109E849300385C66 /* RMCall.m in Sources */,
 				E6FA438B109E896800385C66 /* RMResponse.m in Sources */,
+				E685C0A810C89AE3003E4873 /* MoodleCallProtocol.m in Sources */,
+				E685C0AE10C89B01003E4873 /* MoodleAuthenticator.m in Sources */,
+				E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */,
+				E685C0B810C89B48003E4873 /* Moodle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +568,7 @@
 				E664DBD410AF915100B1418A /* RMCallTests.m in Sources */,
 				E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */,
 				E667E37710C71CAB00EC0CA0 /* main.m in Sources */,
-				E667E42010C7240300EC0CA0 /* Mock.m in Sources */,
+				E667E42010C7240300EC0CA0 /* RMResultDelegateWrapper.m in Sources */,
 				E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */,
 				E667E54C10C73F8700EC0CA0 /* NSObject+SBJSON.m in Sources */,
 				E667E54D10C73F8700EC0CA0 /* NSString+SBJSON.m in Sources */,

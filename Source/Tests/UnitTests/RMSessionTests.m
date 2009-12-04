@@ -8,7 +8,7 @@
 
 #import "RMSessionTests.h"
 #import "MockProtocol.h"
-#import "Mock.h"
+#import "RMResultDelegateWrapper.h"
 #import "WIRemoting.h"
 
 @implementation RMSessionTests
@@ -17,7 +17,7 @@
 
 - (void) setUp
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(failed:error:)];
   protocol = [[MockProtocol alloc] init];
@@ -52,7 +52,7 @@
 - (void)testFailedAuthentication {
   username = @"abc";
   id<RMResultDelegate> oldDelegate = [session.delegate retain];
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(expectFailed:error:)];
   session.delegate = m;
@@ -76,7 +76,7 @@
 
 - (void)testSessionCall
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(failed:error:)];
   [session call:@"json_echo2"
@@ -89,7 +89,7 @@
 
 - (void)testNormalCallWithNoAuthenticationInfo
 {
-  Mock *m = [[Mock alloc] initWithObject:self
+  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(expectFailed:error:)];
   [session.call call:@"json_echo2"

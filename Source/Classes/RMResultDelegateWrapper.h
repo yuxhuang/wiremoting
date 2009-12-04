@@ -11,7 +11,7 @@
 @class RMResponse;
 @protocol RMResultDelegate;
 
-@interface Mock : NSObject<RMResultDelegate> {
+@interface RMResultDelegateWrapper : NSObject<RMResultDelegate> {
   id object;
   SEL finished;
   SEL failed;

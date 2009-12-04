@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 48.1928
+%%BoundingBox: 0 0 500 40.1606
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 10.375 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 12.45 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 2 def
-/cols 5 def
+/cols 6 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -178,6 +178,7 @@ boxfont setfont
 (MockProtocol2) cw
 (MockProtocolShouldSend) cw
 (MockSessionProtocol) cw
+(MoodleCallProtocol) cw
 (RMSessionTests) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -190,19 +191,20 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (<RMCallProtocol>) 2 1 box
+ (<RMCallProtocol>) 2.5 1 box
  (MockProtocol) 0 0 box
  (MockProtocol2) 1 0 box
  (MockProtocolShouldSend) 2 0 box
  (MockSessionProtocol) 3 0 box
- (RMSessionTests) 4 0 box
+ (MoodleCallProtocol) 4 0 box
+ (RMSessionTests) 5 0 box
 
 % ----- relations -----
 
 solid
-1 2 0.25 out
+1 2.5 0.25 out
 solid
-0 4 1 conn
+0 5 1 conn
 solid
 0 0 0.75 in
 solid
@@ -213,3 +215,5 @@ solid
 0 3 0.75 in
 solid
 0 4 0.75 in
+solid
+0 5 0.75 in

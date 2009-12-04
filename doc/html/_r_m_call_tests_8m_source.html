@@ -33,7 +33,7 @@
 <a name="l00010"></a>00010 <span class="preprocessor">#import &quot;MockProtocol.h&quot;</span>
 <a name="l00011"></a>00011 <span class="preprocessor">#import &quot;MockProtocol2.h&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#import &quot;MockProtocolShouldSend.h&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#import &quot;Mock.h&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#import &quot;RMResultDelegateWrapper.h&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#import &quot;WIRemoting.h&quot;</span>
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="keyword">@implementation </span><a class="code" href="interface_r_m_call_tests.html">RMCallTests</a>
@@ -55,7 +55,7 @@
 <a name="l00032"></a>00032 <span class="preprocessor">#pragma mark unit tests</span>
 <a name="l00033"></a>00033 <span class="preprocessor"></span>
 <a name="l00034"></a>00034 - (void) testSingleProtocol {
-<a name="l00035"></a>00035   <a class="code" href="interface_mock.html">Mock</a> *m = [[<a class="code" href="interface_mock.html">Mock</a> alloc] initWithObject:self
+<a name="l00035"></a>00035   <a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> *m = [[<a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> alloc] initWithObject:self
 <a name="l00036"></a>00036                                 finished:@selector(callEchoFinished:)
 <a name="l00037"></a>00037                                   failed:@selector(failed:error:)];
 <a name="l00038"></a>00038   [call call:@&quot;echo&quot; arguments:
@@ -69,7 +69,7 @@
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 - (void) testMultipleProtocols
 <a name="l00048"></a>00048 {
-<a name="l00049"></a>00049   <a class="code" href="interface_mock.html">Mock</a> *m = [[<a class="code" href="interface_mock.html">Mock</a> alloc] initWithObject:self
+<a name="l00049"></a>00049   <a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> *m = [[<a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> alloc] initWithObject:self
 <a name="l00050"></a>00050                                 finished:@selector(callMultipleJsonEchoFinished:)
 <a name="l00051"></a>00051                                   failed:@selector(failed:error:)];
 <a name="l00052"></a>00052   <a class="code" href="interface_mock_protocol2.html">MockProtocol2</a> *proto2 = [[<a class="code" href="interface_mock_protocol2.html">MockProtocol2</a> alloc] init];
@@ -95,7 +95,7 @@
 <a name="l00072"></a>00072   <span class="comment">// pop the protocol out then it should behave with only one protocol</span>
 <a name="l00073"></a>00073   [call popProtocol];
 <a name="l00074"></a>00074   
-<a name="l00075"></a>00075   m = [[<a class="code" href="interface_mock.html">Mock</a> alloc] initWithObject:self
+<a name="l00075"></a>00075   m = [[<a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> alloc] initWithObject:self
 <a name="l00076"></a>00076                                 finished:@selector(callEchoFinished:)
 <a name="l00077"></a>00077                                   failed:@selector(failed:error:)];
 <a name="l00078"></a>00078   [call call:@&quot;echo&quot; arguments:
@@ -109,7 +109,7 @@
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087 - (void) testStraightCall
 <a name="l00088"></a>00088 {
-<a name="l00089"></a>00089   <a class="code" href="interface_mock.html">Mock</a> *m = [[<a class="code" href="interface_mock.html">Mock</a> alloc] initWithObject:self
+<a name="l00089"></a>00089   <a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> *m = [[<a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> alloc] initWithObject:self
 <a name="l00090"></a>00090                                 finished:@selector(callMultipleJsonEchoFinished:)
 <a name="l00091"></a>00091                                   failed:@selector(failed:error:)];
 <a name="l00092"></a>00092   <a class="code" href="interface_mock_protocol2.html">MockProtocol2</a> *proto2 = [[<a class="code" href="interface_mock_protocol2.html">MockProtocol2</a> alloc] init];
@@ -130,7 +130,7 @@
 <a name="l00107"></a>00107 
 <a name="l00108"></a>00108 - (void) testRequestShouldSend
 <a name="l00109"></a>00109 {
-<a name="l00110"></a>00110   <a class="code" href="interface_mock.html">Mock</a> *m = [[<a class="code" href="interface_mock.html">Mock</a> alloc] initWithObject:self
+<a name="l00110"></a>00110   <a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> *m = [[<a class="code" href="interface_r_m_result_delegate_wrapper.html">RMResultDelegateWrapper</a> alloc] initWithObject:self
 <a name="l00111"></a>00111                                 finished:@selector(callEchoFinished:)
 <a name="l00112"></a>00112                                   failed:@selector(failed:error:)];
 <a name="l00113"></a>00113   
@@ -188,7 +188,7 @@
 <a name="l00165"></a>00165 
 <a name="l00166"></a>00166 <span class="keyword">@end</span>
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:15:04 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
