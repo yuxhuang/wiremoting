@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.h Source File</title>
+<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/Source/Classes/RMCall.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -12,7 +12,6 @@
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -22,7 +21,7 @@
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>/Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
+<h1>/Users/yxh/Code/XCode/WIRemoting/Source/Classes/RMCall.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
 <a name="l00002"></a>00002 <span class="comment">//  RMCall.h</span>
 <a name="l00003"></a>00003 <span class="comment">//  WIRemoting</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -33,28 +32,28 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span>
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="keyword">@class</span> <a class="code" href="interface_r_m_response.html" title="Handles call responses in WIRemoting framework.">RMResponse</a>;
-<a name="l00012"></a>00012 <span class="keyword">@class</span> <a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>;
+<a name="l00012"></a>00012 <span class="keyword">@class</span> ASIFormDataRequest;
 <a name="l00013"></a>00013 
-<a name="l00017"></a><a class="code" href="protocol_r_m_call_protocol-p.html">00017</a> <span class="keyword">@protocol </span>RMCallProtocol &lt;<a class="code" href="class_n_s_object.html">NSObject</a>&gt;
+<a name="l00017"></a><a class="code" href="protocol_r_m_call_protocol-p.html">00017</a> <span class="keyword">@protocol </span>RMCallProtocol &lt;NSObject&gt;
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019 <span class="keyword">@optional</span>
-<a name="l00029"></a>00029 - (BOOL) requestShouldSend: (<a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>*) request
-<a name="l00030"></a>00030                     method: (<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00029"></a>00029 - (BOOL) requestShouldSend: (ASIFormDataRequest*) request
+<a name="l00030"></a>00030                     method: (NSString*) method
 <a name="l00031"></a>00031                  arguments: (NSDictionary*) arguments;
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">@optional</span>
-<a name="l00041"></a>00041 - (void) requestWillSend: (<a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>*) request
-<a name="l00042"></a>00042                   method: (<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00041"></a>00041 - (void) requestWillSend: (ASIFormDataRequest*) request
+<a name="l00042"></a>00042                   method: (NSString*) method
 <a name="l00043"></a>00043                arguments: (NSDictionary*) arguments;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 <span class="keyword">@optional</span>
-<a name="l00053"></a>00053 - (void) requestDidSend: (<a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>*) request
-<a name="l00054"></a>00054                   method: (<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00053"></a>00053 - (void) requestDidSend: (ASIFormDataRequest*) request
+<a name="l00054"></a>00054                   method: (NSString*) method
 <a name="l00055"></a>00055                arguments: (NSDictionary*) arguments;
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="keyword">@required</span>
-<a name="l00065"></a>00065 - (void) adjustRequest: (<a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>*) request
-<a name="l00066"></a>00066                 method: (<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00065"></a>00065 - (void) adjustRequest: (ASIFormDataRequest*) request
+<a name="l00066"></a>00066                 method: (NSString*) method
 <a name="l00067"></a>00067              arguments: (NSDictionary*) arguments;
 <a name="l00068"></a>00068 
 <a name="l00069"></a>00069 <span class="keyword">@optional</span>
@@ -62,7 +61,7 @@
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077 <span class="keyword">@end</span>
 <a name="l00078"></a>00078 
-<a name="l00082"></a><a class="code" href="protocol_r_m_result_delegate-p.html">00082</a> <span class="keyword">@protocol </span>RMResultDelegate &lt;<a class="code" href="class_n_s_object.html">NSObject</a>&gt;
+<a name="l00082"></a><a class="code" href="protocol_r_m_result_delegate-p.html">00082</a> <span class="keyword">@protocol </span>RMResultDelegate &lt;NSObject&gt;
 <a name="l00083"></a>00083 
 <a name="l00084"></a>00084 <span class="keyword">@required</span>
 <a name="l00090"></a>00090 - (void) finished: (<a class="code" href="interface_r_m_response.html" title="Handles call responses in WIRemoting framework.">RMResponse</a>*) response;
@@ -73,7 +72,7 @@
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102 <span class="keyword">@end</span>
 <a name="l00103"></a>00103 
-<a name="l00107"></a><a class="code" href="interface_r_m_call.html">00107</a> <span class="keyword">@interface </span><a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> : <a class="code" href="class_n_s_object.html">NSObject</a> {
+<a name="l00107"></a><a class="code" href="interface_r_m_call.html">00107</a> <span class="keyword">@interface </span><a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> : NSObject {
 <a name="l00108"></a><a class="code" href="interface_r_m_call.html#ae96906f15a63ea2680d57eccef568944">00108</a>   id&lt;RMCallProtocol&gt; <a class="code" href="interface_r_m_call.html#ae96906f15a63ea2680d57eccef568944" title="A call protocol to adjust HTTP requests.">protocol</a>;
 <a name="l00109"></a>00109   NSMutableArray *protocolStack;
 <a name="l00110"></a>00110   NSMutableArray *responseQueue;
@@ -84,11 +83,11 @@
 <a name="l00118"></a>00118 
 <a name="l00124"></a>00124 - (<span class="keywordtype">id</span>)initWithProtocol: (<span class="keywordtype">id</span>&lt;RMCallProtocol&gt;) protocol;
 <a name="l00125"></a>00125 
-<a name="l00135"></a>00135 - (BOOL)call:(<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00135"></a>00135 - (BOOL)call:(NSString*) method
 <a name="l00136"></a>00136    arguments:(NSDictionary*) arguments
 <a name="l00137"></a>00137     delegate:(<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
 <a name="l00138"></a>00138 
-<a name="l00152"></a>00152 - (BOOL)call:(<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00152"></a>00152 - (BOOL)call:(NSString*) method
 <a name="l00153"></a>00153    arguments:(NSDictionary*) arguments
 <a name="l00154"></a>00154     delegate:(<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate
 <a name="l00155"></a>00155     protocol:(<span class="keywordtype">id</span>&lt;RMCallProtocol&gt;) protocol;
@@ -99,7 +98,7 @@
 <a name="l00175"></a>00175 
 <a name="l00176"></a>00176 @end
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:05:16 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:15:04 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

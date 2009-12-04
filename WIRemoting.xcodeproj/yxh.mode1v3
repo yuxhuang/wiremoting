@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>E685C03010C893AE003E4873</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>WIRemoting.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>E685C03110C893AE003E4873</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>WIRemoting.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>E685C08610C897E3003E4873</string>
-						<key>history</key>
-						<array>
-							<string>E685C02710C8938D003E4873</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {992, 773}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>38 218 992 814 0 0 1920 1058 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -305,18 +264,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
-								<string>E659C289109E4E0200D9CFE2</string>
-								<string>E664DBC810AF90D400B1418A</string>
-								<string>32C88DFF0371C24200C91783</string>
+								<string>E685C09610C899B3003E4873</string>
+								<string>E685C09310C8994F003E4873</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>10</integer>
-									<integer>9</integer>
+									<integer>2</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -358,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MockProtocol2.m</string>
+								<string>RMResponse.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -366,11 +322,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MockProtocol2.m</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>E685C08510C897E3003E4873</string>
+										<string>RMResponse.h</string>
 										<key>history</key>
 										<array>
 											<string>E659C233109E4D6200D9CFE2</string>
@@ -400,10 +352,7 @@
 											<string>E685BFEC10C88BEC003E4873</string>
 											<string>E685BFFC10C88DE0003E4873</string>
 											<string>E685C01210C8906D003E4873</string>
-											<string>E685C02D10C893AE003E4873</string>
-											<string>E685C07210C896C8003E4873</string>
-											<string>E685C07910C896D4003E4873</string>
-											<string>E685BDFD10C7EC50003E4873</string>
+											<string>E685C09710C899E5003E4873</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -606,7 +555,6 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E61C0689109FDECF00F83A4D</string>
 		<string>E69ADB4A107559C6005E1E82</string>
-		<string>E685C03010C893AE003E4873</string>
 		<string>/Users/yxh/Code/XCode/WIRemoting/WIRemoting.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -631,7 +579,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RMSessionTests.m</string>
+								<string>RMSessionTests.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

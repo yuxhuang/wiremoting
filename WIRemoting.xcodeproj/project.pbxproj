@@ -214,8 +214,7 @@
 		0867D691FE84028FC02AAC07 /* WIRemoting */ = {
 			isa = PBXGroup;
 			children = (
-				08FB77AEFE84172EC02AAC07 /* Classes */,
-				E659C289109E4E0200D9CFE2 /* Tests */,
+				E685C09610C899B3003E4873 /* Source */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				E659C304109E51FE00D9CFE2 /* Third Party */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -344,6 +343,23 @@
 				E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		E685C09310C8994F003E4873 /* Moodle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moodle;
+			sourceTree = "<group>";
+		};
+		E685C09610C899B3003E4873 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E685C09310C8994F003E4873 /* Moodle */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				E659C289109E4E0200D9CFE2 /* Tests */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

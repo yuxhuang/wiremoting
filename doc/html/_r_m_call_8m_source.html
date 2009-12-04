@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.m Source File</title>
+<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/Source/Classes/RMCall.m Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -12,7 +12,6 @@
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -22,7 +21,7 @@
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>/Users/yxh/Code/XCode/WIRemoting/Classes/RMCall.m</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
+<h1>/Users/yxh/Code/XCode/WIRemoting/Source/Classes/RMCall.m</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
 <a name="l00002"></a>00002 <span class="comment">//  RMCall.m</span>
 <a name="l00003"></a>00003 <span class="comment">//  WIRemoting</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
@@ -87,7 +86,7 @@
 <a name="l00063"></a>00063   [<span class="keyword">super</span> dealloc];
 <a name="l00064"></a>00064 }
 <a name="l00065"></a>00065 
-<a name="l00066"></a><a class="code" href="interface_r_m_call.html#a85bb3ac47600a313105a6f94c9ab7ec3">00066</a> - (BOOL)call:(<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00066"></a><a class="code" href="interface_r_m_call.html#a85bb3ac47600a313105a6f94c9ab7ec3">00066</a> - (BOOL)call:(NSString*) method
 <a name="l00067"></a>00067    arguments:(NSDictionary*) arguments
 <a name="l00068"></a>00068     delegate:(<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate
 <a name="l00069"></a>00069 {
@@ -97,7 +96,7 @@
 <a name="l00073"></a>00073            <a class="code" href="interface_r_m_call.html#ae6750e4bc12f50170b839e1b96227a87" title="Call a remote method with a specific call protocol.">protocol</a>:nil];
 <a name="l00074"></a>00074 }
 <a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="interface_r_m_call.html#ae6750e4bc12f50170b839e1b96227a87">00076</a> - (BOOL)call:(<a class="code" href="class_n_s_string.html">NSString</a>*) method
+<a name="l00076"></a><a class="code" href="interface_r_m_call.html#ae6750e4bc12f50170b839e1b96227a87">00076</a> - (BOOL)call:(NSString*) method
 <a name="l00077"></a>00077    arguments:(NSDictionary*) arguments
 <a name="l00078"></a>00078     delegate:(<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate
 <a name="l00079"></a>00079     protocol:(<span class="keywordtype">id</span>&lt;RMCallProtocol&gt;) aProtocol
@@ -109,7 +108,7 @@
 <a name="l00085"></a>00085   assert(delegate != nil);
 <a name="l00086"></a>00086   
 <a name="l00087"></a>00087   <span class="comment">// generate the request</span>
-<a name="l00088"></a>00088   <a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a> *req = [<a class="code" href="interface_a_s_i_form_data_request.html">ASIFormDataRequest</a>
+<a name="l00088"></a>00088   ASIFormDataRequest *req = [ASIFormDataRequest
 <a name="l00089"></a>00089                              requestWithURL:
 <a name="l00090"></a>00090                              [NSURL URLWithString:@&quot;http://127.0.0.1/&quot;]];
 <a name="l00091"></a>00091   
@@ -243,7 +242,7 @@
 <a name="l00219"></a>00219 
 <a name="l00220"></a>00220 <span class="keyword">@end</span>
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:05:16 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:15:04 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>
