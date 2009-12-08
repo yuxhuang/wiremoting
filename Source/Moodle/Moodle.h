@@ -9,11 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "WIRemoting.h"
 
+@class MoodleAuthenticator;
+@class MoodleCallProtocol;
+
 @interface Moodle : NSObject {
+  RMCall *call;
   RMSession *session;
+  MoodleCallProtocol *protocol;
+  MoodleAuthenticator *authenticator;
 }
 
+@property(readonly) BOOL loggedIn;
+
 #pragma mark authentication
+
+- (void) sync;
+
 /**
  * Log in a Moodle system
  *
@@ -21,14 +32,6 @@
  * @param password the password to log in
  */
 -(void) login:(NSString*) username password:(NSString*) password;
-/**
- * Login Success Handler
- */
--(void) loginSuccess:(RMResponse*) response;
-/**
- * Failure handler
- */
--(void) failed:(RMResponse*) response error:(NSError*) error;
 /**
  * Log out from a Moodle system
  */
@@ -41,34 +44,34 @@
  *
  * @return courses as an NSArray of NSDictionary
  */
--(NSArray*) getCourses;
+-(void) getCourses:(id)delegate;
 /**
  * Get a course with an ID
  *
  * @param courseId the course id
  * @return a course as an NSDictionary
  */
--(NSDictionary*) getCourse:(NSInteger) courseId;
+-(void) getCourse:(NSInteger) courseId delegate:(id)delegate;
 /**
  * Get all my courses
  *
  * @return courses as an NSArray of NSDictionary
  */
--(NSArray*) getMyCourses;
+-(void) getMyCourses:(id)delegate;
 /**
  * Get all resources from a course
  *
  * @param courseId the course id
  * @return resources as an NSArray of NSDictionary
  */
--(NSArray*) getResources:(NSInteger) courseId;
+-(void) getResources:(NSInteger) courseId delegate:(id)delegate;
 /**
  * Get all teachers from a course
  *
  * @param courseId the course id
  * @return teachers as an NSArray of NSDictionary
  */
--(NSArray*) getTeachers:(NSInteger) courseId;
+-(void) getTeachers:(NSInteger) courseId delegate:(id)delegate;
 
 /**
  * Get all students from a course
@@ -76,13 +79,13 @@
  * @param courseId the course id
  * @return resources as an NSArray of NSDictionary
  */
--(NSArray*) getStudents:(NSInteger) courseId;
+-(void) getStudents:(NSInteger) courseId delegate:(id)delegate;
 /**
  * Get all activities of a course
  *
  * @param courseId the course id
  * @return activities as an NSArray of NSDictionary
  */
--(NSArray*) getActivities:(NSInteger) courseId;
+-(void) getActivities:(NSInteger) courseId delegate:(id)delegate;
 
 @end

@@ -24,9 +24,18 @@
     
     username = [aUsername copy];
     password = [aPassword copy];
+    sessionKey = nil;
+    client = -1;
   }
   
   return self;
+}
+
+- (void) clear
+{
+  client = -1;
+  [sessionKey release];
+  sessionKey = nil;
 }
 
 - (void) dealloc
@@ -46,13 +55,6 @@
                     password, @"password",
                     nil]]) {
       // you should be here
-    }
-    else {
-      // throw authentication exception
-      NSException *e = [NSException exceptionWithName:@"MoodleAuthenticationException"
-                                               reason:@"Protocol not allowed."
-                                             userInfo:nil];
-      @throw e;
     }
     [call removeDelegate:wrapper];
   }
@@ -75,34 +77,56 @@
     if (nil != n &&
         [n boolValue] &&
         nil != message &&
-        [message isKindOfClass:[NSDictionary class]] &&
+        [message isKindOfClass:[NSDictionary class]] && 
         [[message valueForKey:@"code"] isEqual:@"SOAP"] &&
-        [[message valueForKey:@"string"] isEqual:@"Invalid username and \\/ or password."]) {
-      return FALSE;
+        [[message valueForKey:@"string"] isEqual:@"Invalid username and / or password."]) {
+      return NO;
     }
     else {
-      return TRUE;
+      return YES;
     }
   }
 
-  return FALSE;
+  return NO;
 }
 
 - (void) adjustRequest:(ASIFormDataRequest *)request
                 method:(NSString *)method
              arguments:(NSDictionary *)arguments
 {
-  // adjust request according to 
+  // adjust request to add client and sessionKey
+  if (client != -1 && nil != sessionKey) {
+    [request setPostValue:[NSNumber numberWithInt:client] forKey:@"client"];
+    [request setPostValue:sessionKey forKey:@"sessionkey"];
+  }
 }
 
 #pragma mark authentication token
 
 - (void) getAuthenticationToken: (RMResponse*) response
 {
+  if (nil != sessionKey) {
+    [sessionKey release];
+    sessionKey = nil;
+    client = -1;
+  }
+  
+  id r = [[response responseString] JSONValue];
+  if (nil != r && [r isKindOfClass:[NSDictionary class]]) {
+    NSNumber *n = (NSNumber*) [r valueForKey:@"client"];
+    sessionKey = [[r valueForKey:@"sessionkey"] copy];;
+    if (nil != n && nil != sessionKey) {
+      client = [n intValue];
+    }
+  }
+  
 }
 
 - (void) failed:(RMResponse*) response error:(NSError*) error
 {
+  [sessionKey release];
+  sessionKey = nil;
+  client = -1;
 }
 
 @end

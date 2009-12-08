@@ -10,7 +10,9 @@
 #import "WIRemoting.h"
 
 @interface MoodleResult : NSObject<RMResultDelegate> {
-
+  id result;
 }
+
+@property(readonly) id result;
 
 @end

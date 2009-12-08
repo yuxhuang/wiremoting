@@ -77,6 +77,8 @@
 		E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B010C89B17003E4873 /* MoodleResult.m */; };
 		E685C0B710C89B48003E4873 /* Moodle.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0B510C89B48003E4873 /* Moodle.h */; };
 		E685C0B810C89B48003E4873 /* Moodle.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B610C89B48003E4873 /* Moodle.m */; };
+		E6E4753610CEA97600C5E68C /* MoodleTests.m in Resources */ = {isa = PBXBuildFile; fileRef = E6E4753510CEA97600C5E68C /* MoodleTests.m */; };
+		E6E4755C10CEABD100C5E68C /* MoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E4753510CEA97600C5E68C /* MoodleTests.m */; };
 		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
 		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
 		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
@@ -171,6 +173,8 @@
 		E685C0B010C89B17003E4873 /* MoodleResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleResult.m; sourceTree = "<group>"; };
 		E685C0B510C89B48003E4873 /* Moodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moodle.h; sourceTree = "<group>"; };
 		E685C0B610C89B48003E4873 /* Moodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moodle.m; sourceTree = "<group>"; };
+		E6E4753410CEA97600C5E68C /* MoodleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleTests.h; sourceTree = "<group>"; };
+		E6E4753510CEA97600C5E68C /* MoodleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleTests.m; sourceTree = "<group>"; };
 		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
 		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
 		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 		E659C289109E4E0200D9CFE2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E6E4753310CEA92F00C5E68C /* Moodle */,
 				E664DBC810AF90D400B1418A /* UnitTests */,
 			);
 			path = Tests;
@@ -383,6 +388,15 @@
 				E659C289109E4E0200D9CFE2 /* Tests */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		E6E4753310CEA92F00C5E68C /* Moodle */ = {
+			isa = PBXGroup;
+			children = (
+				E6E4753410CEA97600C5E68C /* MoodleTests.h */,
+				E6E4753510CEA97600C5E68C /* MoodleTests.m */,
+			);
+			path = Moodle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +516,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E4753610CEA97600C5E68C /* MoodleTests.m in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E4755C10CEABD100C5E68C /* MoodleTests.m in Sources */,
 				E664DBD410AF915100B1418A /* RMCallTests.m in Sources */,
 				E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */,
 				E667E37710C71CAB00EC0CA0 /* main.m in Sources */,

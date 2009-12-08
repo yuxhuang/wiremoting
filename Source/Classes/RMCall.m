@@ -79,12 +79,19 @@
    arguments:(NSDictionary*) arguments
     protocol:(id<RMCallProtocol>) aProtocol
 {
+
+  BOOL agreement;
+  
+  // make sure method and delegate exist
+  assert(method != nil);
+  if (nil == arguments) {
+    arguments = [[NSDictionary alloc] init];
+  }
+  else {
+    [arguments retain];
+  }
+  
   @synchronized(self.semaphore) {
-    
-    BOOL agreement;
-    
-    // make sure method and delegate exist
-    assert(method != nil);
     
     // generate the request
     ASIFormDataRequest *req = [ASIFormDataRequest
@@ -125,6 +132,7 @@
     
     // not agree
     if (!agreement) {
+      [arguments release];
       return NO;
     }
     
@@ -200,6 +208,7 @@
     }
   }
 
+  [arguments release];
   return YES;
 }
 

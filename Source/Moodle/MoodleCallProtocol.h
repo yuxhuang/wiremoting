@@ -10,7 +10,9 @@
 #import "WIRemoting.h"
 
 @interface MoodleCallProtocol : NSObject<RMCallProtocol> {
-
+  BOOL async;
 }
+
+@property(assign) BOOL async;
 
 @end

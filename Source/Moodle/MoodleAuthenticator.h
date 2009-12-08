@@ -13,10 +13,13 @@
   NSString *username;
   NSString *password;
   RMResultDelegateWrapper *wrapper;
+  NSInteger client;
+  NSString *sessionKey;
 }
-
 
 - (id)initWithUsername:(NSString*)username
               password:(NSString *)password;
+
+- (void) clear;
 
 @end
