@@ -16,7 +16,7 @@
 #import <UIKit/UIKit.h>
 //#import "application_headers" as required
 
-@class RMCall, RMSession, MockProtocol;
+@class RMCall, RMSession, MockProtocol, RMResultDelegateWrapper;
 @protocol RMAuthenticator, RMCallProtocol, RMResultDelegate;
 
 @interface RMSessionTests : SenTestCase<RMAuthenticator, RMCallProtocol, RMResultDelegate> {
@@ -25,6 +25,7 @@
   MockProtocol *protocol;
   NSString *username;
   NSString *password;
+  RMResultDelegateWrapper *wrapper;
 }
 
 @end

@@ -35,12 +35,13 @@
   RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
                                   failed:@selector(failed:error:)];
+  [call addDelegate:m];
   [call call:@"echo" arguments:
    [NSDictionary
     dictionaryWithObjectsAndKeys:
     @"hello world", @"echo",
-    nil] delegate:m];
-  
+    nil]];
+  [call removeDelegate:m];
   [m release];
 }
 
@@ -54,13 +55,15 @@
   [call pushProtocol:proto2];
   // protocol 2 will change _method to json_echo2
   
+  [call addDelegate:m];
   [call call:@"echo" arguments:
    [NSDictionary
     dictionaryWithObjectsAndKeys:
     @"hello world", @"echo",
     @"hello world 2", @"echo2",
-    nil] delegate:m];
+    nil]];
   
+  [call removeDelegate:m];
   [proto2 release];
   [m release];
   
@@ -75,12 +78,15 @@
   m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(callEchoFinished:)
                                   failed:@selector(failed:error:)];
+  
+  [call addDelegate:m];
   [call call:@"echo" arguments:
    [NSDictionary
     dictionaryWithObjectsAndKeys:
     @"hello world", @"echo",
-    nil] delegate:m];
+    nil]];
   
+  [call removeDelegate:m];
   [m release];
 }
 
@@ -92,16 +98,17 @@
   MockProtocol2 *proto2 = [[MockProtocol2 alloc] init];
   
   // protocol 2 will change _method to json_echo2
+  [call addDelegate:m];
   [call call:@"echo"
    arguments:[NSDictionary
               dictionaryWithObjectsAndKeys:
               @"hello world", @"echo",
               @"hello world 2", @"echo2",
               nil]
-    delegate:m
     protocol:proto2];
-  
+
   [proto2 release];
+  [call removeDelegate:m];
   [m release];
 }
 
@@ -115,19 +122,21 @@
   
   [call pushProtocol:p2];
   
+  [call addDelegate:m];
   BOOL r = [call call:@"echo"
             arguments:[NSDictionary
                        dictionaryWithObjectsAndKeys:
                        @"hello world", @"echo",
-                       nil]
-             delegate:m];
+                       nil]];
   if (r) {
     STFail(@"The call shouldn't be sent.");
   }
   
   [call popProtocol];
   [p2 release];
-  [m release];}
+  [call removeDelegate:m];
+  [m release];
+}
 
 #pragma mark assistant methods
 

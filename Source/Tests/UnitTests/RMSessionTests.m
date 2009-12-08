@@ -8,7 +8,6 @@
 
 #import "RMSessionTests.h"
 #import "MockProtocol.h"
-#import "RMResultDelegateWrapper.h"
 #import "WIRemoting.h"
 
 @implementation RMSessionTests
@@ -17,21 +16,21 @@
 
 - (void) setUp
 {
-  RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
+  wrapper = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(failed:error:)];
   protocol = [[MockProtocol alloc] init];
   call = [[RMCall alloc] initWithProtocol:protocol];
+  [session addDelegate:wrapper];
   session = [[RMSession alloc] initWithAuthenticator:self
-                                                call:call
-                                            delegate:m];
+                                                call:call];
   username = @"admin";
   password = @"1234";
-  [m release];
 }
 
 - (void) tearDown
 {
+  [wrapper release];
   [session release];
   [call release];
   [protocol release];
@@ -51,12 +50,13 @@
 
 - (void)testFailedAuthentication {
   username = @"abc";
-  id<RMResultDelegate> oldDelegate = [session.delegate retain];
+
+  [session removeDelegate:wrapper];
+  
   RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(expectFailed:error:)];
-  session.delegate = m;
-
+  [session addDelegate:m];
   [session authenticate];
   if (session.authenticated) {
     // shouldn't be here, because the authenticat must failed with
@@ -68,9 +68,7 @@
   }
   
   username = @"admin";
-  session.delegate = oldDelegate;
-  
-  [oldDelegate release];
+
   [m release];
 }
 
@@ -79,10 +77,14 @@
   RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(failed:error:)];
+  
+  [session removeDelegate:wrapper];
+  [session addDelegate:wrapper];
+  
   [session call:@"json_echo2"
       arguments:[NSDictionary
-                 dictionaryWithObjectsAndKeys:@"hello world", @"echo", nil]
-       delegate:m];
+                 dictionaryWithObjectsAndKeys:@"hello world", @"echo", nil]];
+  
   
   [m release];
 }
@@ -92,10 +94,11 @@
   RMResultDelegateWrapper *m = [[RMResultDelegateWrapper alloc] initWithObject:self
                                 finished:@selector(finished:)
                                   failed:@selector(expectFailed:error:)];
+  
+  [session.call addDelegate:m];
   [session.call call:@"json_echo2"
       arguments:[NSDictionary
-                 dictionaryWithObjectsAndKeys:@"hello world", @"echo", nil]
-       delegate:m];
+                 dictionaryWithObjectsAndKeys:@"hello world", @"echo", nil]];
   
   [m release];
 }
@@ -107,21 +110,20 @@
   return self;
 }
 
-- (void)authenticateWithCall:(RMCall *)call
-                    delegate:(id<RMResultDelegate>)delegate
+- (void)authenticateWithCall:(RMCall *)aCall
 {
-  if ([call call:@"json_auth"
-       arguments:[NSDictionary
-                  dictionaryWithObjectsAndKeys:
-                  username, @"username",
-                  password, @"password",
-                  nil]
-        delegate:delegate]) {
+  if ([aCall call:@"json_auth"
+        arguments:[NSDictionary
+                   dictionaryWithObjectsAndKeys:
+                   username, @"username",
+                   password, @"password",
+                   nil]]) {
     // should be here
   }
   else {
     STFail(@"The authenticate call is not executed.");
   }
+  
 }
 
 - (void)adjustRequest:(ASIFormDataRequest *)request

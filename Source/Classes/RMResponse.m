@@ -17,22 +17,23 @@
 
 + (id)responseWithCall:(RMCall*) call
                request:(ASIHTTPRequest*) request
-              delegate:(id<RMResultDelegate>) delegate
+              delegate:(NSArray*) aDelegateChain
 {
   return [[[RMResponse alloc]
-           initWithCall:call request:request delegate:delegate] autorelease];
+           initWithCall:call request:request delegate:aDelegateChain] autorelease];
 }
 
 - (id)initWithCall:(RMCall*) call
            request:(ASIHTTPRequest*) req
-          delegate:(id<RMResultDelegate>) aDelegate
+          delegate:(NSArray*) aDelegateChain
 {
   self = [super init];
   
   if (nil != self) {
     parentCall = call;
     request = [req retain];
-    delegate = aDelegate;
+    // take a snapshot of the delegate chain
+    delegateChain = [aDelegateChain copy];;
   }
   
   return self;
@@ -42,6 +43,7 @@
 {
   [string release];
   [data release];
+  [delegateChain release];
   [super dealloc];
 }
 
@@ -51,8 +53,10 @@
   string = [[NSString alloc] initWithString:[req responseString]];
   data = [[NSData alloc] initWithData:[req responseData]];
   
-  // call the delegate for successful call
-  [delegate finished:self];
+  // call delegates for successful call
+  for (id<RMResultDelegate> delegate in delegateChain) {
+    [delegate finished:self];
+  }
   
   // tell the parent call the response is done
   [parentCall responseDone:self];
@@ -66,8 +70,10 @@
   NSError *error = [req error];
   
   // call the delegate for failed call
-  [delegate failed:self
-                 error:error];
+  for (id<RMResultDelegate> delegate in delegateChain) {
+    [delegate failed:self
+               error:error];
+  }
   
   // tell the parent call the response is done
   [parentCall responseDone:self];

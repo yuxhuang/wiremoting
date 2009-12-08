@@ -17,7 +17,7 @@
  */
 @interface RMResponse : NSObject {
   RMCall *parentCall;
-  id<RMResultDelegate> delegate;
+  NSArray *delegateChain;
   ASIHTTPRequest *request;
   NSString *string;
   NSData *data;
@@ -26,11 +26,11 @@
 
 + (id)responseWithCall:(RMCall*) call
                request:(ASIHTTPRequest*) request
-              delegate:(id<RMResultDelegate>) delegate;
+              delegate:(NSArray*) delegateChain;
 
 - (id)initWithCall:(RMCall*) call
            request:(ASIHTTPRequest*) request
-          delegate:(id<RMResultDelegate>) delegate;
+          delegate:(NSArray*) delegateChain;
 
 - (void)requestFinished:(ASIHTTPRequest*) request;
 - (void)requestFailed:(ASIHTTPRequest*) request;

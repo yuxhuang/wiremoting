@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "WIRemoting.h"
 
-@interface MoodleAuthenticator : NSObject<RMAuthenticator> {
-
+@interface MoodleAuthenticator : NSObject<RMAuthenticator,RMCallProtocol> {
+  NSString *username;
+  NSString *password;
+  RMResultDelegateWrapper *wrapper;
 }
+
+
+- (id)initWithUsername:(NSString*)username
+              password:(NSString *)password;
 
 @end

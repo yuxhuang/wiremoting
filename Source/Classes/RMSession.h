@@ -27,8 +27,7 @@
  * @param call a RMCall object.
  * @param delegate a RMSessionDelegate.
  */
-- (void) authenticateWithCall: (RMCall*) call
-                     delegate: (id<RMResultDelegate>) delegate;
+- (void) authenticateWithCall: (RMCall*) call;
 @required
 /**
  * A call protocol to handle session credentials for subsequent calls.
@@ -63,7 +62,7 @@
 @interface RMSession : NSObject<RMResultDelegate> {
   RMCall *call;
   id<RMAuthenticator> authenticator;
-  id<RMResultDelegate> delegate;
+  NSMutableArray *delegateChain;
   BOOL authenticated;
 }
 
@@ -72,22 +71,20 @@
  */
 @property (readonly) RMCall *call;
 /**
- * The session delegate to handle authentication events.
+ * Semaphore for locking
  */
-@property (retain) id<RMResultDelegate> delegate;
+@property (readonly,getter=semaphore) id semaphore;
 
 /**
  * Initiate a session with an authentication delegate.
  *
  * @param authenticator An authentication service provider.
  * @param call A call object to handle session calls.
- * @param delegate A session delegate to handle authentication events.
  *
  * @return An initiated RMSession object.
  */
 - (id) initWithAuthenticator: (id<RMAuthenticator>) authenticator
-                        call:(RMCall*) call
-                    delegate: (id<RMResultDelegate>) delegate;
+                        call:(RMCall*) call;
 
 /**
  * Authenticate the session.
@@ -106,14 +103,27 @@
  *
  * @param method The method name.
  * @param arguments Method arguments.
- * @param delegate The call delegate to handle call results.
  */
 - (BOOL)call:(NSString*) method
-   arguments:(NSDictionary*) arguments
-    delegate:(id<RMResultDelegate>) delegate;
+   arguments:(NSDictionary*) arguments;
 
 /**
  * Close a session.
  */
 - (void)close;
+
+/**
+ * Add a new delegate
+ *
+ * @param delegate A delegate
+ */
+- (void) addDelegate: (id<RMResultDelegate>) delegate;
+
+/**
+ * Remove a delegate
+ *
+ * @param delegate A delegate
+ */
+- (void) removeDelegate: (id<RMResultDelegate>) delegate;
+
 @end

@@ -1,0 +1,154 @@
+\hypertarget{interface_moodle}{
+\section{Moodle Class Reference}
+\label{interface_moodle}\index{Moodle@{Moodle}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_moodle_a9213ffaec574e053426c7889c096ab3d}{login:password:}
+\begin{DoxyCompactList}\small\item\em Log in a \hyperlink{interface_moodle}{Moodle} system. \item\end{DoxyCompactList}\item 
+\hypertarget{interface_moodle_a5781c50f886a420b8e7d8b9cf824f68c}{
+(void) -\/ \hyperlink{interface_moodle_a5781c50f886a420b8e7d8b9cf824f68c}{loginSuccess:}}
+\label{interface_moodle_a5781c50f886a420b8e7d8b9cf824f68c}
+
+\begin{DoxyCompactList}\small\item\em Login Success Handler. \item\end{DoxyCompactList}\item 
+\hypertarget{interface_moodle_aa0c8c98374d884a787a8a212f375120a}{
+(void) -\/ \hyperlink{interface_moodle_aa0c8c98374d884a787a8a212f375120a}{failed:error:}}
+\label{interface_moodle_aa0c8c98374d884a787a8a212f375120a}
+
+\begin{DoxyCompactList}\small\item\em Failure handler. \item\end{DoxyCompactList}\item 
+\hypertarget{interface_moodle_a15ea5da83295031cf3384ce7b13ca570}{
+(void) -\/ \hyperlink{interface_moodle_a15ea5da83295031cf3384ce7b13ca570}{logout}}
+\label{interface_moodle_a15ea5da83295031cf3384ce7b13ca570}
+
+\begin{DoxyCompactList}\small\item\em Log out from a \hyperlink{interface_moodle}{Moodle} system. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_a04e4a2082a8100dc2f1f6948bd843aa6}{getCourses}
+\begin{DoxyCompactList}\small\item\em Get all courses. \item\end{DoxyCompactList}\item 
+(NSDictionary $\ast$) -\/ \hyperlink{interface_moodle_a2abf5272330348bfac86e2714874ed10}{getCourse:}
+\begin{DoxyCompactList}\small\item\em Get a course with an ID. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_a5ea7cf4b73cc15399410a1c7d8875984}{getMyCourses}
+\begin{DoxyCompactList}\small\item\em Get all my courses. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_a71ccbe28df5d535d316ac3de507d1bc7}{getResources:}
+\begin{DoxyCompactList}\small\item\em Get all resources from a course. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_ad24bfc36948fc830ad21c7867b8e3793}{getTeachers:}
+\begin{DoxyCompactList}\small\item\em Get all teachers from a course. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_a0a15c6cd198f7448b8f363d2b5a3e33d}{getStudents:}
+\begin{DoxyCompactList}\small\item\em Get all students from a course. \item\end{DoxyCompactList}\item 
+(NSArray $\ast$) -\/ \hyperlink{interface_moodle_a7c17a97046fb3e9f9770c35bf5aa568c}{getActivities:}
+\begin{DoxyCompactList}\small\item\em Get all activities of a course. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_moodle_aff717c5349de2476696eef1117b2e4e1}{
+\hyperlink{interface_r_m_session}{RMSession} $\ast$ {\bfseries session}}
+\label{interface_moodle_aff717c5349de2476696eef1117b2e4e1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Moodle.h.
+
+\subsection{Member Function Documentation}
+\hypertarget{interface_moodle_a9213ffaec574e053426c7889c096ab3d}{
+\index{Moodle@{Moodle}!login:password:@{login:password:}}
+\index{login:password:@{login:password:}!Moodle@{Moodle}}
+\subsubsection[{login:password:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) login: (NSString $\ast$) {\em username}\/ password: (NSString $\ast$) {\em password}}}
+\label{interface_moodle_a9213ffaec574e053426c7889c096ab3d}
+
+
+Log in a \hyperlink{interface_moodle}{Moodle} system. 
+\begin{DoxyParams}{Parameters}
+\item[{\em username}]the username to log in \item[{\em password}]the password to log in \end{DoxyParams}
+\hypertarget{interface_moodle_a04e4a2082a8100dc2f1f6948bd843aa6}{
+\index{Moodle@{Moodle}!getCourses@{getCourses}}
+\index{getCourses@{getCourses}!Moodle@{Moodle}}
+\subsubsection[{getCourses}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getCourses }}
+\label{interface_moodle_a04e4a2082a8100dc2f1f6948bd843aa6}
+
+
+Get all courses. \begin{DoxyReturn}{Returns}
+courses as an NSArray of NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_a2abf5272330348bfac86e2714874ed10}{
+\index{Moodle@{Moodle}!getCourse:@{getCourse:}}
+\index{getCourse:@{getCourse:}!Moodle@{Moodle}}
+\subsubsection[{getCourse:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSDictionary$\ast$) getCourse: (NSInteger) {\em courseId}}}
+\label{interface_moodle_a2abf5272330348bfac86e2714874ed10}
+
+
+Get a course with an ID. 
+\begin{DoxyParams}{Parameters}
+\item[{\em courseId}]the course id \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a course as an NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_a5ea7cf4b73cc15399410a1c7d8875984}{
+\index{Moodle@{Moodle}!getMyCourses@{getMyCourses}}
+\index{getMyCourses@{getMyCourses}!Moodle@{Moodle}}
+\subsubsection[{getMyCourses}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getMyCourses }}
+\label{interface_moodle_a5ea7cf4b73cc15399410a1c7d8875984}
+
+
+Get all my courses. \begin{DoxyReturn}{Returns}
+courses as an NSArray of NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_a71ccbe28df5d535d316ac3de507d1bc7}{
+\index{Moodle@{Moodle}!getResources:@{getResources:}}
+\index{getResources:@{getResources:}!Moodle@{Moodle}}
+\subsubsection[{getResources:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getResources: (NSInteger) {\em courseId}}}
+\label{interface_moodle_a71ccbe28df5d535d316ac3de507d1bc7}
+
+
+Get all resources from a course. 
+\begin{DoxyParams}{Parameters}
+\item[{\em courseId}]the course id \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resources as an NSArray of NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_ad24bfc36948fc830ad21c7867b8e3793}{
+\index{Moodle@{Moodle}!getTeachers:@{getTeachers:}}
+\index{getTeachers:@{getTeachers:}!Moodle@{Moodle}}
+\subsubsection[{getTeachers:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getTeachers: (NSInteger) {\em courseId}}}
+\label{interface_moodle_ad24bfc36948fc830ad21c7867b8e3793}
+
+
+Get all teachers from a course. 
+\begin{DoxyParams}{Parameters}
+\item[{\em courseId}]the course id \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+teachers as an NSArray of NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_a0a15c6cd198f7448b8f363d2b5a3e33d}{
+\index{Moodle@{Moodle}!getStudents:@{getStudents:}}
+\index{getStudents:@{getStudents:}!Moodle@{Moodle}}
+\subsubsection[{getStudents:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getStudents: (NSInteger) {\em courseId}}}
+\label{interface_moodle_a0a15c6cd198f7448b8f363d2b5a3e33d}
+
+
+Get all students from a course. 
+\begin{DoxyParams}{Parameters}
+\item[{\em courseId}]the course id \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resources as an NSArray of NSDictionary 
+\end{DoxyReturn}
+\hypertarget{interface_moodle_a7c17a97046fb3e9f9770c35bf5aa568c}{
+\index{Moodle@{Moodle}!getActivities:@{getActivities:}}
+\index{getActivities:@{getActivities:}!Moodle@{Moodle}}
+\subsubsection[{getActivities:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (NSArray$\ast$) getActivities: (NSInteger) {\em courseId}}}
+\label{interface_moodle_a7c17a97046fb3e9f9770c35bf5aa568c}
+
+
+Get all activities of a course. 
+\begin{DoxyParams}{Parameters}
+\item[{\em courseId}]the course id \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+activities as an NSArray of NSDictionary 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+/Users/yxh/Code/XCode/WIRemoting/Source/Moodle/Moodle.h\end{DoxyCompactItemize}

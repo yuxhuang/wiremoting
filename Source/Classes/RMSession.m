@@ -10,20 +10,20 @@
 
 @implementation RMSession
 
-@synthesize call, delegate, authenticated;
+@synthesize call, authenticated;
+@dynamic semaphore;
 
 #pragma mark session management
 
 - (id) initWithAuthenticator: (id<RMAuthenticator>) newAuthenticator
                         call:(RMCall*) newCall
-                    delegate: (id<RMResultDelegate>) newDelegate
 {
   self = [super init];
   if (nil != self) {
     // grab instances
     authenticator = [newAuthenticator retain];
     call = [newCall retain];
-    delegate = [newDelegate retain];
+    delegateChain = [[NSMutableArray alloc] initWithCapacity:1];
     
     // initialize variables
     authenticated = NO;
@@ -36,18 +36,41 @@
 {
   [authenticator release];
   [call release];
-  [delegate release];
+  [delegateChain release];
   [super dealloc];
 }
 
 - (void) close {
 }
 
+- (void) addDelegate: (id<RMResultDelegate>) delegate
+{
+  @synchronized(self.semaphore) {
+    [delegateChain addObject:delegate];
+  }
+}
+
+- (void) removeDelegate: (id<RMResultDelegate>) delegate
+{
+  @synchronized(self.semaphore) {
+    [delegateChain removeObject:delegate];
+  }
+}
+
+- (id) semaphore
+{
+  return self;
+}
+
 #pragma mark authentication
 
 - (void) authenticate
 {
-  [authenticator authenticateWithCall:self.call delegate:self];
+  @synchronized(self.call.semaphore) {
+    [self.call addDelegate:self];
+    [authenticator authenticateWithCall:self.call];
+    [self.call removeDelegate:self];
+  }
 }
 
 - (void)finished:(RMResponse *)response
@@ -68,41 +91,49 @@
     }
   }
   // if authenticated
-  if (auth) {
-    authenticated = YES;
-    // call delegate
-    [delegate finished:response];
-  }
-  else {
-    authenticated = NO;
-    // create a new NSError
-    NSError *error =
-        [NSError errorWithDomain:NSURLErrorDomain
-                            code:EINVAL
-                        userInfo:
-          [NSDictionary
-           dictionaryWithObjectsAndKeys:
-           @"Authentication error.", NSLocalizedDescriptionKey,
-           @"Unable to authenticate the session.", NSLocalizedFailureReasonErrorKey,
-           nil]];
-    [delegate failed:response error:error];
+  @synchronized(self.semaphore) {
+    if (auth) {
+      authenticated = YES;
+      // call delegates
+      for (id<RMResultDelegate> delegate in delegateChain) {
+        [delegate finished:response];
+      }
+    }
+    else {
+      authenticated = NO;
+      // create a new NSError
+      NSError *error =
+          [NSError errorWithDomain:NSURLErrorDomain
+                              code:EINVAL
+                          userInfo:
+            [NSDictionary
+             dictionaryWithObjectsAndKeys:
+             @"Authentication error.", NSLocalizedDescriptionKey,
+             @"Unable to authenticate the session.", NSLocalizedFailureReasonErrorKey,
+             nil]];
+      for (id<RMResultDelegate> delegate in delegateChain) {
+        [delegate failed:response error:error];
+      }
+    }
   }
 }
 
 - (void)failed:(RMResponse *)response error:(NSError *)error
 {
-  [delegate failed:response error:error];
+  @synchronized(self.semaphore) {
+    for (id<RMResultDelegate> delegate in delegateChain) {
+      [delegate failed:response error:error];
+    }
+  }
 }
 
 #pragma mark call
 
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
-    delegate:(id<RMResultDelegate>) callDelegate
 {
   return [call call:method
           arguments:arguments
-           delegate:callDelegate
            protocol:[authenticator callProtocol]];
 }
 
