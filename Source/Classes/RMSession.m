@@ -137,4 +137,14 @@
            protocol:[authenticator callProtocol]];
 }
 
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
+    delegate:(id) delegate
+{
+  return [call call:method
+          arguments:arguments
+           delegate:delegate
+           protocol:[authenticator callProtocol]];
+}
+
 @end

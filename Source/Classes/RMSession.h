@@ -108,6 +108,20 @@
    arguments:(NSDictionary*) arguments;
 
 /**
+ * Call a remote method with a temporary delegate
+ *
+ * @param method The method name.
+ * @param arguments The method arguments.
+ * @param delegate a delegate
+ *
+ * @return whether the call is sent.
+ */
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
+    delegate:(id) delegate;
+
+
+/**
  * Close a session.
  */
 - (void)close;

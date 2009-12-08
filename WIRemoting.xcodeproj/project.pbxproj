@@ -54,10 +54,6 @@
 		E664DBD410AF915100B1418A /* RMCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DBD110AF914700B1418A /* RMCallTests.m */; };
 		E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockProtocol.m */; };
 		E664DC2810AFB77D00B1418A /* WIRemoting.h in Headers */ = {isa = PBXBuildFile; fileRef = E664DC2710AFB77700B1418A /* WIRemoting.h */; };
-		E667E36B10C71C6B00EC0CA0 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
-		E667E37710C71CAB00EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
-		E667E37810C71CC100EC0CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E37610C71CAB00EC0CA0 /* main.m */; };
-		E667E37D10C71CF400EC0CA0 /* MockProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E664DC2110AFB71500B1418A /* MockProtocol.m */; };
 		E667E42010C7240300EC0CA0 /* RMResultDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */; };
 		E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */; };
 		E667E54C10C73F8700EC0CA0 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C30A109E523500D9CFE2 /* NSObject+SBJSON.m */; };
@@ -67,6 +63,9 @@
 		E667E55010C73F8B00EC0CA0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C312109E523500D9CFE2 /* SBJsonParser.m */; };
 		E667E55110C73F8E00EC0CA0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C314109E523500D9CFE2 /* SBJsonWriter.m */; };
 		E667E5C810C74AE900EC0CA0 /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
+		E67A9F3B10CF020800F520FA /* GetCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A9F3A10CF020800F520FA /* GetCoursesViewController.m */; };
+		E67A9F8C10CF059700F520FA /* ShowCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */; };
+		E67AA06E10CF0E6A00F520FA /* CourseDetailResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */; };
 		E685BDF010C7EB63003E4873 /* MockProtocolShouldSend.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */; };
 		E685BE5A10C7FA39003E4873 /* RMSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE5910C7FA39003E4873 /* RMSessionTests.m */; };
 		E685BE8F10C7FDE7003E4873 /* MockSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */; };
@@ -79,6 +78,22 @@
 		E685C0B810C89B48003E4873 /* Moodle.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B610C89B48003E4873 /* Moodle.m */; };
 		E6E4753610CEA97600C5E68C /* MoodleTests.m in Resources */ = {isa = PBXBuildFile; fileRef = E6E4753510CEA97600C5E68C /* MoodleTests.m */; };
 		E6E4755C10CEABD100C5E68C /* MoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E4753510CEA97600C5E68C /* MoodleTests.m */; };
+		E6E477B110CED0FD00C5E68C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C11D109E492300D9CFE2 /* UIKit.framework */; };
+		E6E477B210CED0FE00C5E68C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C7109E497D00D9CFE2 /* SystemConfiguration.framework */; };
+		E6E477B310CED0FE00C5E68C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1CB109E498100D9CFE2 /* libz.dylib */; };
+		E6E477B410CED0FF00C5E68C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		E6E477B510CED0FF00C5E68C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E659C1C3109E497000D9CFE2 /* CFNetwork.framework */; };
+		E6E477D510CED1C100C5E68C /* MoodleExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */; };
+		E6E477DC10CED21900C5E68C /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E477DA10CED21900C5E68C /* RootViewController.xib */; };
+		E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E477DB10CED21900C5E68C /* MainWindow.xib */; };
+		E6E477E410CED27200C5E68C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E477E310CED27200C5E68C /* RootViewController.m */; };
+		E6E477F110CED2A100C5E68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E477F010CED2A100C5E68C /* main.m */; };
+		E6E4784510CEE7BA00C5E68C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */; };
+		E6E4789110CEEA6200C5E68C /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
+		E6E4789910CEEA8000C5E68C /* RMResultDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */; };
+		E6E4789A10CEEA8300C5E68C /* RMResultDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */; };
+		E6E4794510CEF0A600C5E68C /* MoodleResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */; };
+		E6E479F910CEF85800C5E68C /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E479F810CEF85800C5E68C /* LogoutViewController.m */; };
 		E6FA4333109E806F00385C66 /* RMSession.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA4331109E806F00385C66 /* RMSession.h */; };
 		E6FA4334109E806F00385C66 /* RMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA4332109E806F00385C66 /* RMSession.m */; };
 		E6FA433F109E849300385C66 /* RMCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E6FA433D109E849300385C66 /* RMCall.h */; };
@@ -88,14 +103,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E667E36C10C71C7300EC0CA0 /* PBXContainerItemProxy */ = {
+		E667E36E10C71C7E00EC0CA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = WIRemoting;
 		};
-		E667E36E10C71C7E00EC0CA0 /* PBXContainerItemProxy */ = {
+		E6E476FF10CED09900C5E68C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
@@ -152,13 +167,17 @@
 		E664DC2010AFB71500B1418A /* MockProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol.h; sourceTree = "<group>"; };
 		E664DC2110AFB71500B1418A /* MockProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol.m; sourceTree = "<group>"; };
 		E664DC2710AFB77700B1418A /* WIRemoting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIRemoting.h; sourceTree = "<group>"; };
-		E667E36310C71C5700EC0CA0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E667E36510C71C5700EC0CA0 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
-		E667E37610C71CAB00EC0CA0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMResultDelegateWrapper.h; sourceTree = "<group>"; };
 		E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMResultDelegateWrapper.m; sourceTree = "<group>"; };
 		E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol2.h; sourceTree = "<group>"; };
 		E667E4D010C73B3B00EC0CA0 /* MockProtocol2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol2.m; sourceTree = "<group>"; };
+		E67A9F3910CF020800F520FA /* GetCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCoursesViewController.h; sourceTree = "<group>"; };
+		E67A9F3A10CF020800F520FA /* GetCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCoursesViewController.m; sourceTree = "<group>"; };
+		E67A9F8A10CF059700F520FA /* ShowCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCourseViewController.h; sourceTree = "<group>"; };
+		E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCourseViewController.m; sourceTree = "<group>"; };
+		E67AA06C10CF0E6A00F520FA /* CourseDetailResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailResultViewController.h; sourceTree = "<group>"; };
+		E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailResultViewController.m; sourceTree = "<group>"; };
 		E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocolShouldSend.h; sourceTree = "<group>"; };
 		E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocolShouldSend.m; sourceTree = "<group>"; };
 		E685BE5810C7FA39003E4873 /* RMSessionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSessionTests.h; sourceTree = "<group>"; };
@@ -175,6 +194,20 @@
 		E685C0B610C89B48003E4873 /* Moodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moodle.m; sourceTree = "<group>"; };
 		E6E4753410CEA97600C5E68C /* MoodleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleTests.h; sourceTree = "<group>"; };
 		E6E4753510CEA97600C5E68C /* MoodleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleTests.m; sourceTree = "<group>"; };
+		E6E476F910CED08500C5E68C /* Moodle Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodle Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Moodle Example-Info.plist"; sourceTree = "<group>"; };
+		E6E477D310CED1C100C5E68C /* MoodleExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleExampleAppDelegate.h; sourceTree = "<group>"; };
+		E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleExampleAppDelegate.m; sourceTree = "<group>"; };
+		E6E477DA10CED21900C5E68C /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		E6E477DB10CED21900C5E68C /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		E6E477E210CED27200C5E68C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E6E477E310CED27200C5E68C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E6E477F010CED2A100C5E68C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
+		E6E4794310CEF0A600C5E68C /* MoodleResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleResultViewController.h; sourceTree = "<group>"; };
+		E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleResultViewController.m; sourceTree = "<group>"; };
+		E6E479F710CEF85800C5E68C /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutViewController.h; sourceTree = "<group>"; };
+		E6E479F810CEF85800C5E68C /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
 		E6FA4331109E806F00385C66 /* RMSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSession.h; sourceTree = "<group>"; };
 		E6FA4332109E806F00385C66 /* RMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSession.m; sourceTree = "<group>"; };
 		E6FA433D109E849300385C66 /* RMCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCall.h; sourceTree = "<group>"; };
@@ -209,11 +242,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E667E36110C71C5700EC0CA0 /* Frameworks */ = {
+		E6E476F710CED08500C5E68C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E667E36B10C71C6B00EC0CA0 /* libWIRemoting.a in Frameworks */,
+				E6E477B110CED0FD00C5E68C /* UIKit.framework in Frameworks */,
+				E6E477B210CED0FE00C5E68C /* SystemConfiguration.framework in Frameworks */,
+				E6E477B310CED0FE00C5E68C /* libz.dylib in Frameworks */,
+				E6E477B410CED0FF00C5E68C /* Foundation.framework in Frameworks */,
+				E6E477B510CED0FF00C5E68C /* CFNetwork.framework in Frameworks */,
+				E6E4789110CEEA6200C5E68C /* libWIRemoting.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +263,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libWIRemoting.a */,
 				E659C34C109E553F00D9CFE2 /* RemotingTests.octest */,
-				E667E36310C71C5700EC0CA0 /* Example.app */,
+				E6E476F910CED08500C5E68C /* Moodle Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +278,7 @@
 				034768DFFF38A50411DB9C8B /* Products */,
 				E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */,
 				E667E36510C71C5700EC0CA0 /* Example-Info.plist */,
+				E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */,
 			);
 			name = WIRemoting;
 			sourceTree = "<group>";
@@ -276,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				AA747D9E0F9514B9006C5449 /* WIRemoting_Prefix.pch */,
-				E667E37610C71CAB00EC0CA0 /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -368,6 +406,10 @@
 		E685C09310C8994F003E4873 /* Moodle */ = {
 			isa = PBXGroup;
 			children = (
+				E6E477C310CED13600C5E68C /* Resources */,
+				E6E477F010CED2A100C5E68C /* main.m */,
+				E6E477E210CED27200C5E68C /* RootViewController.h */,
+				E6E477E310CED27200C5E68C /* RootViewController.m */,
 				E685C0A310C89AC1003E4873 /* MoodleCallProtocol.h */,
 				E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */,
 				E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */,
@@ -376,6 +418,18 @@
 				E685C0B010C89B17003E4873 /* MoodleResult.m */,
 				E685C0B510C89B48003E4873 /* Moodle.h */,
 				E685C0B610C89B48003E4873 /* Moodle.m */,
+				E6E477D310CED1C100C5E68C /* MoodleExampleAppDelegate.h */,
+				E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */,
+				E6E4794310CEF0A600C5E68C /* MoodleResultViewController.h */,
+				E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */,
+				E6E479F710CEF85800C5E68C /* LogoutViewController.h */,
+				E6E479F810CEF85800C5E68C /* LogoutViewController.m */,
+				E67A9F3910CF020800F520FA /* GetCoursesViewController.h */,
+				E67A9F3A10CF020800F520FA /* GetCoursesViewController.m */,
+				E67A9F8A10CF059700F520FA /* ShowCourseViewController.h */,
+				E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */,
+				E67AA06C10CF0E6A00F520FA /* CourseDetailResultViewController.h */,
+				E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */,
 			);
 			path = Moodle;
 			sourceTree = "<group>";
@@ -397,6 +451,16 @@
 				E6E4753510CEA97600C5E68C /* MoodleTests.m */,
 			);
 			path = Moodle;
+			sourceTree = "<group>";
+		};
+		E6E477C310CED13600C5E68C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */,
+				E6E477DA10CED21900C5E68C /* RootViewController.xib */,
+				E6E477DB10CED21900C5E68C /* MainWindow.xib */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +495,7 @@
 				E685C0AD10C89B01003E4873 /* MoodleAuthenticator.h in Headers */,
 				E685C0B110C89B17003E4873 /* MoodleResult.h in Headers */,
 				E685C0B710C89B48003E4873 /* Moodle.h in Headers */,
+				E6E4789A10CEEA8300C5E68C /* RMResultDelegateWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,22 +538,22 @@
 			productReference = E659C34C109E553F00D9CFE2 /* RemotingTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		E667E36210C71C5700EC0CA0 /* Example */ = {
+		E6E476F810CED08500C5E68C /* MoodleExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E667E36810C71C5800EC0CA0 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "MoodleExample" */;
 			buildPhases = (
-				E667E35F10C71C5700EC0CA0 /* Resources */,
-				E667E36010C71C5700EC0CA0 /* Sources */,
-				E667E36110C71C5700EC0CA0 /* Frameworks */,
+				E6E476F510CED08500C5E68C /* Resources */,
+				E6E476F610CED08500C5E68C /* Sources */,
+				E6E476F710CED08500C5E68C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E667E36D10C71C7300EC0CA0 /* PBXTargetDependency */,
+				E6E4770010CED09900C5E68C /* PBXTargetDependency */,
 			);
-			name = Example;
-			productName = Example;
-			productReference = E667E36310C71C5700EC0CA0 /* Example.app */;
+			name = MoodleExample;
+			productName = "Moodle Example";
+			productReference = E6E476F910CED08500C5E68C /* Moodle Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -506,7 +571,7 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* WIRemoting */,
 				E659C34B109E553F00D9CFE2 /* RemotingTests */,
-				E667E36210C71C5700EC0CA0 /* Example */,
+				E6E476F810CED08500C5E68C /* MoodleExample */,
 			);
 		};
 /* End PBXProject section */
@@ -520,10 +585,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E667E35F10C71C5700EC0CA0 /* Resources */ = {
+		E6E476F510CED08500C5E68C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E477DC10CED21900C5E68C /* RootViewController.xib in Resources */,
+				E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */,
+				E6E4784510CEE7BA00C5E68C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +641,7 @@
 				E685C0AE10C89B01003E4873 /* MoodleAuthenticator.m in Sources */,
 				E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */,
 				E685C0B810C89B48003E4873 /* Moodle.m in Sources */,
+				E6E4789910CEEA8000C5E68C /* RMResultDelegateWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +652,6 @@
 				E6E4755C10CEABD100C5E68C /* MoodleTests.m in Sources */,
 				E664DBD410AF915100B1418A /* RMCallTests.m in Sources */,
 				E664DC2210AFB71500B1418A /* MockProtocol.m in Sources */,
-				E667E37710C71CAB00EC0CA0 /* main.m in Sources */,
 				E667E42010C7240300EC0CA0 /* RMResultDelegateWrapper.m in Sources */,
 				E667E4D110C73B3B00EC0CA0 /* MockProtocol2.m in Sources */,
 				E667E54C10C73F8700EC0CA0 /* NSObject+SBJSON.m in Sources */,
@@ -598,27 +666,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E667E36010C71C5700EC0CA0 /* Sources */ = {
+		E6E476F610CED08500C5E68C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E667E37810C71CC100EC0CA0 /* main.m in Sources */,
-				E667E37D10C71CF400EC0CA0 /* MockProtocol.m in Sources */,
+				E6E477D510CED1C100C5E68C /* MoodleExampleAppDelegate.m in Sources */,
+				E6E477E410CED27200C5E68C /* RootViewController.m in Sources */,
+				E6E477F110CED2A100C5E68C /* main.m in Sources */,
+				E6E4794510CEF0A600C5E68C /* MoodleResultViewController.m in Sources */,
+				E6E479F910CEF85800C5E68C /* LogoutViewController.m in Sources */,
+				E67A9F3B10CF020800F520FA /* GetCoursesViewController.m in Sources */,
+				E67A9F8C10CF059700F520FA /* ShowCourseViewController.m in Sources */,
+				E67AA06E10CF0E6A00F520FA /* CourseDetailResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E667E36D10C71C7300EC0CA0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* WIRemoting */;
-			targetProxy = E667E36C10C71C7300EC0CA0 /* PBXContainerItemProxy */;
-		};
 		E667E36F10C71C7E00EC0CA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* WIRemoting */;
 			targetProxy = E667E36E10C71C7E00EC0CA0 /* PBXContainerItemProxy */;
+		};
+		E6E4770010CED09900C5E68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* WIRemoting */;
+			targetProxy = E6E476FF10CED09900C5E68C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -663,7 +737,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.1;
 			};
@@ -676,7 +753,10 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.1;
 			};
@@ -738,7 +818,7 @@
 			};
 			name = Release;
 		};
-		E667E36610C71C5800EC0CA0 /* Debug */ = {
+		E6E476FC10CED08600C5E68C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -748,21 +828,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Example-Info.plist";
+				INFOPLIST_FILE = "Moodle Example-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
 				PREBINDING = NO;
-				PRODUCT_NAME = Example;
+				PRODUCT_NAME = "Moodle Example";
 				SDKROOT = iphoneos3.1.2;
 			};
 			name = Debug;
 		};
-		E667E36710C71C5800EC0CA0 /* Release */ = {
+		E6E476FD10CED08600C5E68C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -772,16 +846,10 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Example-Info.plist";
+				INFOPLIST_FILE = "Moodle Example-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
 				PREBINDING = NO;
-				PRODUCT_NAME = Example;
+				PRODUCT_NAME = "Moodle Example";
 				SDKROOT = iphoneos3.1.2;
 				ZERO_LINK = NO;
 			};
@@ -817,11 +885,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E667E36810C71C5800EC0CA0 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "MoodleExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E667E36610C71C5800EC0CA0 /* Debug */,
-				E667E36710C71C5800EC0CA0 /* Release */,
+				E6E476FC10CED08600C5E68C /* Debug */,
+				E6E476FD10CED08600C5E68C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

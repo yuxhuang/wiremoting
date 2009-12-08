@@ -56,6 +56,7 @@
 
 -(void) logout
 {
+  [session call:@"logout" arguments:nil];
   [authenticator release];
   authenticator = nil;
   [session release];
@@ -64,11 +65,67 @@
 
 -(void) getCourses:(id)delegate
 {
-  @synchronized(call.semaphore) {
-    [call addDelegate:delegate];
-    [call call:@"get_courses" arguments:nil];
-    [call removeDelegate:delegate];
-  }
+  [session call:@"get_courses" arguments:nil delegate:delegate];
 }
+
+-(void) getCourse:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_courses"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
+-(void) getMyCourses:(id)delegate
+{
+  [session call:@"get_my_courses" arguments:nil delegate:delegate];
+}
+
+-(void) getResources:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_resources"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
+-(void) getTeachers:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_teachers"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
+-(void) getStudents:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_students"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
+-(void) getActivities:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_activities"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
+-(void) getLastChanges:(NSInteger) courseId delegate:(id)delegate
+{
+  [session call:@"get_last_changes"
+      arguments:[NSDictionary dictionaryWithObjectsAndKeys:
+                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 @"id", @"idfield", nil]
+       delegate:delegate];
+}
+
 
 @end

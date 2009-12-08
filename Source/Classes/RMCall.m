@@ -77,6 +77,29 @@
 
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
+    delegate:(id) delegate
+{
+  @synchronized(self.semaphore) {
+    [self addDelegate:delegate];
+    [self call:method arguments:arguments];
+    [self removeDelegate:delegate];
+  }
+}
+
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
+    delegate:(id) delegate
+    protocol:(id<RMCallProtocol>) aProtocol
+{
+  @synchronized(self.semaphore) {
+    [self addDelegate:delegate];
+    [self call:method arguments:arguments protocol:aProtocol];
+    [self removeDelegate:delegate];
+  }
+}
+
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
     protocol:(id<RMCallProtocol>) aProtocol
 {
 

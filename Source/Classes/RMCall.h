@@ -140,6 +140,19 @@
    arguments:(NSDictionary*) arguments;
 
 /**
+ * Call a remote method with a temporary delegate
+ *
+ * @param method The method name.
+ * @param arguments The method arguments.
+ * @param delegate a delegate
+ *
+ * @return whether the call is sent.
+ */
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
+    delegate:(id) delegate;
+
+/**
  * Call a remote method with a specific call protocol.
  *
  * Call a remote method with the specified call protocol in the highest
@@ -147,12 +160,27 @@
  *
  * @param method The method name.
  * @param arguments The method arguments.
- * @param protocl The call protocol to execute on top of other protocols.
+ * @param protocol The call protocol to execute on top of other protocols.
  *
  * @return whether the call is sent.
  */
 - (BOOL)call:(NSString*) method
    arguments:(NSDictionary*) arguments
+    protocol:(id<RMCallProtocol>) protocol;
+
+/**
+ * Call a remote method with a temporary delegate
+ *
+ * @param method The method name.
+ * @param arguments The method arguments.
+ * @param delegate a delegate
+ * @param protocol The call protocol to execute on top of other protocols.
+ *
+ * @return whether the call is sent.
+ */
+- (BOOL)call:(NSString*) method
+   arguments:(NSDictionary*) arguments
+    delegate:(id) delegate
     protocol:(id<RMCallProtocol>) protocol;
 
 /**

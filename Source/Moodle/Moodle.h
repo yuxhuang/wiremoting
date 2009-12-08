@@ -87,5 +87,12 @@
  * @return activities as an NSArray of NSDictionary
  */
 -(void) getActivities:(NSInteger) courseId delegate:(id)delegate;
+/**
+ * Get all activities of a course
+ *
+ * @param courseId the course id
+ * @return activities as an NSArray of NSDictionary
+ */
+-(void) getLastChanges:(NSInteger) courseId delegate:(id)delegate;
 
 @end
