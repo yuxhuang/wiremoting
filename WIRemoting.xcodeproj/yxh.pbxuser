@@ -60,7 +60,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					439,
+					478,
 					20,
 					48,
 					43,
@@ -94,7 +94,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					399,
+					438,
 					60,
 					20,
 					48,
@@ -111,10 +111,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 282016629;
-			PBXWorkspaceStateSaveDate = 282016629;
+			PBXPerProjectTemplateStateSaveDate = 282019092;
+			PBXWorkspaceStateSaveDate = 282019092;
 		};
 		perUserProjectItems = {
+			E625EEAA10CF4527000B10EB /* PlistBookmark */ = E625EEAA10CF4527000B10EB /* PlistBookmark */;
+			E625EEB810CF454B000B10EB /* PlistBookmark */ = E625EEB810CF454B000B10EB /* PlistBookmark */;
 			E659C233109E4D6200D9CFE2 = E659C233109E4D6200D9CFE2 /* PBXTextBookmark */;
 			E659C342109E529000D9CFE2 = E659C342109E529000D9CFE2 /* PBXTextBookmark */;
 			E667E0EE10C6FA8400EC0CA0 = E667E0EE10C6FA8400EC0CA0 /* PBXTextBookmark */;
@@ -130,7 +132,6 @@
 			E67AA1AF10CF27F500F520FA = E67AA1AF10CF27F500F520FA /* PBXTextBookmark */;
 			E67AA1FE10CF2F8900F520FA = E67AA1FE10CF2F8900F520FA /* PBXTextBookmark */;
 			E67AA1FF10CF2F8900F520FA = E67AA1FF10CF2F8900F520FA /* PBXTextBookmark */;
-			E67AA20010CF2F8900F520FA = E67AA20010CF2F8900F520FA /* PBXTextBookmark */;
 			E67AA20110CF2F8900F520FA = E67AA20110CF2F8900F520FA /* PBXTextBookmark */;
 			E67AA20210CF2F8900F520FA = E67AA20210CF2F8900F520FA /* PBXTextBookmark */;
 			E67AA20310CF2F8900F520FA = E67AA20310CF2F8900F520FA /* PBXTextBookmark */;
@@ -140,20 +141,14 @@
 			E67AA21D10CF304500F520FA = E67AA21D10CF304500F520FA /* PBXTextBookmark */;
 			E67AA22F10CF308000F520FA = E67AA22F10CF308000F520FA /* PBXTextBookmark */;
 			E67AA23010CF308000F520FA = E67AA23010CF308000F520FA /* PBXTextBookmark */;
-			E67AA2BC10CF375C00F520FA = E67AA2BC10CF375C00F520FA /* PBXTextBookmark */;
 			E685BDFC10C7EC50003E4873 = E685BDFC10C7EC50003E4873 /* PBXTextBookmark */;
 			E685BE7A10C7FD2E003E4873 = E685BE7A10C7FD2E003E4873 /* PBXTextBookmark */;
 			E685BE9910C7FEF6003E4873 = E685BE9910C7FEF6003E4873 /* PBXTextBookmark */;
 			E685C0E210C89D92003E4873 = E685C0E210C89D92003E4873 /* PBXTextBookmark */;
-			E6BD023110CF3BD300814C34 /* PBXTextBookmark */ = E6BD023110CF3BD300814C34 /* PBXTextBookmark */;
-			E6BD023210CF3BD300814C34 /* PBXTextBookmark */ = E6BD023210CF3BD300814C34 /* PBXTextBookmark */;
-			E6BD023310CF3BD300814C34 /* PBXTextBookmark */ = E6BD023310CF3BD300814C34 /* PBXTextBookmark */;
-			E6BD023E10CF3C5A00814C34 /* PBXTextBookmark */ = E6BD023E10CF3C5A00814C34 /* PBXTextBookmark */;
-			E6BD024110CF3C6100814C34 /* PBXTextBookmark */ = E6BD024110CF3C6100814C34 /* PBXTextBookmark */;
-			E6BD024610CF3C9A00814C34 /* PBXTextBookmark */ = E6BD024610CF3C9A00814C34 /* PBXTextBookmark */;
-			E6BD024910CF3CDF00814C34 /* PBXTextBookmark */ = E6BD024910CF3CDF00814C34 /* PBXTextBookmark */;
-			E6BD024E10CF3CE600814C34 /* PBXTextBookmark */ = E6BD024E10CF3CE600814C34 /* PBXTextBookmark */;
-			E6BD025110CF3DB800814C34 /* PBXTextBookmark */ = E6BD025110CF3DB800814C34 /* PBXTextBookmark */;
+			E6BD023110CF3BD300814C34 = E6BD023110CF3BD300814C34 /* PBXTextBookmark */;
+			E6BD02C210CF450D00814C34 = E6BD02C210CF450D00814C34 /* PBXTextBookmark */;
+			E6BD02C310CF450D00814C34 = E6BD02C310CF450D00814C34 /* PBXBookmark */;
+			E6BD02C510CF450D00814C34 = E6BD02C510CF450D00814C34 /* PlistBookmark */;
 			E6E473C110CDE46C00C5E68C = E6E473C110CDE46C00C5E68C /* PBXTextBookmark */;
 			E6E473C210CDE46C00C5E68C = E6E473C210CDE46C00C5E68C /* PBXTextBookmark */;
 			E6E473C410CDE46C00C5E68C = E6E473C410CDE46C00C5E68C /* PBXTextBookmark */;
@@ -195,6 +190,28 @@
 	};
 	D2AAC07D0554694100DB518D /* WIRemoting */ = {
 		activeExec = 0;
+	};
+	E625EEAA10CF4527000B10EB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E6E476FB10CED08500C5E68C /* Moodle-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/yxh/Code/XCode/WIRemoting/Moodle-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	E625EEB810CF454B000B10EB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E6E476FB10CED08500C5E68C /* Moodle-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/yxh/Code/XCode/WIRemoting/Moodle-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	E659C0F3109E48F900D9CFE2 /* ASIAuthenticationDialog.h */ = {
 		uiCtxt = {
@@ -534,9 +551,9 @@
 	};
 	E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {617, 1456}}";
-			sepNavSelRange = "{2497, 0}";
-			sepNavVisRange = "{2152, 1196}";
+			sepNavIntBoundsRect = "{{0, 0}, {656, 1520}}";
+			sepNavSelRange = "{3078, 0}";
+			sepNavVisRange = "{2592, 765}";
 			sepNavWindowFrame = "{{1994, 143}, {799, 881}}";
 		};
 	};
@@ -596,11 +613,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E67A9F3A10CF020800F520FA /* GetCoursesViewController.m */;
 		functionName = "-finished:";
-		hitCount = 6;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 81;
-		location = "Moodle Example";
-		modificationTime = 282008392.984096;
+		location = Moodle;
+		modificationTime = 282019164.078768;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -614,11 +631,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
 		functionName = "-customize";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 24;
-		location = "Moodle Example";
-		modificationTime = 282008358.16118;
+		location = Moodle;
+		modificationTime = 282019164.093643;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -667,16 +684,6 @@
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 0;
-	};
-	E67AA20010CF2F8900F520FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */;
-		name = "CourseDetailResultViewController.m: 17";
-		rLen = 0;
-		rLoc = 362;
-		rType = 0;
-		vrLen = 647;
-		vrLoc = 60;
 	};
 	E67AA20110CF2F8900F520FA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -766,16 +773,6 @@
 		rLoc = 324;
 		rType = 0;
 		vrLen = 647;
-		vrLoc = 0;
-	};
-	E67AA2BC10CF375C00F520FA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */;
-		name = "CourseDetailResultViewController.m: 13";
-		rLen = 0;
-		rLoc = 277;
-		rType = 0;
-		vrLen = 798;
 		vrLoc = 0;
 	};
 	E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */ = {
@@ -936,85 +933,30 @@
 		vrLen = 1030;
 		vrLoc = 1221;
 	};
-	E6BD023210CF3BD300814C34 /* PBXTextBookmark */ = {
+	E6BD02C210CF450D00814C34 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 20";
+		name = "ShowCourseViewController.m: 88";
 		rLen = 0;
-		rLoc = 385;
+		rLoc = 3078;
 		rType = 0;
-		vrLen = 816;
-		vrLoc = 0;
+		vrLen = 765;
+		vrLoc = 2592;
 	};
-	E6BD023310CF3BD300814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 82";
-		rLen = 0;
-		rLoc = 2774;
-		rType = 0;
-		vrLen = 1180;
-		vrLoc = 2152;
+	E6BD02C310CF450D00814C34 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = E6E476FB10CED08500C5E68C /* Moodle-Info.plist */;
 	};
-	E6BD023E10CF3C5A00814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 73";
+	E6BD02C510CF450D00814C34 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E6E476FB10CED08500C5E68C /* Moodle-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/yxh/Code/XCode/WIRemoting/Moodle-Info.plist";
 		rLen = 0;
-		rLoc = 2481;
-		rType = 0;
-		vrLen = 1179;
-		vrLoc = 2152;
-	};
-	E6BD024110CF3C6100814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 76";
-		rLen = 0;
-		rLoc = 2613;
-		rType = 0;
-		vrLen = 1179;
-		vrLoc = 2152;
-	};
-	E6BD024610CF3C9A00814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 73";
-		rLen = 0;
-		rLoc = 2481;
-		rType = 0;
-		vrLen = 1180;
-		vrLoc = 2152;
-	};
-	E6BD024910CF3CDF00814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 73";
-		rLen = 0;
-		rLoc = 2481;
-		rType = 0;
-		vrLen = 1181;
-		vrLoc = 2152;
-	};
-	E6BD024E10CF3CE600814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 75";
-		rLen = 0;
-		rLoc = 2591;
-		rType = 0;
-		vrLen = 1181;
-		vrLoc = 2152;
-	};
-	E6BD025110CF3DB800814C34 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */;
-		name = "ShowCourseViewController.m: 74";
-		rLen = 0;
-		rLoc = 2497;
-		rType = 0;
-		vrLen = 1196;
-		vrLoc = 2152;
+		rLoc = 9223372036854775808;
 	};
 	E6E473C110CDE46C00C5E68C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1205,7 +1147,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -1230,7 +1172,7 @@
 		variableFormatDictionary = {
 		};
 	};
-	E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */ = {
+	E6E476FB10CED08500C5E68C /* Moodle-Info.plist */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{2050, 90}, {779, 880}}";
 		};

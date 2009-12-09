@@ -167,7 +167,6 @@
 		E664DC2010AFB71500B1418A /* MockProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol.h; sourceTree = "<group>"; };
 		E664DC2110AFB71500B1418A /* MockProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocol.m; sourceTree = "<group>"; };
 		E664DC2710AFB77700B1418A /* WIRemoting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIRemoting.h; sourceTree = "<group>"; };
-		E667E36510C71C5700EC0CA0 /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 		E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMResultDelegateWrapper.h; sourceTree = "<group>"; };
 		E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMResultDelegateWrapper.m; sourceTree = "<group>"; };
 		E667E4CF10C73B3B00EC0CA0 /* MockProtocol2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocol2.h; sourceTree = "<group>"; };
@@ -196,7 +195,7 @@
 		E6E4753410CEA97600C5E68C /* MoodleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleTests.h; sourceTree = "<group>"; };
 		E6E4753510CEA97600C5E68C /* MoodleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleTests.m; sourceTree = "<group>"; };
 		E6E476F910CED08500C5E68C /* Moodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Moodle Example-Info.plist"; sourceTree = "<group>"; };
+		E6E476FB10CED08500C5E68C /* Moodle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Moodle-Info.plist"; sourceTree = "<group>"; };
 		E6E477D310CED1C100C5E68C /* MoodleExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleExampleAppDelegate.h; sourceTree = "<group>"; };
 		E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleExampleAppDelegate.m; sourceTree = "<group>"; };
 		E6E477DA10CED21900C5E68C /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -278,8 +277,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */,
-				E667E36510C71C5700EC0CA0 /* Example-Info.plist */,
-				E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */,
+				E6E476FB10CED08500C5E68C /* Moodle-Info.plist */,
 			);
 			name = WIRemoting;
 			sourceTree = "<group>";
@@ -830,7 +828,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Moodle Example-Info.plist";
+				INFOPLIST_FILE = "Moodle-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
 				PRODUCT_NAME = Moodle;
@@ -848,7 +846,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
-				INFOPLIST_FILE = "Moodle Example-Info.plist";
+				INFOPLIST_FILE = "Moodle-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
 				PRODUCT_NAME = Moodle;
