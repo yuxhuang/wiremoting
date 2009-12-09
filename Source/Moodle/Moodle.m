@@ -42,6 +42,9 @@
 
 -(void) login:(NSString*) username password:(NSString*) password
 {
+  if (nil != authenticator && nil != session) {
+    [self logout];
+  }
   authenticator = [[MoodleAuthenticator alloc]
                    initWithUsername:username password:password];
   session = [[RMSession alloc] initWithAuthenticator:authenticator
@@ -72,7 +75,7 @@
 {
   [session call:@"get_courses"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSNumber numberWithInt:courseId], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }
@@ -86,7 +89,7 @@
 {
   [session call:@"get_resources"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSArray arrayWithObject:[NSNumber numberWithInt:courseId]], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }
@@ -95,7 +98,7 @@
 {
   [session call:@"get_teachers"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSNumber numberWithInt:courseId], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }
@@ -104,7 +107,7 @@
 {
   [session call:@"get_students"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSNumber numberWithInt:courseId], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }
@@ -113,7 +116,7 @@
 {
   [session call:@"get_activities"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSNumber numberWithInt:courseId], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }
@@ -122,7 +125,7 @@
 {
   [session call:@"get_last_changes"
       arguments:[NSDictionary dictionaryWithObjectsAndKeys:
-                 [NSNumber numberWithInt:courseId], @"idcourse",
+                 [NSNumber numberWithInt:courseId], @"value",
                  @"id", @"idfield", nil]
        delegate:delegate];
 }

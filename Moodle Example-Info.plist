@@ -6,8 +6,10 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>moodle.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.webinit.MoodleExample</string>
+	<string>org.webinit.Moodle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

@@ -35,7 +35,16 @@
   [request setPostValue:method forKey:@"_method"];
   // enter the arguments
   for (NSString *key in [arguments allKeys]) {
-    [request setPostValue:[arguments valueForKey:key] forKey:key];
+    id object = [arguments objectForKey:key];
+    if ([object isKindOfClass:[NSArray class]]) {
+      for (NSString *value in object) {
+        [request setPostValue:value forKey:[NSString stringWithFormat:@"%@[]", key]];
+      }
+    }
+    else {
+      [request setPostValue:object forKey:key];
+    }
+    
   }
 }
 

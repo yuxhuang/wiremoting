@@ -56,6 +56,10 @@
   // get courses array
   NSArray *courses = [r valueForKey:@"courses"];
   for (NSDictionary *c in courses) {
+    // course id > 1
+    if ([[c valueForKey:@"id"] intValue] <= 1) {
+      continue;
+    }
     // check error
     if (![[c valueForKey:@"error"] isEqual:@""]) {
       // create a UIAlertView

@@ -10,6 +10,7 @@
 #import "WIRemoting.h"
 #import "MoodleResultViewController.h"
 #import "GetCoursesViewController.h"
+#import "LoginViewController.h"
 #import "LogoutViewController.h"
 
 @implementation RootViewController
@@ -23,7 +24,6 @@
   views = [[NSMutableArray alloc] init];
   
   // add sub views
-  
   // get courses
   controller = [[GetCoursesViewController alloc] initWithTitle:@"All Courses"
                                                 andDescription:@"Get all courses from Moodle"];
@@ -33,7 +33,7 @@
                     controller, @"controller",
                     nil]];
   [controller release];
-  
+
   // get my courses
   GetCoursesViewController *gcvc = [[GetCoursesViewController alloc] initWithTitle:@"My Courses"
                                                 andDescription:@"Get my courses from Moodle"];
@@ -41,9 +41,33 @@
   [views addObject:[NSDictionary dictionaryWithObjectsAndKeys:
                     @"My Courses", @"title",
                     @"Retrieve my courses.", @"description",
-                    controller, @"controller",
+                    gcvc, @"controller",
                     nil]];
   [gcvc release];
+  
+  // log in as admin
+  LoginViewController *lvc = [[LoginViewController alloc] initWithTitle:@"Log In as Admin"
+                                            andDescription:@"Log In as the admin user"];
+  lvc.username = @"admin";
+  lvc.password = @"1234";
+  [views addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                    @"Admin", @"title",
+                    @"Log In as Admin User", @"description",
+                    lvc, @"controller",
+                    nil]];
+  [lvc release];
+  
+  // log in as teacher
+  lvc = [[LoginViewController alloc] initWithTitle:@"Log In as Teacher"
+                                    andDescription:@"Log In as the teacher user"];
+  lvc.username = @"teacher";
+  lvc.password = @"teacher";
+  [views addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                    @"Teacher", @"title",
+                    @"Log In as Teacher User", @"description",
+                    lvc, @"controller",
+                    nil]];
+  [lvc release];
   
   // log out
   controller = [[LogoutViewController alloc] initWithTitle:@"Log Out"

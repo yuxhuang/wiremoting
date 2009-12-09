@@ -66,14 +66,14 @@
 		E67A9F3B10CF020800F520FA /* GetCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A9F3A10CF020800F520FA /* GetCoursesViewController.m */; };
 		E67A9F8C10CF059700F520FA /* ShowCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */; };
 		E67AA06E10CF0E6A00F520FA /* CourseDetailResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */; };
+		E67AA1EE10CF2DF100F520FA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E67AA1ED10CF2DF100F520FA /* LoginViewController.m */; };
+		E67AA29D10CF33EF00F520FA /* moodle.png in Resources */ = {isa = PBXBuildFile; fileRef = E67AA29C10CF33EF00F520FA /* moodle.png */; };
 		E685BDF010C7EB63003E4873 /* MockProtocolShouldSend.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */; };
 		E685BE5A10C7FA39003E4873 /* RMSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE5910C7FA39003E4873 /* RMSessionTests.m */; };
 		E685BE8F10C7FDE7003E4873 /* MockSessionProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685BE8E10C7FDE7003E4873 /* MockSessionProtocol.m */; };
 		E685C0A810C89AE3003E4873 /* MoodleCallProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */; };
 		E685C0AD10C89B01003E4873 /* MoodleAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */; };
 		E685C0AE10C89B01003E4873 /* MoodleAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */; };
-		E685C0B110C89B17003E4873 /* MoodleResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0AF10C89B17003E4873 /* MoodleResult.h */; };
-		E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B010C89B17003E4873 /* MoodleResult.m */; };
 		E685C0B710C89B48003E4873 /* Moodle.h in Headers */ = {isa = PBXBuildFile; fileRef = E685C0B510C89B48003E4873 /* Moodle.h */; };
 		E685C0B810C89B48003E4873 /* Moodle.m in Sources */ = {isa = PBXBuildFile; fileRef = E685C0B610C89B48003E4873 /* Moodle.m */; };
 		E6E4753610CEA97600C5E68C /* MoodleTests.m in Resources */ = {isa = PBXBuildFile; fileRef = E6E4753510CEA97600C5E68C /* MoodleTests.m */; };
@@ -178,6 +178,9 @@
 		E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCourseViewController.m; sourceTree = "<group>"; };
 		E67AA06C10CF0E6A00F520FA /* CourseDetailResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailResultViewController.h; sourceTree = "<group>"; };
 		E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailResultViewController.m; sourceTree = "<group>"; };
+		E67AA1EC10CF2DF100F520FA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E67AA1ED10CF2DF100F520FA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E67AA29C10CF33EF00F520FA /* moodle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moodle.png; sourceTree = "<group>"; };
 		E685BDEE10C7EB63003E4873 /* MockProtocolShouldSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockProtocolShouldSend.h; sourceTree = "<group>"; };
 		E685BDEF10C7EB63003E4873 /* MockProtocolShouldSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockProtocolShouldSend.m; sourceTree = "<group>"; };
 		E685BE5810C7FA39003E4873 /* RMSessionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSessionTests.h; sourceTree = "<group>"; };
@@ -188,13 +191,11 @@
 		E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleCallProtocol.m; sourceTree = "<group>"; };
 		E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleAuthenticator.h; sourceTree = "<group>"; };
 		E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleAuthenticator.m; sourceTree = "<group>"; };
-		E685C0AF10C89B17003E4873 /* MoodleResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleResult.h; sourceTree = "<group>"; };
-		E685C0B010C89B17003E4873 /* MoodleResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleResult.m; sourceTree = "<group>"; };
 		E685C0B510C89B48003E4873 /* Moodle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moodle.h; sourceTree = "<group>"; };
 		E685C0B610C89B48003E4873 /* Moodle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moodle.m; sourceTree = "<group>"; };
 		E6E4753410CEA97600C5E68C /* MoodleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleTests.h; sourceTree = "<group>"; };
 		E6E4753510CEA97600C5E68C /* MoodleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleTests.m; sourceTree = "<group>"; };
-		E6E476F910CED08500C5E68C /* Moodle Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moodle Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E476F910CED08500C5E68C /* Moodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E476FB10CED08500C5E68C /* Moodle Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Moodle Example-Info.plist"; sourceTree = "<group>"; };
 		E6E477D310CED1C100C5E68C /* MoodleExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleExampleAppDelegate.h; sourceTree = "<group>"; };
 		E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleExampleAppDelegate.m; sourceTree = "<group>"; };
@@ -263,7 +264,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libWIRemoting.a */,
 				E659C34C109E553F00D9CFE2 /* RemotingTests.octest */,
-				E6E476F910CED08500C5E68C /* Moodle Example.app */,
+				E6E476F910CED08500C5E68C /* Moodle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -414,8 +415,6 @@
 				E685C0A410C89AC1003E4873 /* MoodleCallProtocol.m */,
 				E685C0AB10C89B01003E4873 /* MoodleAuthenticator.h */,
 				E685C0AC10C89B01003E4873 /* MoodleAuthenticator.m */,
-				E685C0AF10C89B17003E4873 /* MoodleResult.h */,
-				E685C0B010C89B17003E4873 /* MoodleResult.m */,
 				E685C0B510C89B48003E4873 /* Moodle.h */,
 				E685C0B610C89B48003E4873 /* Moodle.m */,
 				E6E477D310CED1C100C5E68C /* MoodleExampleAppDelegate.h */,
@@ -430,6 +429,8 @@
 				E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */,
 				E67AA06C10CF0E6A00F520FA /* CourseDetailResultViewController.h */,
 				E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */,
+				E67AA1EC10CF2DF100F520FA /* LoginViewController.h */,
+				E67AA1ED10CF2DF100F520FA /* LoginViewController.m */,
 			);
 			path = Moodle;
 			sourceTree = "<group>";
@@ -456,6 +457,7 @@
 		E6E477C310CED13600C5E68C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E67AA29C10CF33EF00F520FA /* moodle.png */,
 				E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */,
 				E6E477DA10CED21900C5E68C /* RootViewController.xib */,
 				E6E477DB10CED21900C5E68C /* MainWindow.xib */,
@@ -493,7 +495,6 @@
 				E6FA438A109E896800385C66 /* RMResponse.h in Headers */,
 				E664DC2810AFB77D00B1418A /* WIRemoting.h in Headers */,
 				E685C0AD10C89B01003E4873 /* MoodleAuthenticator.h in Headers */,
-				E685C0B110C89B17003E4873 /* MoodleResult.h in Headers */,
 				E685C0B710C89B48003E4873 /* Moodle.h in Headers */,
 				E6E4789A10CEEA8300C5E68C /* RMResultDelegateWrapper.h in Headers */,
 			);
@@ -538,9 +539,9 @@
 			productReference = E659C34C109E553F00D9CFE2 /* RemotingTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		E6E476F810CED08500C5E68C /* MoodleExample */ = {
+		E6E476F810CED08500C5E68C /* Moodle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "MoodleExample" */;
+			buildConfigurationList = E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "Moodle" */;
 			buildPhases = (
 				E6E476F510CED08500C5E68C /* Resources */,
 				E6E476F610CED08500C5E68C /* Sources */,
@@ -551,9 +552,9 @@
 			dependencies = (
 				E6E4770010CED09900C5E68C /* PBXTargetDependency */,
 			);
-			name = MoodleExample;
+			name = Moodle;
 			productName = "Moodle Example";
-			productReference = E6E476F910CED08500C5E68C /* Moodle Example.app */;
+			productReference = E6E476F910CED08500C5E68C /* Moodle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -571,7 +572,7 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* WIRemoting */,
 				E659C34B109E553F00D9CFE2 /* RemotingTests */,
-				E6E476F810CED08500C5E68C /* MoodleExample */,
+				E6E476F810CED08500C5E68C /* Moodle */,
 			);
 		};
 /* End PBXProject section */
@@ -592,6 +593,7 @@
 				E6E477DC10CED21900C5E68C /* RootViewController.xib in Resources */,
 				E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */,
 				E6E4784510CEE7BA00C5E68C /* LoginViewController.xib in Resources */,
+				E67AA29D10CF33EF00F520FA /* moodle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +641,6 @@
 				E6FA438B109E896800385C66 /* RMResponse.m in Sources */,
 				E685C0A810C89AE3003E4873 /* MoodleCallProtocol.m in Sources */,
 				E685C0AE10C89B01003E4873 /* MoodleAuthenticator.m in Sources */,
-				E685C0B210C89B17003E4873 /* MoodleResult.m in Sources */,
 				E685C0B810C89B48003E4873 /* Moodle.m in Sources */,
 				E6E4789910CEEA8000C5E68C /* RMResultDelegateWrapper.m in Sources */,
 			);
@@ -678,6 +679,7 @@
 				E67A9F3B10CF020800F520FA /* GetCoursesViewController.m in Sources */,
 				E67A9F8C10CF059700F520FA /* ShowCourseViewController.m in Sources */,
 				E67AA06E10CF0E6A00F520FA /* CourseDetailResultViewController.m in Sources */,
+				E67AA1EE10CF2DF100F520FA /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +833,7 @@
 				INFOPLIST_FILE = "Moodle Example-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
-				PRODUCT_NAME = "Moodle Example";
+				PRODUCT_NAME = Moodle;
 				SDKROOT = iphoneos3.1.2;
 			};
 			name = Debug;
@@ -849,7 +851,7 @@
 				INFOPLIST_FILE = "Moodle Example-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
-				PRODUCT_NAME = "Moodle Example";
+				PRODUCT_NAME = Moodle;
 				SDKROOT = iphoneos3.1.2;
 				ZERO_LINK = NO;
 			};
@@ -885,7 +887,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "MoodleExample" */ = {
+		E6E476FE10CED08600C5E68C /* Build configuration list for PBXNativeTarget "Moodle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6E476FC10CED08600C5E68C /* Debug */,

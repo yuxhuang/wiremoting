@@ -63,6 +63,21 @@
                     nil]];
   [c release];
 
+  // activities
+  c = [[CourseDetailResultViewController alloc] initWithTitle:@"Activities"
+                                               andDescription:nil];
+  c.courseId = self.courseId;
+  c.selector = @selector(getActivities:delegate:);
+  c.arrayType = @"activities";
+  c.titleField = @"email";
+  c.descriptionField = @"DATE";
+  [views addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+                    @"Activities", @"title",
+                    @"Retrieve activities from this course", @"description",
+                    c, @"controller",
+                    nil]];
+  [c release];
+  
   // changes
   c = [[CourseDetailResultViewController alloc] initWithTitle:@"Last Changes"
                                                andDescription:nil];

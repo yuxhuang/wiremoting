@@ -33,7 +33,7 @@ static MoodleExampleAppDelegate *instance;
   // initialize moodle
   moodle = [[Moodle alloc] init];
   
-  [moodle login:@"admin" password:@"1234"];
+  [moodle login:@"student01" password:@"student01"];
 }
 
 
