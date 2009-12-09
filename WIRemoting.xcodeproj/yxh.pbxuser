@@ -111,12 +111,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 282019092;
-			PBXWorkspaceStateSaveDate = 282019092;
+			PBXPerProjectTemplateStateSaveDate = 282024622;
+			PBXWorkspaceStateSaveDate = 282024622;
 		};
 		perUserProjectItems = {
-			E625EEAA10CF4527000B10EB /* PlistBookmark */ = E625EEAA10CF4527000B10EB /* PlistBookmark */;
-			E625EEB810CF454B000B10EB /* PlistBookmark */ = E625EEB810CF454B000B10EB /* PlistBookmark */;
+			E625EEAA10CF4527000B10EB = E625EEAA10CF4527000B10EB /* PlistBookmark */;
+			E625EEB810CF454B000B10EB = E625EEB810CF454B000B10EB /* PlistBookmark */;
+			E625EFCA10CF5B12000B10EB /* PBXTextBookmark */ = E625EFCA10CF5B12000B10EB /* PBXTextBookmark */;
+			E625EFE410CF5BA0000B10EB /* PBXTextBookmark */ = E625EFE410CF5BA0000B10EB /* PBXTextBookmark */;
 			E659C233109E4D6200D9CFE2 = E659C233109E4D6200D9CFE2 /* PBXTextBookmark */;
 			E659C342109E529000D9CFE2 = E659C342109E529000D9CFE2 /* PBXTextBookmark */;
 			E667E0EE10C6FA8400EC0CA0 = E667E0EE10C6FA8400EC0CA0 /* PBXTextBookmark */;
@@ -200,7 +202,7 @@
 		);
 		name = "/Users/yxh/Code/XCode/WIRemoting/Moodle-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	E625EEB810CF454B000B10EB /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -211,7 +213,27 @@
 		);
 		name = "/Users/yxh/Code/XCode/WIRemoting/Moodle-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
+	};
+	E625EFCA10CF5B12000B10EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */;
+		name = "MoodleExampleAppDelegate.m: 29";
+		rLen = 0;
+		rLoc = 596;
+		rType = 0;
+		vrLen = 566;
+		vrLoc = 343;
+	};
+	E625EFE410CF5BA0000B10EB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */;
+		name = "MoodleExampleAppDelegate.m: 26";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 343;
 	};
 	E659C0F3109E48F900D9CFE2 /* ASIAuthenticationDialog.h */ = {
 		uiCtxt = {
@@ -551,9 +573,9 @@
 	};
 	E67A9F8B10CF059700F520FA /* ShowCourseViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {656, 1520}}";
+			sepNavIntBoundsRect = "{{0, 0}, {740, 1584}}";
 			sepNavSelRange = "{3078, 0}";
-			sepNavVisRange = "{2592, 765}";
+			sepNavVisRange = "{1404, 1944}";
 			sepNavWindowFrame = "{{1994, 143}, {799, 881}}";
 		};
 	};
@@ -587,9 +609,9 @@
 	};
 	E67AA06D10CF0E6A00F520FA /* CourseDetailResultViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {617, 1264}}";
+			sepNavIntBoundsRect = "{{0, 0}, {740, 1296}}";
 			sepNavSelRange = "{1902, 0}";
-			sepNavVisRange = "{1221, 1030}";
+			sepNavVisRange = "{252, 1638}";
 			sepNavWindowFrame = "{{281, 123}, {799, 881}}";
 		};
 	};
@@ -617,7 +639,7 @@
 		ignoreCount = 0;
 		lineNumber = 81;
 		location = Moodle;
-		modificationTime = 282019164.078768;
+		modificationTime = 282024640.328354;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -635,7 +657,7 @@
 		ignoreCount = 0;
 		lineNumber = 24;
 		location = Moodle;
-		modificationTime = 282019164.093643;
+		modificationTime = 282024640.353503;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -710,7 +732,7 @@
 		fRef = E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */;
 		name = "MoodleResultViewController.m: 220";
 		rLen = 0;
-		rLoc = 6045;
+		rLoc = 6334;
 		rType = 0;
 		vrLen = 864;
 		vrLoc = 5274;
@@ -1147,7 +1169,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -1187,9 +1209,9 @@
 	};
 	E6E477D410CED1C100C5E68C /* MoodleExampleAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {720, 1008}}";
-			sepNavSelRange = "{796, 0}";
-			sepNavVisRange = "{156, 938}";
+			sepNavIntBoundsRect = "{{0, 0}, {656, 960}}";
+			sepNavSelRange = "{532, 0}";
+			sepNavVisRange = "{343, 568}";
 			sepNavWindowFrame = "{{1959, 54}, {779, 880}}";
 		};
 	};
@@ -1203,9 +1225,9 @@
 	};
 	E6E477E310CED27200C5E68C /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {740, 3760}}";
-			sepNavSelRange = "{1922, 0}";
-			sepNavVisRange = "{1471, 1788}";
+			sepNavIntBoundsRect = "{{0, 0}, {740, 4032}}";
+			sepNavSelRange = "{5384, 0}";
+			sepNavVisRange = "{4481, 1799}";
 			sepNavWindowFrame = "{{1985, 105}, {799, 881}}";
 		};
 	};
@@ -1277,9 +1299,9 @@
 	};
 	E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {712, 3584}}";
-			sepNavSelRange = "{6045, 0}";
-			sepNavVisRange = "{5274, 864}";
+			sepNavIntBoundsRect = "{{0, 0}, {740, 3792}}";
+			sepNavSelRange = "{3553, 130}";
+			sepNavVisRange = "{2783, 1756}";
 			sepNavWindowFrame = "{{1986, 144}, {799, 881}}";
 		};
 	};

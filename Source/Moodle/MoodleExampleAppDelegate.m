@@ -30,6 +30,9 @@ static MoodleExampleAppDelegate *instance;
 	[window addSubview:[navigationController view]];
   [window makeKeyAndVisible];
   
+  // Set status bar style
+  [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+  
   // initialize moodle
   moodle = [[Moodle alloc] init];
   

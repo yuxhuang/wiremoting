@@ -88,7 +88,6 @@
 		E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E477DB10CED21900C5E68C /* MainWindow.xib */; };
 		E6E477E410CED27200C5E68C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E477E310CED27200C5E68C /* RootViewController.m */; };
 		E6E477F110CED2A100C5E68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E477F010CED2A100C5E68C /* main.m */; };
-		E6E4784510CEE7BA00C5E68C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */; };
 		E6E4789110CEEA6200C5E68C /* libWIRemoting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libWIRemoting.a */; };
 		E6E4789910CEEA8000C5E68C /* RMResultDelegateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E667E41F10C7240300EC0CA0 /* RMResultDelegateWrapper.m */; };
 		E6E4789A10CEEA8300C5E68C /* RMResultDelegateWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E667E41E10C7240300EC0CA0 /* RMResultDelegateWrapper.h */; };
@@ -203,7 +202,6 @@
 		E6E477E210CED27200C5E68C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		E6E477E310CED27200C5E68C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E6E477F010CED2A100C5E68C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../LoginViewController.xib; sourceTree = "<group>"; };
 		E6E4794310CEF0A600C5E68C /* MoodleResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoodleResultViewController.h; sourceTree = "<group>"; };
 		E6E4794410CEF0A600C5E68C /* MoodleResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoodleResultViewController.m; sourceTree = "<group>"; };
 		E6E479F710CEF85800C5E68C /* LogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutViewController.h; sourceTree = "<group>"; };
@@ -456,7 +454,6 @@
 			isa = PBXGroup;
 			children = (
 				E67AA29C10CF33EF00F520FA /* moodle.png */,
-				E6E4784310CEE7BA00C5E68C /* LoginViewController.xib */,
 				E6E477DA10CED21900C5E68C /* RootViewController.xib */,
 				E6E477DB10CED21900C5E68C /* MainWindow.xib */,
 			);
@@ -590,7 +587,6 @@
 			files = (
 				E6E477DC10CED21900C5E68C /* RootViewController.xib in Resources */,
 				E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */,
-				E6E4784510CEE7BA00C5E68C /* LoginViewController.xib in Resources */,
 				E67AA29D10CF33EF00F520FA /* moodle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

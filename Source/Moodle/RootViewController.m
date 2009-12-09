@@ -171,6 +171,8 @@
   }
     
 	// Configure the cell.
+  cell.selectionStyle = UITableViewCellSelectionStyleGray;
+  cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   cell.textLabel.text = [[views objectAtIndex:indexPath.row] valueForKey:@"title"];
   cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
   cell.detailTextLabel.text = [[views objectAtIndex:indexPath.row] valueForKey:@"description"];

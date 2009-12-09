@@ -145,6 +145,13 @@
   }
   
 	// Configure the cell.
+  if (nil != [[views objectAtIndex:indexPath.row] valueForKey:@"controller"]) {
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  }
+  else {
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  }
   cell.textLabel.text = [[views objectAtIndex:indexPath.row] valueForKey:@"title"];
   cell.textLabel.font = [UIFont boldSystemFontOfSize:14.0];
   cell.detailTextLabel.text = [[views objectAtIndex:indexPath.row] valueForKey:@"description"];
