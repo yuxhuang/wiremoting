@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* WIRemoting_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* WIRemoting_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		E625EFF210CF5D7C000B10EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E625EFF110CF5D7C000B10EB /* Default.png */; };
+		E625EFF310CF5D7C000B10EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E625EFF110CF5D7C000B10EB /* Default.png */; };
 		E659C105109E48F900D9CFE2 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = E659C0F3109E48F900D9CFE2 /* ASIAuthenticationDialog.h */; };
 		E659C106109E48F900D9CFE2 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = E659C0F4109E48F900D9CFE2 /* ASIAuthenticationDialog.m */; };
 		E659C107109E48F900D9CFE2 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = E659C0F5109E48F900D9CFE2 /* ASIFormDataRequest.h */; };
@@ -122,6 +124,7 @@
 		AA747D9E0F9514B9006C5449 /* WIRemoting_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIRemoting_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libWIRemoting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWIRemoting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E625EFF110CF5D7C000B10EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E659C0F3109E48F900D9CFE2 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		E659C0F4109E48F900D9CFE2 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		E659C0F5109E48F900D9CFE2 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
@@ -276,6 +279,7 @@
 				034768DFFF38A50411DB9C8B /* Products */,
 				E659C34D109E553F00D9CFE2 /* RemotingTests-Info.plist */,
 				E6E476FB10CED08500C5E68C /* Moodle-Info.plist */,
+				E625EFF110CF5D7C000B10EB /* Default.png */,
 			);
 			name = WIRemoting;
 			sourceTree = "<group>";
@@ -578,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E4753610CEA97600C5E68C /* MoodleTests.m in Resources */,
+				E625EFF210CF5D7C000B10EB /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +593,7 @@
 				E6E477DC10CED21900C5E68C /* RootViewController.xib in Resources */,
 				E6E477DD10CED21900C5E68C /* MainWindow.xib in Resources */,
 				E67AA29D10CF33EF00F520FA /* moodle.png in Resources */,
+				E625EFF310CF5D7C000B10EB /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
