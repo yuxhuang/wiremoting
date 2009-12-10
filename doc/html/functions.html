@@ -34,13 +34,13 @@
     <ul>
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
@@ -49,6 +49,10 @@
 Here is a list of all documented class members with links to the class documentation for each member:
 
 <h3><a class="anchor" id="index_a">- a -</a></h3><ul>
+<li>addDelegate:
+: <a class="el" href="interface_r_m_call.html#a24b00b6c098e4c14b267fafb186d2493">RMCall</a>
+, <a class="el" href="interface_r_m_session.html#a20ee0730741132192d4245108509bbb8">RMSession</a>
+</li>
 <li>adjustRequest:method:arguments:
 : <a class="el" href="protocol_r_m_call_protocol-p.html#ab3c27370fb06c6083131b5338dcabe2f">&lt;RMCallProtocol&gt;</a>
 </li>
@@ -64,8 +68,8 @@ Here is a list of all documented class members with links to the class documenta
 <li>authenticateResponseString:
 : <a class="el" href="protocol_r_m_authenticator-p.html#adf5dc80e89981e86b61d1720ad441c79">&lt;RMAuthenticator&gt;</a>
 </li>
-<li>authenticateWithCall:delegate:
-: <a class="el" href="protocol_r_m_authenticator-p.html#a89800622f7067e082cbb6665f51d44c8">&lt;RMAuthenticator&gt;</a>
+<li>authenticateWithCall:
+: <a class="el" href="protocol_r_m_authenticator-p.html#acec2e6c190f5719f5e9184938e50aa43">&lt;RMAuthenticator&gt;</a>
 </li>
 </ul>
 
@@ -74,12 +78,19 @@ Here is a list of all documented class members with links to the class documenta
 <li>call
 : <a class="el" href="interface_r_m_session.html#a1eb4cd25fd5ff4adb90fd2025b2bd3ee">RMSession</a>
 </li>
+<li>call:arguments:
+: <a class="el" href="interface_r_m_call.html#a2c8e09fb8f50b66a2ceb3efac2dd9e6b">RMCall</a>
+, <a class="el" href="interface_r_m_session.html#ad8842825e7ffa3ea841d0f44dc0360ac">RMSession</a>
+</li>
 <li>call:arguments:delegate:
-: <a class="el" href="interface_r_m_call.html#a85bb3ac47600a313105a6f94c9ab7ec3">RMCall</a>
-, <a class="el" href="interface_r_m_session.html#a898ba9b048b6568b051acde8d2f48749">RMSession</a>
+: <a class="el" href="interface_r_m_call.html#a45876bba77d77d080a2a15cd38c77358">RMCall</a>
+, <a class="el" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0">RMSession</a>
 </li>
 <li>call:arguments:delegate:protocol:
-: <a class="el" href="interface_r_m_call.html#ae6750e4bc12f50170b839e1b96227a87">RMCall</a>
+: <a class="el" href="interface_r_m_call.html#aa01a7d4b9ff68f7cc187d52fba7b19b2">RMCall</a>
+</li>
+<li>call:arguments:protocol:
+: <a class="el" href="interface_r_m_call.html#ab9818645989afce7fc2327926d4024b8">RMCall</a>
 </li>
 <li>callProtocol
 : <a class="el" href="protocol_r_m_authenticator-p.html#a1a8ee1ab6eb4014dd3783e096173f000">&lt;RMAuthenticator&gt;</a>
@@ -90,18 +101,10 @@ Here is a list of all documented class members with links to the class documenta
 </ul>
 
 
-<h3><a class="anchor" id="index_d">- d -</a></h3><ul>
-<li>delegate
-: <a class="el" href="interface_r_m_session.html#a9f50b3e61cc57115a00bddcecf64f793">RMSession</a>
-</li>
-</ul>
-
-
 <h3><a class="anchor" id="index_f">- f -</a></h3><ul>
 <li>failed:error:
 : <a class="el" href="protocol_r_m_result_delegate-p.html#a3521cd9555449b32aabdb759d2dadce5">&lt;RMResultDelegate&gt;</a>
 , <a class="el" href="interface_r_m_result_delegate_wrapper.html#ad4fccdd6b67ba89b4abe76f64708b82c">RMResultDelegateWrapper</a>
-, <a class="el" href="interface_moodle.html#aa0c8c98374d884a787a8a212f375120a">Moodle</a>
 </li>
 <li>finished:
 : <a class="el" href="protocol_r_m_result_delegate-p.html#a965fe7cc4e150bb6ecf7cbb02b9c7248">&lt;RMResultDelegate&gt;</a>
@@ -111,33 +114,39 @@ Here is a list of all documented class members with links to the class documenta
 
 
 <h3><a class="anchor" id="index_g">- g -</a></h3><ul>
-<li>getActivities:
-: <a class="el" href="interface_moodle.html#a7c17a97046fb3e9f9770c35bf5aa568c">Moodle</a>
+<li>getActivities:delegate:
+: <a class="el" href="interface_moodle.html#ad769405bd0d258ad32c1f4d247b54d57">Moodle</a>
 </li>
-<li>getCourse:
-: <a class="el" href="interface_moodle.html#a2abf5272330348bfac86e2714874ed10">Moodle</a>
+<li>getCourse:delegate:
+: <a class="el" href="interface_moodle.html#a305417edc7b5fd47e19d8e7d888af614">Moodle</a>
 </li>
-<li>getCourses
-: <a class="el" href="interface_moodle.html#a04e4a2082a8100dc2f1f6948bd843aa6">Moodle</a>
+<li>getCourses:
+: <a class="el" href="interface_moodle.html#af557618a5c74a5b786311459499ea850">Moodle</a>
 </li>
-<li>getMyCourses
-: <a class="el" href="interface_moodle.html#a5ea7cf4b73cc15399410a1c7d8875984">Moodle</a>
+<li>getLastChanges:delegate:
+: <a class="el" href="interface_moodle.html#a6326606ca7ade3a39a82b0541dd60df1">Moodle</a>
 </li>
-<li>getResources:
-: <a class="el" href="interface_moodle.html#a71ccbe28df5d535d316ac3de507d1bc7">Moodle</a>
+<li>getMyCourses:
+: <a class="el" href="interface_moodle.html#a381adeb477225e16f6bb35288c7d8a2a">Moodle</a>
 </li>
-<li>getStudents:
-: <a class="el" href="interface_moodle.html#a0a15c6cd198f7448b8f363d2b5a3e33d">Moodle</a>
+<li>getResources:delegate:
+: <a class="el" href="interface_moodle.html#a979d64f5269da915013a13ed7b7ccc08">Moodle</a>
 </li>
-<li>getTeachers:
-: <a class="el" href="interface_moodle.html#ad24bfc36948fc830ad21c7867b8e3793">Moodle</a>
+<li>getStudents:delegate:
+: <a class="el" href="interface_moodle.html#a5e8d12f26f66b20f27021cddbca69e4d">Moodle</a>
+</li>
+<li>getTeachers:delegate:
+: <a class="el" href="interface_moodle.html#acfceceac0230b35cec8bf956529978f2">Moodle</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_i">- i -</a></h3><ul>
-<li>initWithAuthenticator:call:delegate:
-: <a class="el" href="interface_r_m_session.html#ac0cd1eaf70a3afee073b376773d915ff">RMSession</a>
+<li>initWithAuthenticator:call:
+: <a class="el" href="interface_r_m_session.html#a17841007deca0854a7926b895f46fa10">RMSession</a>
+</li>
+<li>initWithObject:finished:failed:
+: <a class="el" href="interface_r_m_result_delegate_wrapper.html#ab2fbcbd604edd4ca182125604fecc51e">RMResultDelegateWrapper</a>
 </li>
 <li>initWithProtocol:
 : <a class="el" href="interface_r_m_call.html#a64f1e76758d2d473859064c5b0c6c75d">RMCall</a>
@@ -151,9 +160,6 @@ Here is a list of all documented class members with links to the class documenta
 <h3><a class="anchor" id="index_l">- l -</a></h3><ul>
 <li>login:password:
 : <a class="el" href="interface_moodle.html#a9213ffaec574e053426c7889c096ab3d">Moodle</a>
-</li>
-<li>loginSuccess:
-: <a class="el" href="interface_moodle.html#a5781c50f886a420b8e7d8b9cf824f68c">Moodle</a>
 </li>
 <li>logout
 : <a class="el" href="interface_moodle.html#a15ea5da83295031cf3384ce7b13ca570">Moodle</a>
@@ -175,6 +181,10 @@ Here is a list of all documented class members with links to the class documenta
 
 
 <h3><a class="anchor" id="index_r">- r -</a></h3><ul>
+<li>removeDelegate:
+: <a class="el" href="interface_r_m_call.html#a134cc51db3b462b9108b30e449f8b5bb">RMCall</a>
+, <a class="el" href="interface_r_m_session.html#a692b571f760d3c4e536b8c048721a61b">RMSession</a>
+</li>
 <li>requestDidSend:method:arguments:
 : <a class="el" href="protocol_r_m_call_protocol-p.html#ae502b8d3070e9de7a6b125b16a8db5cf">&lt;RMCallProtocol&gt;</a>
 </li>
@@ -187,13 +197,21 @@ Here is a list of all documented class members with links to the class documenta
 </ul>
 
 
+<h3><a class="anchor" id="index_s">- s -</a></h3><ul>
+<li>semaphore
+: <a class="el" href="interface_r_m_call.html#a4745f7b9f19769c2c0d4777515d979ad">RMCall</a>
+, <a class="el" href="interface_r_m_session.html#a6185aabc32345064c8e643f9f9e1bcf3">RMSession</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_t">- t -</a></h3><ul>
 <li>topProtocol
 : <a class="el" href="interface_r_m_call.html#a306021de3467cc71a876068cbed9d834">RMCall</a>
 </li>
 </ul>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

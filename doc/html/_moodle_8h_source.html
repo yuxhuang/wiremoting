@@ -32,31 +32,40 @@
 <a name="l00009"></a>00009 <span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#import &quot;WIRemoting.h&quot;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a><a class="code" href="interface_moodle.html">00012</a> <span class="keyword">@interface </span><a class="code" href="interface_moodle.html">Moodle</a> : NSObject {
-<a name="l00013"></a>00013   <a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> *session;
-<a name="l00014"></a>00014 }
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="preprocessor">#pragma mark authentication</span>
-<a name="l00017"></a>00017 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 -(void) login:(NSString*) username password:(NSString*) password;
-<a name="l00027"></a>00027 -(void) loginSuccess:(<a class="code" href="interface_r_m_response.html" title="Handles call responses in WIRemoting framework.">RMResponse</a>*) response;
-<a name="l00031"></a>00031 -(void) failed:(<a class="code" href="interface_r_m_response.html" title="Handles call responses in WIRemoting framework.">RMResponse</a>*) response error:(NSError*) error;
-<a name="l00035"></a>00035 -(void) logout;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="preprocessor">#pragma mark courses</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span>
-<a name="l00044"></a>00044 -(NSArray*) getCourses;
-<a name="l00051"></a>00051 -(NSDictionary*) getCourse:(NSInteger) courseId;
-<a name="l00057"></a>00057 -(NSArray*) getMyCourses;
-<a name="l00064"></a>00064 -(NSArray*) getResources:(NSInteger) courseId;
-<a name="l00071"></a>00071 -(NSArray*) getTeachers:(NSInteger) courseId;
-<a name="l00072"></a>00072 
-<a name="l00079"></a>00079 -(NSArray*) getStudents:(NSInteger) courseId;
-<a name="l00086"></a>00086 -(NSArray*) getActivities:(NSInteger) courseId;
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="keyword">@end</span>
+<a name="l00012"></a>00012 <span class="keyword">@class</span> <a class="code" href="interface_moodle_authenticator.html">MoodleAuthenticator</a>;
+<a name="l00013"></a>00013 <span class="keyword">@class</span> <a class="code" href="interface_moodle_call_protocol.html">MoodleCallProtocol</a>;
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="interface_moodle.html">00015</a> <span class="keyword">@interface </span><a class="code" href="interface_moodle.html">Moodle</a> : NSObject {
+<a name="l00016"></a>00016   <a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> *call;
+<a name="l00017"></a>00017   <a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> *session;
+<a name="l00018"></a>00018   <a class="code" href="interface_moodle_call_protocol.html">MoodleCallProtocol</a> *protocol;
+<a name="l00019"></a>00019   <a class="code" href="interface_moodle_authenticator.html">MoodleAuthenticator</a> *authenticator;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 @property(readonly) BOOL loggedIn;
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="preprocessor">#pragma mark authentication</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00026"></a>00026 - (void) sync;
+<a name="l00027"></a>00027 
+<a name="l00034"></a>00034 -(void) login:(NSString*) username password:(NSString*) password;
+<a name="l00038"></a>00038 -(void) logout;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="preprocessor">#pragma mark courses</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span>
+<a name="l00047"></a>00047 -(void) getCourses:(<span class="keywordtype">id</span>)delegate;
+<a name="l00054"></a>00054 -(void) getCourse:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00060"></a>00060 -(void) getMyCourses:(<span class="keywordtype">id</span>)delegate;
+<a name="l00067"></a>00067 -(void) getResources:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00074"></a>00074 -(void) getTeachers:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00075"></a>00075 
+<a name="l00082"></a>00082 -(void) getStudents:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00089"></a>00089 -(void) getActivities:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00096"></a>00096 -(void) getLastChanges:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate;
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">@end</span>
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

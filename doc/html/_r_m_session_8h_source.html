@@ -41,45 +41,52 @@
 <a name="l00021"></a><a class="code" href="protocol_r_m_authenticator-p.html">00021</a> <span class="keyword">@protocol </span>RMAuthenticator &lt;NSObject&gt;
 <a name="l00022"></a>00022 
 <a name="l00023"></a>00023 <span class="keyword">@required</span>
-<a name="l00030"></a>00030 - (void) authenticateWithCall: (<a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a>*) call
-<a name="l00031"></a>00031                      delegate: (<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
-<a name="l00032"></a>00032 <span class="keyword">@required</span>
-<a name="l00038"></a>00038 - (id&lt;RMCallProtocol&gt;) callProtocol;
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="keyword">@optional</span>
-<a name="l00047"></a>00047 - (BOOL) authenticateResponseString:(NSString*) responseString;
-<a name="l00048"></a>00048 
-<a name="l00049"></a>00049 <span class="keyword">@optional</span>
-<a name="l00056"></a>00056 - (BOOL) authenticateResponseData:(NSData*) responseData;
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="keyword">@end</span>
-<a name="l00059"></a>00059 
-<a name="l00063"></a><a class="code" href="interface_r_m_session.html">00063</a> <span class="keyword">@interface </span><a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> : NSObject&lt;<a class="code" href="protocol_r_m_result_delegate-p.html" title="Handles call results in WIRemoting framework.">RMResultDelegate</a>&gt; {
-<a name="l00064"></a><a class="code" href="interface_r_m_session.html#a1eb4cd25fd5ff4adb90fd2025b2bd3ee">00064</a>   <a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> *call;
-<a name="l00065"></a>00065   id&lt;RMAuthenticator&gt; authenticator;
-<a name="l00066"></a><a class="code" href="interface_r_m_session.html#a9f50b3e61cc57115a00bddcecf64f793">00066</a>   id&lt;RMResultDelegate&gt; <a class="code" href="interface_r_m_session.html#a9f50b3e61cc57115a00bddcecf64f793" title="The session delegate to handle authentication events.">delegate</a>;
-<a name="l00067"></a><a class="code" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24">00067</a>   BOOL <a class="code" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24" title="Return the state whether the session is authenticated.">authenticated</a>;
-<a name="l00068"></a>00068 }
-<a name="l00069"></a>00069 
-<a name="l00073"></a>00073 @property (readonly) <a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> *call;
-<a name="l00077"></a>00077 @property (retain) <span class="keywordtype">id</span>&lt;RMResultDelegate&gt; delegate;
-<a name="l00078"></a>00078 
-<a name="l00088"></a>00088 - (<span class="keywordtype">id</span>) initWithAuthenticator: (<span class="keywordtype">id</span>&lt;RMAuthenticator&gt;) authenticator
-<a name="l00089"></a>00089                         call:(<a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a>*) call
-<a name="l00090"></a>00090                     delegate: (<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
-<a name="l00091"></a>00091 
-<a name="l00095"></a>00095 - (<span class="keywordtype">void</span>) authenticate;
-<a name="l00096"></a>00096 
-<a name="l00102"></a>00102 @property(readonly) BOOL authenticated;
-<a name="l00103"></a>00103 
-<a name="l00111"></a>00111 - (BOOL)call:(NSString*) method
-<a name="l00112"></a>00112    arguments:(NSDictionary*) arguments
-<a name="l00113"></a>00113     delegate:(<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
-<a name="l00114"></a>00114 
-<a name="l00118"></a>00118 - (<span class="keywordtype">void</span>)close;
-<a name="l00119"></a>00119 @end
+<a name="l00030"></a>00030 - (void) authenticateWithCall: (<a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a>*) call;
+<a name="l00031"></a>00031 <span class="keyword">@required</span>
+<a name="l00037"></a>00037 - (id&lt;RMCallProtocol&gt;) callProtocol;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">@optional</span>
+<a name="l00046"></a>00046 - (BOOL) authenticateResponseString:(NSString*) responseString;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">@optional</span>
+<a name="l00055"></a>00055 - (BOOL) authenticateResponseData:(NSData*) responseData;
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">@end</span>
+<a name="l00058"></a>00058 
+<a name="l00062"></a><a class="code" href="interface_r_m_session.html">00062</a> <span class="keyword">@interface </span><a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> : NSObject&lt;<a class="code" href="protocol_r_m_result_delegate-p.html" title="Handles call results in WIRemoting framework.">RMResultDelegate</a>&gt; {
+<a name="l00063"></a><a class="code" href="interface_r_m_session.html#a1eb4cd25fd5ff4adb90fd2025b2bd3ee">00063</a>   <a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> *call;
+<a name="l00064"></a>00064   id&lt;RMAuthenticator&gt; authenticator;
+<a name="l00065"></a>00065   NSMutableArray *delegateChain;
+<a name="l00066"></a><a class="code" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24">00066</a>   BOOL <a class="code" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24" title="Return the state whether the session is authenticated.">authenticated</a>;
+<a name="l00067"></a>00067 }
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072 @property (readonly) <a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> *call;
+<a name="l00076"></a><a class="code" href="interface_r_m_session.html#a6185aabc32345064c8e643f9f9e1bcf3">00076</a> @property (readonly,getter=semaphore) <span class="keywordtype">id</span> semaphore;
+<a name="l00077"></a>00077 
+<a name="l00086"></a>00086 - (<span class="keywordtype">id</span>) initWithAuthenticator: (<span class="keywordtype">id</span>&lt;RMAuthenticator&gt;) authenticator
+<a name="l00087"></a>00087                         call:(<a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a>*) call;
+<a name="l00088"></a>00088 
+<a name="l00092"></a>00092 - (<span class="keywordtype">void</span>) authenticate;
+<a name="l00093"></a>00093 
+<a name="l00099"></a>00099 @property(readonly) BOOL authenticated;
+<a name="l00100"></a>00100 
+<a name="l00107"></a>00107 - (BOOL)call:(NSString*) method
+<a name="l00108"></a>00108    arguments:(NSDictionary*) arguments;
+<a name="l00109"></a>00109 
+<a name="l00119"></a>00119 - (BOOL)call:(NSString*) method
+<a name="l00120"></a>00120    arguments:(NSDictionary*) arguments
+<a name="l00121"></a>00121     delegate:(<span class="keywordtype">id</span>) delegate;
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00127"></a>00127 - (<span class="keywordtype">void</span>)close;
+<a name="l00128"></a>00128 
+<a name="l00134"></a>00134 - (<span class="keywordtype">void</span>) addDelegate: (<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
+<a name="l00135"></a>00135 
+<a name="l00141"></a>00141 - (<span class="keywordtype">void</span>) removeDelegate: (<span class="keywordtype">id</span>&lt;RMResultDelegate&gt;) delegate;
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 @end
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

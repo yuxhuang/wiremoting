@@ -12,16 +12,24 @@ Handles calls in WIRemoting framework.
 \item 
 (id) -\/ \hyperlink{interface_r_m_call_a64f1e76758d2d473859064c5b0c6c75d}{initWithProtocol:}
 \begin{DoxyCompactList}\small\item\em Initiatize the call with a call protocol. \item\end{DoxyCompactList}\item 
-(BOOL) -\/ \hyperlink{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}{call:arguments:delegate:}
+(BOOL) -\/ \hyperlink{interface_r_m_call_a2c8e09fb8f50b66a2ceb3efac2dd9e6b}{call:arguments:}
 \begin{DoxyCompactList}\small\item\em Call a remote method. \item\end{DoxyCompactList}\item 
-(BOOL) -\/ \hyperlink{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}{call:arguments:delegate:protocol:}
+(BOOL) -\/ \hyperlink{interface_r_m_call_a45876bba77d77d080a2a15cd38c77358}{call:arguments:delegate:}
+\begin{DoxyCompactList}\small\item\em Call a remote method with a temporary delegate. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{interface_r_m_call_ab9818645989afce7fc2327926d4024b8}{call:arguments:protocol:}
 \begin{DoxyCompactList}\small\item\em Call a remote method with a specific call protocol. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{interface_r_m_call_aa01a7d4b9ff68f7cc187d52fba7b19b2}{call:arguments:delegate:protocol:}
+\begin{DoxyCompactList}\small\item\em Call a remote method with a temporary delegate. \item\end{DoxyCompactList}\item 
 (void) -\/ \hyperlink{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}{pushProtocol:}
 \begin{DoxyCompactList}\small\item\em Push a call protocol onto the protocol stack. \item\end{DoxyCompactList}\item 
 (id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$) -\/ \hyperlink{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}{popProtocol}
 \begin{DoxyCompactList}\small\item\em Pop a call protocol from the protocol stack. \item\end{DoxyCompactList}\item 
 (id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$) -\/ \hyperlink{interface_r_m_call_a306021de3467cc71a876068cbed9d834}{topProtocol}
 \begin{DoxyCompactList}\small\item\em Get the protocol on the top of the protocol stack. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_call_a24b00b6c098e4c14b267fafb186d2493}{addDelegate:}
+\begin{DoxyCompactList}\small\item\em Add a new delegate. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_call_a134cc51db3b462b9108b30e449f8b5bb}{removeDelegate:}
+\begin{DoxyCompactList}\small\item\em Remove a delegate. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}{
 (void) -\/ {\bfseries responseDone:}}
 \label{interface_r_m_call_ad886fa1609a87c68a5d681942704e61d}
@@ -45,6 +53,11 @@ NSMutableArray $\ast$ {\bfseries responseQueue}}
 \label{interface_r_m_call_ab5d202e25515a602bac16ab028336a89}
 
 \item 
+\hypertarget{interface_r_m_call_a7ee402fc72181667a1dee30f83d41ddf}{
+NSMutableArray $\ast$ {\bfseries delegateChain}}
+\label{interface_r_m_call_a7ee402fc72181667a1dee30f83d41ddf}
+
+\item 
 \hypertarget{interface_r_m_call_a98a195cf89cf282dc613f6573c238d2d}{
 NSAutoreleasePool $\ast$ {\bfseries autoReleasePool}}
 \label{interface_r_m_call_a98a195cf89cf282dc613f6573c238d2d}
@@ -57,7 +70,12 @@ NSAutoreleasePool $\ast$ {\bfseries autoReleasePool}}
 id$<$ \hyperlink{protocol_r_m_call_protocol-p}{RMCallProtocol} $>$ \hyperlink{interface_r_m_call_ae96906f15a63ea2680d57eccef568944}{protocol}}
 \label{interface_r_m_call_ae96906f15a63ea2680d57eccef568944}
 
-\begin{DoxyCompactList}\small\item\em A call protocol to adjust HTTP requests. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A call protocol to adjust HTTP requests. \item\end{DoxyCompactList}\item 
+\hypertarget{interface_r_m_call_a4745f7b9f19769c2c0d4777515d979ad}{
+id \hyperlink{interface_r_m_call_a4745f7b9f19769c2c0d4777515d979ad}{semaphore}}
+\label{interface_r_m_call_a4745f7b9f19769c2c0d4777515d979ad}
+
+\begin{DoxyCompactList}\small\item\em A semaphore for locking. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -78,39 +96,69 @@ Initiatize the call with a call protocol.
 \item[{\em protocol}]A call protocol. \end{DoxyParams}
 
 
-Definition at line 29 of file RMCall.m.\hypertarget{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}{
-\index{RMCall@{RMCall}!call:arguments:delegate:@{call:arguments:delegate:}}
-\index{call:arguments:delegate:@{call:arguments:delegate:}!RMCall@{RMCall}}
-\subsubsection[{call:arguments:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
-\label{interface_r_m_call_a85bb3ac47600a313105a6f94c9ab7ec3}
+Definition at line 30 of file RMCall.m.\hypertarget{interface_r_m_call_a2c8e09fb8f50b66a2ceb3efac2dd9e6b}{
+\index{RMCall@{RMCall}!call:arguments:@{call:arguments:}}
+\index{call:arguments:@{call:arguments:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}}}
+\label{interface_r_m_call_a2c8e09fb8f50b66a2ceb3efac2dd9e6b}
 
 
 Call a remote method. 
 \begin{DoxyParams}{Parameters}
-\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]The call delegate to handle results.\end{DoxyParams}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments.\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 whether the call is sent. 
 \end{DoxyReturn}
 
 
-Definition at line 66 of file RMCall.m.\hypertarget{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}{
-\index{RMCall@{RMCall}!call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}}
-\index{call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}!RMCall@{RMCall}}
-\subsubsection[{call:arguments:delegate:protocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}\/ protocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
-\label{interface_r_m_call_ae6750e4bc12f50170b839e1b96227a87}
+Definition at line 70 of file RMCall.m.\hypertarget{interface_r_m_call_a45876bba77d77d080a2a15cd38c77358}{
+\index{RMCall@{RMCall}!call:arguments:delegate:@{call:arguments:delegate:}}
+\index{call:arguments:delegate:@{call:arguments:delegate:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id) {\em delegate}}}
+\label{interface_r_m_call_a45876bba77d77d080a2a15cd38c77358}
+
+
+Call a remote method with a temporary delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]a delegate\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the call is sent. 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file RMCall.m.\hypertarget{interface_r_m_call_ab9818645989afce7fc2327926d4024b8}{
+\index{RMCall@{RMCall}!call:arguments:protocol:@{call:arguments:protocol:}}
+\index{call:arguments:protocol:@{call:arguments:protocol:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:protocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ protocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
+\label{interface_r_m_call_ab9818645989afce7fc2327926d4024b8}
 
 
 Call a remote method with a specific call protocol. Call a remote method with the specified call protocol in the highest priority.
 
 
 \begin{DoxyParams}{Parameters}
-\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]The call delegate to handle results. \item[{\em protocl}]The call protocol to execute on top of other protocols.\end{DoxyParams}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em protocol}]The call protocol to execute on top of other protocols.\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 whether the call is sent. 
 \end{DoxyReturn}
 
 
-Definition at line 76 of file RMCall.m.\hypertarget{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}{
+Definition at line 105 of file RMCall.m.\hypertarget{interface_r_m_call_aa01a7d4b9ff68f7cc187d52fba7b19b2}{
+\index{RMCall@{RMCall}!call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}}
+\index{call:arguments:delegate:protocol:@{call:arguments:delegate:protocol:}!RMCall@{RMCall}}
+\subsubsection[{call:arguments:delegate:protocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id) {\em delegate}\/ protocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
+\label{interface_r_m_call_aa01a7d4b9ff68f7cc187d52fba7b19b2}
+
+
+Call a remote method with a temporary delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]a delegate \item[{\em protocol}]The call protocol to execute on top of other protocols.\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the call is sent. 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file RMCall.m.\hypertarget{interface_r_m_call_afb23a22f89df78e62f45f2af2dd41623}{
 \index{RMCall@{RMCall}!pushProtocol:@{pushProtocol:}}
 \index{pushProtocol:@{pushProtocol:}!RMCall@{RMCall}}
 \subsubsection[{pushProtocol:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) pushProtocol: (id$<${\bf RMCallProtocol}$>$) {\em protocol}}}
@@ -122,7 +170,7 @@ Push a call protocol onto the protocol stack.
 \item[{\em protocol}]A call protocol. \end{DoxyParams}
 
 
-Definition at line 203 of file RMCall.m.\hypertarget{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}{
+Definition at line 242 of file RMCall.m.\hypertarget{interface_r_m_call_a2f55cbd7d34e98e4dbc74e1d8d8facf8}{
 \index{RMCall@{RMCall}!popProtocol@{popProtocol}}
 \index{popProtocol@{popProtocol}!RMCall@{RMCall}}
 \subsubsection[{popProtocol}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf RMCallProtocol} $>$) popProtocol }}
@@ -134,7 +182,7 @@ The popped call protocol.
 \end{DoxyReturn}
 
 
-Definition at line 208 of file RMCall.m.\hypertarget{interface_r_m_call_a306021de3467cc71a876068cbed9d834}{
+Definition at line 247 of file RMCall.m.\hypertarget{interface_r_m_call_a306021de3467cc71a876068cbed9d834}{
 \index{RMCall@{RMCall}!topProtocol@{topProtocol}}
 \index{topProtocol@{topProtocol}!RMCall@{RMCall}}
 \subsubsection[{topProtocol}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf RMCallProtocol} $>$) topProtocol }}
@@ -146,7 +194,31 @@ The protocol on the top of the stack.
 \end{DoxyReturn}
 
 
-Definition at line 215 of file RMCall.m.
+Definition at line 254 of file RMCall.m.\hypertarget{interface_r_m_call_a24b00b6c098e4c14b267fafb186d2493}{
+\index{RMCall@{RMCall}!addDelegate:@{addDelegate:}}
+\index{addDelegate:@{addDelegate:}!RMCall@{RMCall}}
+\subsubsection[{addDelegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) addDelegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
+\label{interface_r_m_call_a24b00b6c098e4c14b267fafb186d2493}
+
+
+Add a new delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em delegate}]A delegate \end{DoxyParams}
+
+
+Definition at line 259 of file RMCall.m.\hypertarget{interface_r_m_call_a134cc51db3b462b9108b30e449f8b5bb}{
+\index{RMCall@{RMCall}!removeDelegate:@{removeDelegate:}}
+\index{removeDelegate:@{removeDelegate:}!RMCall@{RMCall}}
+\subsubsection[{removeDelegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) removeDelegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
+\label{interface_r_m_call_a134cc51db3b462b9108b30e449f8b5bb}
+
+
+Remove a delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em delegate}]A delegate \end{DoxyParams}
+
+
+Definition at line 266 of file RMCall.m.
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 

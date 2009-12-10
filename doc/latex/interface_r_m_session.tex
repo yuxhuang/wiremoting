@@ -16,26 +16,37 @@ Handles sessions in WIRemoting framework.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-(id) -\/ \hyperlink{interface_r_m_session_ac0cd1eaf70a3afee073b376773d915ff}{initWithAuthenticator:call:delegate:}
+(id) -\/ \hyperlink{interface_r_m_session_a17841007deca0854a7926b895f46fa10}{initWithAuthenticator:call:}
 \begin{DoxyCompactList}\small\item\em Initiate a session with an authentication delegate. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_r_m_session_aba47598cf422661784044b0f24286939}{
 (void) -\/ \hyperlink{interface_r_m_session_aba47598cf422661784044b0f24286939}{authenticate}}
 \label{interface_r_m_session_aba47598cf422661784044b0f24286939}
 
 \begin{DoxyCompactList}\small\item\em Authenticate the session. \item\end{DoxyCompactList}\item 
-(BOOL) -\/ \hyperlink{interface_r_m_session_a898ba9b048b6568b051acde8d2f48749}{call:arguments:delegate:}
+(BOOL) -\/ \hyperlink{interface_r_m_session_ad8842825e7ffa3ea841d0f44dc0360ac}{call:arguments:}
 \begin{DoxyCompactList}\small\item\em Call a method. \item\end{DoxyCompactList}\item 
+(BOOL) -\/ \hyperlink{interface_r_m_session_adaf01c561e55c091d8011dc507a1f1d0}{call:arguments:delegate:}
+\begin{DoxyCompactList}\small\item\em Call a remote method with a temporary delegate. \item\end{DoxyCompactList}\item 
 \hypertarget{interface_r_m_session_a77c806e25987046026c7bb60accabe1b}{
 (void) -\/ \hyperlink{interface_r_m_session_a77c806e25987046026c7bb60accabe1b}{close}}
 \label{interface_r_m_session_a77c806e25987046026c7bb60accabe1b}
 
-\begin{DoxyCompactList}\small\item\em Close a session. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Close a session. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_session_a20ee0730741132192d4245108509bbb8}{addDelegate:}
+\begin{DoxyCompactList}\small\item\em Add a new delegate. \item\end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_session_a692b571f760d3c4e536b8c048721a61b}{removeDelegate:}
+\begin{DoxyCompactList}\small\item\em Remove a delegate. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{interface_r_m_session_a759f830479707308f14b1405f6968379}{
 id$<$ \hyperlink{protocol_r_m_authenticator-p}{RMAuthenticator} $>$ {\bfseries authenticator}}
 \label{interface_r_m_session_a759f830479707308f14b1405f6968379}
+
+\item 
+\hypertarget{interface_r_m_session_ac4f774f899a7a0b0e974ccf8de73a786}{
+NSMutableArray $\ast$ {\bfseries delegateChain}}
+\label{interface_r_m_session_ac4f774f899a7a0b0e974ccf8de73a786}
 
 \end{DoxyCompactItemize}
 \subsection*{Properties}
@@ -46,11 +57,11 @@ id$<$ \hyperlink{protocol_r_m_authenticator-p}{RMAuthenticator} $>$ {\bfseries a
 \label{interface_r_m_session_a1eb4cd25fd5ff4adb90fd2025b2bd3ee}
 
 \begin{DoxyCompactList}\small\item\em The call object to handle session calls. \item\end{DoxyCompactList}\item 
-\hypertarget{interface_r_m_session_a9f50b3e61cc57115a00bddcecf64f793}{
-id$<$ \hyperlink{protocol_r_m_result_delegate-p}{RMResultDelegate} $>$ \hyperlink{interface_r_m_session_a9f50b3e61cc57115a00bddcecf64f793}{delegate}}
-\label{interface_r_m_session_a9f50b3e61cc57115a00bddcecf64f793}
+\hypertarget{interface_r_m_session_a6185aabc32345064c8e643f9f9e1bcf3}{
+id \hyperlink{interface_r_m_session_a6185aabc32345064c8e643f9f9e1bcf3}{semaphore}}
+\label{interface_r_m_session_a6185aabc32345064c8e643f9f9e1bcf3}
 
-\begin{DoxyCompactList}\small\item\em The session delegate to handle authentication events. \item\end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Semaphore for locking. \item\end{DoxyCompactList}\item 
 BOOL \hyperlink{interface_r_m_session_a71acbe4da4033e724b01e44d39ea2f24}{authenticated}
 \begin{DoxyCompactList}\small\item\em Return the state whether the session is authenticated. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -58,37 +69,76 @@ BOOL \hyperlink{interface_r_m_session_a71acbe4da4033e724b01e44d39ea2f24}{authent
 \subsection{Detailed Description}
 Handles sessions in WIRemoting framework. 
 
-Definition at line 63 of file RMSession.h.
+Definition at line 62 of file RMSession.h.
 
 \subsection{Member Function Documentation}
-\hypertarget{interface_r_m_session_ac0cd1eaf70a3afee073b376773d915ff}{
-\index{RMSession@{RMSession}!initWithAuthenticator:call:delegate:@{initWithAuthenticator:call:delegate:}}
-\index{initWithAuthenticator:call:delegate:@{initWithAuthenticator:call:delegate:}!RMSession@{RMSession}}
-\subsubsection[{initWithAuthenticator:call:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) initWithAuthenticator: (id$<${\bf RMAuthenticator}$>$) {\em authenticator}\/ call: ({\bf RMCall}$\ast$) {\em call}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
-\label{interface_r_m_session_ac0cd1eaf70a3afee073b376773d915ff}
+\hypertarget{interface_r_m_session_a17841007deca0854a7926b895f46fa10}{
+\index{RMSession@{RMSession}!initWithAuthenticator:call:@{initWithAuthenticator:call:}}
+\index{initWithAuthenticator:call:@{initWithAuthenticator:call:}!RMSession@{RMSession}}
+\subsubsection[{initWithAuthenticator:call:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) initWithAuthenticator: (id$<${\bf RMAuthenticator}$>$) {\em authenticator}\/ call: ({\bf RMCall}$\ast$) {\em call}}}
+\label{interface_r_m_session_a17841007deca0854a7926b895f46fa10}
 
 
 Initiate a session with an authentication delegate. 
 \begin{DoxyParams}{Parameters}
-\item[{\em authenticator}]An authentication service provider. \item[{\em call}]A call object to handle session calls. \item[{\em delegate}]A session delegate to handle authentication events.\end{DoxyParams}
+\item[{\em authenticator}]An authentication service provider. \item[{\em call}]A call object to handle session calls.\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 An initiated \hyperlink{interface_r_m_session}{RMSession} object. 
 \end{DoxyReturn}
 
 
-Definition at line 17 of file RMSession.m.\hypertarget{interface_r_m_session_a898ba9b048b6568b051acde8d2f48749}{
-\index{RMSession@{RMSession}!call:arguments:delegate:@{call:arguments:delegate:}}
-\index{call:arguments:delegate:@{call:arguments:delegate:}!RMSession@{RMSession}}
-\subsubsection[{call:arguments:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
-\label{interface_r_m_session_a898ba9b048b6568b051acde8d2f48749}
+Definition at line 18 of file RMSession.m.\hypertarget{interface_r_m_session_ad8842825e7ffa3ea841d0f44dc0360ac}{
+\index{RMSession@{RMSession}!call:arguments:@{call:arguments:}}
+\index{call:arguments:@{call:arguments:}!RMSession@{RMSession}}
+\subsubsection[{call:arguments:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}}}
+\label{interface_r_m_session_ad8842825e7ffa3ea841d0f44dc0360ac}
 
 
 Call a method. 
 \begin{DoxyParams}{Parameters}
-\item[{\em method}]The method name. \item[{\em arguments}]Method arguments. \item[{\em delegate}]The call delegate to handle call results. \end{DoxyParams}
+\item[{\em method}]The method name. \item[{\em arguments}]Method arguments. \end{DoxyParams}
 
 
-Definition at line 99 of file RMSession.m.
+Definition at line 132 of file RMSession.m.\hypertarget{interface_r_m_session_adaf01c561e55c091d8011dc507a1f1d0}{
+\index{RMSession@{RMSession}!call:arguments:delegate:@{call:arguments:delegate:}}
+\index{call:arguments:delegate:@{call:arguments:delegate:}!RMSession@{RMSession}}
+\subsubsection[{call:arguments:delegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (BOOL) call: (NSString$\ast$) {\em method}\/ arguments: (NSDictionary$\ast$) {\em arguments}\/ delegate: (id) {\em delegate}}}
+\label{interface_r_m_session_adaf01c561e55c091d8011dc507a1f1d0}
+
+
+Call a remote method with a temporary delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em method}]The method name. \item[{\em arguments}]The method arguments. \item[{\em delegate}]a delegate\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether the call is sent. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file RMSession.m.\hypertarget{interface_r_m_session_a20ee0730741132192d4245108509bbb8}{
+\index{RMSession@{RMSession}!addDelegate:@{addDelegate:}}
+\index{addDelegate:@{addDelegate:}!RMSession@{RMSession}}
+\subsubsection[{addDelegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) addDelegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
+\label{interface_r_m_session_a20ee0730741132192d4245108509bbb8}
+
+
+Add a new delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em delegate}]A delegate \end{DoxyParams}
+
+
+Definition at line 46 of file RMSession.m.\hypertarget{interface_r_m_session_a692b571f760d3c4e536b8c048721a61b}{
+\index{RMSession@{RMSession}!removeDelegate:@{removeDelegate:}}
+\index{removeDelegate:@{removeDelegate:}!RMSession@{RMSession}}
+\subsubsection[{removeDelegate:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) removeDelegate: (id$<${\bf RMResultDelegate}$>$) {\em delegate}}}
+\label{interface_r_m_session_a692b571f760d3c4e536b8c048721a61b}
+
+
+Remove a delegate. 
+\begin{DoxyParams}{Parameters}
+\item[{\em delegate}]A delegate \end{DoxyParams}
+
+
+Definition at line 53 of file RMSession.m.
 
 \subsection{Property Documentation}
 \hypertarget{interface_r_m_session_a71acbe4da4033e724b01e44d39ea2f24}{
@@ -103,7 +153,7 @@ whether the session is authenticated.
 \end{DoxyReturn}
 
 
-Definition at line 67 of file RMSession.h.
+Definition at line 66 of file RMSession.h.
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 

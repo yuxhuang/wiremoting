@@ -30,13 +30,133 @@
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#import &quot;Moodle.h&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">@implementation </span><a class="code" href="interface_moodle.html">Moodle</a>
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">@end</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#import &quot;MoodleAuthenticator.h&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#import &quot;MoodleCallProtocol.h&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">@implementation </span><a class="code" href="interface_moodle.html">Moodle</a>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 @dynamic loggedIn;
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 - (id) init
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019   <span class="keyword">self</span> = [<span class="keyword">super</span> init];
+<a name="l00020"></a>00020   
+<a name="l00021"></a>00021   <span class="keywordflow">if</span> (nil != <span class="keyword">self</span>) {
+<a name="l00022"></a>00022     protocol = [[<a class="code" href="interface_moodle_call_protocol.html">MoodleCallProtocol</a> alloc] init];
+<a name="l00023"></a>00023     call = [[<a class="code" href="interface_r_m_call.html" title="Handles calls in WIRemoting framework.">RMCall</a> alloc] initWithProtocol:protocol];
+<a name="l00024"></a>00024   }
+<a name="l00025"></a>00025   
+<a name="l00026"></a>00026   <span class="keywordflow">return</span> <span class="keyword">self</span>;
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 - (void) dealloc
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031   [authenticator release];
+<a name="l00032"></a>00032   [session release];
+<a name="l00033"></a>00033   [call release];
+<a name="l00034"></a>00034   [protocol release];
+<a name="l00035"></a>00035   [<span class="keyword">super</span> dealloc];
+<a name="l00036"></a>00036 }
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 - (void) sync
+<a name="l00039"></a>00039 {
+<a name="l00040"></a>00040   protocol.async = NO;
+<a name="l00041"></a>00041 }
+<a name="l00042"></a>00042 
+<a name="l00043"></a><a class="code" href="interface_moodle.html#a9213ffaec574e053426c7889c096ab3d">00043</a> -(void) login:(NSString*) username password:(NSString*) password
+<a name="l00044"></a>00044 {
+<a name="l00045"></a>00045   <span class="keywordflow">if</span> (nil != authenticator &amp;&amp; nil != session) {
+<a name="l00046"></a>00046     [<span class="keyword">self</span> <a class="code" href="interface_moodle.html#a15ea5da83295031cf3384ce7b13ca570" title="Log out from a Moodle system.">logout</a>];
+<a name="l00047"></a>00047   }
+<a name="l00048"></a>00048   authenticator = [[<a class="code" href="interface_moodle_authenticator.html">MoodleAuthenticator</a> alloc]
+<a name="l00049"></a>00049                    initWithUsername:username password:password];
+<a name="l00050"></a>00050   session = [[<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> alloc] initWithAuthenticator:authenticator
+<a name="l00051"></a>00051                                                 call:call];
+<a name="l00052"></a>00052   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#aba47598cf422661784044b0f24286939" title="Authenticate the session.">authenticate</a>];
+<a name="l00053"></a>00053 }
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 - (BOOL) loggedIn
+<a name="l00056"></a>00056 {
+<a name="l00057"></a>00057   <span class="keywordflow">return</span> session.<a class="code" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24" title="Return the state whether the session is authenticated.">authenticated</a>;
+<a name="l00058"></a>00058 }
+<a name="l00059"></a>00059 
+<a name="l00060"></a><a class="code" href="interface_moodle.html#a15ea5da83295031cf3384ce7b13ca570">00060</a> -(void) <a class="code" href="interface_moodle.html#a15ea5da83295031cf3384ce7b13ca570" title="Log out from a Moodle system.">logout</a>
+<a name="l00061"></a>00061 {
+<a name="l00062"></a>00062   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#ad8842825e7ffa3ea841d0f44dc0360ac" title="Call a method.">call</a>:@&quot;logout&quot; <a class="code" href="interface_r_m_session.html#ad8842825e7ffa3ea841d0f44dc0360ac" title="Call a method.">arguments</a>:nil];
+<a name="l00063"></a>00063   [<a class="code" href="interface_moodle_authenticator.html">authenticator</a> release];
+<a name="l00064"></a>00064   authenticator = nil;
+<a name="l00065"></a>00065   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> release];
+<a name="l00066"></a>00066   session = nil;
+<a name="l00067"></a>00067 }
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="interface_moodle.html#af557618a5c74a5b786311459499ea850">00069</a> -(void) getCourses:(<span class="keywordtype">id</span>)delegate
+<a name="l00070"></a>00070 {
+<a name="l00071"></a>00071   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_courses&quot; <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:nil <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00072"></a>00072 }
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="interface_moodle.html#a305417edc7b5fd47e19d8e7d888af614">00074</a> -(void) getCourse:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_courses&quot;
+<a name="l00077"></a>00077       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00078"></a>00078                  [NSNumber numberWithInt:courseId], @&quot;value&quot;,
+<a name="l00079"></a>00079                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00080"></a>00080        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="interface_moodle.html#a381adeb477225e16f6bb35288c7d8a2a">00083</a> -(void) getMyCourses:(<span class="keywordtype">id</span>)delegate
+<a name="l00084"></a>00084 {
+<a name="l00085"></a>00085   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_my_courses&quot; <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:nil <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="interface_moodle.html#a979d64f5269da915013a13ed7b7ccc08">00088</a> -(void) getResources:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00089"></a>00089 {
+<a name="l00090"></a>00090   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_resources&quot;
+<a name="l00091"></a>00091       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00092"></a>00092                  [NSArray arrayWithObject:[NSNumber numberWithInt:courseId]], @&quot;value&quot;,
+<a name="l00093"></a>00093                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00094"></a>00094        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00095"></a>00095 }
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="interface_moodle.html#acfceceac0230b35cec8bf956529978f2">00097</a> -(void) getTeachers:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_teachers&quot;
+<a name="l00100"></a>00100       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00101"></a>00101                  [NSNumber numberWithInt:courseId], @&quot;value&quot;,
+<a name="l00102"></a>00102                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00103"></a>00103        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00104"></a>00104 }
+<a name="l00105"></a>00105 
+<a name="l00106"></a><a class="code" href="interface_moodle.html#a5e8d12f26f66b20f27021cddbca69e4d">00106</a> -(void) getStudents:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00107"></a>00107 {
+<a name="l00108"></a>00108   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_students&quot;
+<a name="l00109"></a>00109       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00110"></a>00110                  [NSNumber numberWithInt:courseId], @&quot;value&quot;,
+<a name="l00111"></a>00111                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00112"></a>00112        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="interface_moodle.html#ad769405bd0d258ad32c1f4d247b54d57">00115</a> -(void) getActivities:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00116"></a>00116 {
+<a name="l00117"></a>00117   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_activities&quot;
+<a name="l00118"></a>00118       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00119"></a>00119                  [NSNumber numberWithInt:courseId], @&quot;value&quot;,
+<a name="l00120"></a>00120                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00121"></a>00121        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="interface_moodle.html#a6326606ca7ade3a39a82b0541dd60df1">00124</a> -(void) getLastChanges:(NSInteger) courseId delegate:(<span class="keywordtype">id</span>)delegate
+<a name="l00125"></a>00125 {
+<a name="l00126"></a>00126   [<a class="code" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">session</a> <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">call</a>:@&quot;get_last_changes&quot;
+<a name="l00127"></a>00127       <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">arguments</a>:[NSDictionary dictionaryWithObjectsAndKeys:
+<a name="l00128"></a>00128                  [NSNumber numberWithInt:courseId], @&quot;value&quot;,
+<a name="l00129"></a>00129                  @&quot;id&quot;, @&quot;idfield&quot;, nil]
+<a name="l00130"></a>00130        <a class="code" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0" title="Call a remote method with a temporary delegate.">delegate</a>:delegate];
+<a name="l00131"></a>00131 }
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="keyword">@end</span>
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

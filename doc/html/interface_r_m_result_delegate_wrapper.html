@@ -39,8 +39,8 @@ Inheritance diagram for RMResultDelegateWrapper:</div>
 <p><a href="class_r_m_result_delegate_wrapper-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2fbcbd604edd4ca182125604fecc51e"></a><!-- doxytag: member="RMResultDelegateWrapper::initWithObject:finished:failed:" ref="ab2fbcbd604edd4ca182125604fecc51e" args="(id obj,[finished] SEL fin,[failed] SEL fai)" -->
-(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <b>initWithObject:finished:failed:</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_result_delegate_wrapper.html#ab2fbcbd604edd4ca182125604fecc51e">initWithObject:finished:failed:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new delegate wrapper.  <a href="#ab2fbcbd604edd4ca182125604fecc51e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_result_delegate_wrapper.html#ac631e09ab641294f124b0e7d81b455c3">finished:</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">An event fired when the call successfully finishes.  <a href="#ac631e09ab641294f124b0e7d81b455c3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_result_delegate_wrapper.html#ad4fccdd6b67ba89b4abe76f64708b82c">failed:error:</a></td></tr>
@@ -57,6 +57,52 @@ SEL&nbsp;</td><td class="memItemRight" valign="bottom"><b>failed</b></td></tr>
 
 <p>Definition at line <a class="el" href="_r_m_result_delegate_wrapper_8h_source.html#l00014">14</a> of file <a class="el" href="_r_m_result_delegate_wrapper_8h_source.html">RMResultDelegateWrapper.h</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab2fbcbd604edd4ca182125604fecc51e"></a><!-- doxytag: member="RMResultDelegateWrapper::initWithObject:finished:failed:" ref="ab2fbcbd604edd4ca182125604fecc51e" args="(id obj,[finished] SEL fin,[failed] SEL fai)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithObject: </td>
+          <td></td>
+          <td class="paramtype">(id)&nbsp;</td>
+          <td class="paramname"> <em>obj</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">finished:</td>
+          <td></td>
+          <td class="paramtype">(SEL)&nbsp;</td>
+          <td class="paramname"> <em>fin</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">failed:</td>
+          <td></td>
+          <td class="paramtype">(SEL)&nbsp;</td>
+          <td class="paramname"> <em>fai</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Create a new delegate wrapper. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>obj</em>&nbsp;</td><td>the object on which the selectors perform </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fin</em>&nbsp;</td><td>the fininshed selector </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fai</em>&nbsp;</td><td>the failed selector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the wrapper instance </dd></dl>
+
+<p>Definition at line <a class="el" href="_r_m_result_delegate_wrapper_8m_source.html#l00014">14</a> of file <a class="el" href="_r_m_result_delegate_wrapper_8m_source.html">RMResultDelegateWrapper.m</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac631e09ab641294f124b0e7d81b455c3"></a><!-- doxytag: member="RMResultDelegateWrapper::finished:" ref="ac631e09ab641294f124b0e7d81b455c3" args="(RMResponse *response)" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +178,7 @@ SEL&nbsp;</td><td class="memItemRight" valign="bottom"><b>failed</b></td></tr>
 <li>/Users/yxh/Code/XCode/WIRemoting/Source/Classes/<a class="el" href="_r_m_result_delegate_wrapper_8m_source.html">RMResultDelegateWrapper.m</a></li>
 </ul>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

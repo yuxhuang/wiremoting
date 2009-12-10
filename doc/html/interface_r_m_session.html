@@ -44,35 +44,43 @@ Inheritance diagram for RMSession:</div>
 <p><a href="class_r_m_session-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#ac0cd1eaf70a3afee073b376773d915ff">initWithAuthenticator:call:delegate:</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initiate a session with an authentication delegate.  <a href="#ac0cd1eaf70a3afee073b376773d915ff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#a17841007deca0854a7926b895f46fa10">initWithAuthenticator:call:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initiate a session with an authentication delegate.  <a href="#a17841007deca0854a7926b895f46fa10"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba47598cf422661784044b0f24286939"></a><!-- doxytag: member="RMSession::authenticate" ref="aba47598cf422661784044b0f24286939" args="()" -->
 (void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#aba47598cf422661784044b0f24286939">authenticate</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Authenticate the session. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(BOOL)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#a898ba9b048b6568b051acde8d2f48749">call:arguments:delegate:</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Call a method.  <a href="#a898ba9b048b6568b051acde8d2f48749"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(BOOL)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#ad8842825e7ffa3ea841d0f44dc0360ac">call:arguments:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Call a method.  <a href="#ad8842825e7ffa3ea841d0f44dc0360ac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(BOOL)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#adaf01c561e55c091d8011dc507a1f1d0">call:arguments:delegate:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Call a remote method with a temporary delegate.  <a href="#adaf01c561e55c091d8011dc507a1f1d0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77c806e25987046026c7bb60accabe1b"></a><!-- doxytag: member="RMSession::close" ref="a77c806e25987046026c7bb60accabe1b" args="()" -->
 (void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#a77c806e25987046026c7bb60accabe1b">close</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Close a session. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#a20ee0730741132192d4245108509bbb8">addDelegate:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a new delegate.  <a href="#a20ee0730741132192d4245108509bbb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(void)&nbsp;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_session.html#a692b571f760d3c4e536b8c048721a61b">removeDelegate:</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remove a delegate.  <a href="#a692b571f760d3c4e536b8c048721a61b"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a759f830479707308f14b1405f6968379"></a><!-- doxytag: member="RMSession::authenticator" ref="a759f830479707308f14b1405f6968379" args="" -->
 id&lt; <a class="el" href="protocol_r_m_authenticator-p.html">RMAuthenticator</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><b>authenticator</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4f774f899a7a0b0e974ccf8de73a786"></a><!-- doxytag: member="RMSession::delegateChain" ref="ac4f774f899a7a0b0e974ccf8de73a786" args="" -->
+NSMutableArray *&nbsp;</td><td class="memItemRight" valign="bottom"><b>delegateChain</b></td></tr>
 <tr><td colspan="2"><h2>Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb4cd25fd5ff4adb90fd2025b2bd3ee"></a><!-- doxytag: member="RMSession::call" ref="a1eb4cd25fd5ff4adb90fd2025b2bd3ee" args="" -->
 <a class="el" href="interface_r_m_call.html">RMCall</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_session.html#a1eb4cd25fd5ff4adb90fd2025b2bd3ee">call</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The call object to handle session calls. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f50b3e61cc57115a00bddcecf64f793"></a><!-- doxytag: member="RMSession::delegate" ref="a9f50b3e61cc57115a00bddcecf64f793" args="" -->
-id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_session.html#a9f50b3e61cc57115a00bddcecf64f793">delegate</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The session delegate to handle authentication events. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6185aabc32345064c8e643f9f9e1bcf3"></a><!-- doxytag: member="RMSession::semaphore" ref="a6185aabc32345064c8e643f9f9e1bcf3" args="" -->
+id&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_session.html#a6185aabc32345064c8e643f9f9e1bcf3">semaphore</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Semaphore for locking. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">BOOL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_session.html#a71acbe4da4033e724b01e44d39ea2f24">authenticated</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the state whether the session is authenticated.  <a href="#a71acbe4da4033e724b01e44d39ea2f24"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Handles sessions in WIRemoting framework. </p>
 
-<p>Definition at line <a class="el" href="_r_m_session_8h_source.html#l00063">63</a> of file <a class="el" href="_r_m_session_8h_source.html">RMSession.h</a>.</p>
+<p>Definition at line <a class="el" href="_r_m_session_8h_source.html#l00062">62</a> of file <a class="el" href="_r_m_session_8h_source.html">RMSession.h</a>.</p>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac0cd1eaf70a3afee073b376773d915ff"></a><!-- doxytag: member="RMSession::initWithAuthenticator:call:delegate:" ref="ac0cd1eaf70a3afee073b376773d915ff" args="(id&lt; RMAuthenticator &gt; authenticator,[call] RMCall *call,[delegate] id&lt; RMResultDelegate &gt; delegate)" -->
+<a class="anchor" id="a17841007deca0854a7926b895f46fa10"></a><!-- doxytag: member="RMSession::initWithAuthenticator:call:" ref="a17841007deca0854a7926b895f46fa10" args="(id&lt; RMAuthenticator &gt; authenticator,[call] RMCall *call)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -86,13 +94,7 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
           <td class="paramkey">call:</td>
           <td></td>
           <td class="paramtype">(<a class="el" href="interface_r_m_call.html">RMCall</a>*)&nbsp;</td>
-          <td class="paramname"> <em>call</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">delegate:</td>
-          <td></td>
-          <td class="paramtype">(id&lt;<a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate</a>&gt;)&nbsp;</td>
-          <td class="paramname"> <em>delegate</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>call</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -107,18 +109,55 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>authenticator</em>&nbsp;</td><td>An authentication service provider. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>call</em>&nbsp;</td><td>A call object to handle session calls. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>delegate</em>&nbsp;</td><td>A session delegate to handle authentication events.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>call</em>&nbsp;</td><td>A call object to handle session calls.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>An initiated <a class="el" href="interface_r_m_session.html" title="Handles sessions in WIRemoting framework.">RMSession</a> object. </dd></dl>
 
-<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00017">17</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
+<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00018">18</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a898ba9b048b6568b051acde8d2f48749"></a><!-- doxytag: member="RMSession::call:arguments:delegate:" ref="a898ba9b048b6568b051acde8d2f48749" args="(NSString *method,[arguments] NSDictionary *arguments,[delegate] id&lt; RMResultDelegate &gt; delegate)" -->
+<a class="anchor" id="ad8842825e7ffa3ea841d0f44dc0360ac"></a><!-- doxytag: member="RMSession::call:arguments:" ref="ad8842825e7ffa3ea841d0f44dc0360ac" args="(NSString *method,[arguments] NSDictionary *arguments)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) call: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&nbsp;</td>
+          <td class="paramname"> <em>method</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">arguments:</td>
+          <td></td>
+          <td class="paramtype">(NSDictionary*)&nbsp;</td>
+          <td class="paramname"> <em>arguments</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Call a method. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>method</em>&nbsp;</td><td>The method name. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arguments</em>&nbsp;</td><td>Method arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00132">132</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adaf01c561e55c091d8011dc507a1f1d0"></a><!-- doxytag: member="RMSession::call:arguments:delegate:" ref="adaf01c561e55c091d8011dc507a1f1d0" args="(NSString *method,[arguments] NSDictionary *arguments,[delegate] id delegate)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -137,7 +176,7 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
         <tr>
           <td class="paramkey">delegate:</td>
           <td></td>
-          <td class="paramtype">(id&lt;<a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate</a>&gt;)&nbsp;</td>
+          <td class="paramtype">(id)&nbsp;</td>
           <td class="paramname"> <em>delegate</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -149,17 +188,74 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
 </div>
 <div class="memdoc">
 
-<p>Call a method. </p>
+<p>Call a remote method with a temporary delegate. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>method</em>&nbsp;</td><td>The method name. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>arguments</em>&nbsp;</td><td>Method arguments. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>delegate</em>&nbsp;</td><td>The call delegate to handle call results. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arguments</em>&nbsp;</td><td>The method arguments. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>delegate</em>&nbsp;</td><td>a delegate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>whether the call is sent. </dd></dl>
+
+<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00140">140</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20ee0730741132192d4245108509bbb8"></a><!-- doxytag: member="RMSession::addDelegate:" ref="a20ee0730741132192d4245108509bbb8" args="(id&lt; RMResultDelegate &gt; delegate)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) addDelegate: </td>
+          <td></td>
+          <td class="paramtype">(id&lt;<a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate</a>&gt;)&nbsp;</td>
+          <td class="paramname"> <em>delegate</em></td>
+          <td>&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add a new delegate. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>delegate</em>&nbsp;</td><td>A delegate </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00099">99</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
+<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00046">46</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a692b571f760d3c4e536b8c048721a61b"></a><!-- doxytag: member="RMSession::removeDelegate:" ref="a692b571f760d3c4e536b8c048721a61b" args="(id&lt; RMResultDelegate &gt; delegate)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) removeDelegate: </td>
+          <td></td>
+          <td class="paramtype">(id&lt;<a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate</a>&gt;)&nbsp;</td>
+          <td class="paramname"> <em>delegate</em></td>
+          <td>&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Remove a delegate. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>delegate</em>&nbsp;</td><td>A delegate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_r_m_session_8m_source.html#l00053">53</a> of file <a class="el" href="_r_m_session_8m_source.html">RMSession.m</a>.</p>
 
 </div>
 </div>
@@ -178,7 +274,7 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
 <p>Return the state whether the session is authenticated. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>whether the session is authenticated. </dd></dl>
 
-<p>Definition at line <a class="el" href="_r_m_session_8h_source.html#l00067">67</a> of file <a class="el" href="_r_m_session_8h_source.html">RMSession.h</a>.</p>
+<p>Definition at line <a class="el" href="_r_m_session_8h_source.html#l00066">66</a> of file <a class="el" href="_r_m_session_8h_source.html">RMSession.h</a>.</p>
 
 </div>
 </div>
@@ -187,7 +283,7 @@ id&lt; <a class="el" href="protocol_r_m_result_delegate-p.html">RMResultDelegate
 <li>/Users/yxh/Code/XCode/WIRemoting/Source/Classes/<a class="el" href="_r_m_session_8m_source.html">RMSession.m</a></li>
 </ul>
 </div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 22:38:52 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

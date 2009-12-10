@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/main.m Source File</title>
+<title>WIRemoting: /Users/yxh/Code/XCode/WIRemoting/Source/Moodle/main.m Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -12,7 +12,6 @@
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -22,23 +21,25 @@
       <li><a href="files.html"><span>File&nbsp;List</span></a></li>
     </ul>
   </div>
-<h1>/Users/yxh/Code/XCode/WIRemoting/main.m</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
-<a name="l00002"></a>00002 <span class="comment"> *  main.c</span>
-<a name="l00003"></a>00003 <span class="comment"> *  WIRemoting</span>
-<a name="l00004"></a>00004 <span class="comment"> *</span>
-<a name="l00005"></a>00005 <span class="comment"> *  Created by Felix Huang on 09-12-02.</span>
-<a name="l00006"></a>00006 <span class="comment"> *  Copyright 2009 Webinit Consulting. All rights reserved.</span>
-<a name="l00007"></a>00007 <span class="comment"> *</span>
-<a name="l00008"></a>00008 <span class="comment"> */</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#import &quot;WIRemoting.h&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#import &quot;MockProtocol.h&quot;</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="keywordtype">int</span> main() {
-<a name="l00014"></a>00014   <a class="code" href="interface_mock_protocol.html">MockProtocol</a>* protocol = [[<a class="code" href="interface_mock_protocol.html">MockProtocol</a> alloc] init];
-<a name="l00015"></a>00015 }
+<h1>/Users/yxh/Code/XCode/WIRemoting/Source/Moodle/main.m</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//</span>
+<a name="l00002"></a>00002 <span class="comment">//  main.m</span>
+<a name="l00003"></a>00003 <span class="comment">//  Untitled</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">//  Created by Felix Huang on 09-12-08.</span>
+<a name="l00006"></a>00006 <span class="comment">//  Copyright Webinit Consulting 2009. All rights reserved.</span>
+<a name="l00007"></a>00007 <span class="comment">//</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {
+<a name="l00012"></a>00012     
+<a name="l00013"></a>00013     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+<a name="l00014"></a>00014     <span class="keywordtype">int</span> retVal = UIApplicationMain(argc, argv, nil, nil);
+<a name="l00015"></a>00015     [pool release];
+<a name="l00016"></a>00016     <span class="keywordflow">return</span> retVal;
+<a name="l00017"></a>00017 }
 </pre></div></div>
-<hr size="1"/><address style="text-align: right;"><small>Generated on Thu Dec 3 21:05:16 2009 for WIRemoting by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Wed Dec 9 23:55:12 2009 for WIRemoting by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

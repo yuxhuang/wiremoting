@@ -11,11 +11,8 @@ Inheritance diagram for RMResultDelegateWrapper::\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{interface_r_m_result_delegate_wrapper_ab2fbcbd604edd4ca182125604fecc51e}{
-(id) -\/ {\bfseries initWithObject:finished:failed:}}
-\label{interface_r_m_result_delegate_wrapper_ab2fbcbd604edd4ca182125604fecc51e}
-
-\item 
+(id) -\/ \hyperlink{interface_r_m_result_delegate_wrapper_ab2fbcbd604edd4ca182125604fecc51e}{initWithObject:finished:failed:}
+\begin{DoxyCompactList}\small\item\em Create a new delegate wrapper. \item\end{DoxyCompactList}\item 
 (void) -\/ \hyperlink{interface_r_m_result_delegate_wrapper_ac631e09ab641294f124b0e7d81b455c3}{finished:}
 \begin{DoxyCompactList}\small\item\em An event fired when the call successfully finishes. \item\end{DoxyCompactList}\item 
 (void) -\/ \hyperlink{interface_r_m_result_delegate_wrapper_ad4fccdd6b67ba89b4abe76f64708b82c}{failed:error:}
@@ -46,7 +43,22 @@ SEL {\bfseries failed}}
 Definition at line 14 of file RMResultDelegateWrapper.h.
 
 \subsection{Member Function Documentation}
-\hypertarget{interface_r_m_result_delegate_wrapper_ac631e09ab641294f124b0e7d81b455c3}{
+\hypertarget{interface_r_m_result_delegate_wrapper_ab2fbcbd604edd4ca182125604fecc51e}{
+\index{RMResultDelegateWrapper@{RMResultDelegateWrapper}!initWithObject:finished:failed:@{initWithObject:finished:failed:}}
+\index{initWithObject:finished:failed:@{initWithObject:finished:failed:}!RMResultDelegateWrapper@{RMResultDelegateWrapper}}
+\subsubsection[{initWithObject:finished:failed:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) initWithObject: (id) {\em obj}\/ finished: (SEL) {\em fin}\/ failed: (SEL) {\em fai}}}
+\label{interface_r_m_result_delegate_wrapper_ab2fbcbd604edd4ca182125604fecc51e}
+
+
+Create a new delegate wrapper. 
+\begin{DoxyParams}{Parameters}
+\item[{\em obj}]the object on which the selectors perform \item[{\em fin}]the fininshed selector \item[{\em fai}]the failed selector \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the wrapper instance 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file RMResultDelegateWrapper.m.\hypertarget{interface_r_m_result_delegate_wrapper_ac631e09ab641294f124b0e7d81b455c3}{
 \index{RMResultDelegateWrapper@{RMResultDelegateWrapper}!finished:@{finished:}}
 \index{finished:@{finished:}!RMResultDelegateWrapper@{RMResultDelegateWrapper}}
 \subsubsection[{finished:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) finished: ({\bf RMResponse} $\ast$) {\em response}}}
