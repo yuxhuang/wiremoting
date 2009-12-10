@@ -17,10 +17,17 @@
   SEL failed;
 }
 
+/**
+ * Create a new delegate wrapper
+ *
+ * @param obj the object on which the selectors perform
+ * @param fin the fininshed selector
+ * @param fai the failed selector
+ * @return the wrapper instance
+ */
 - (id)initWithObject:(id) obj finished:(SEL) fin failed:(SEL) fai;
 
 - (void) finished:(RMResponse *) response;
-
 - (void) failed:(RMResponse *) response
               error:(NSError *) error;
 
